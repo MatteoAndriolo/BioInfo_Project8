@@ -13,8 +13,9 @@ fasta_out="../reads/fasta_sim_50.fasta"
 # construct single file
 with open(fasta_out, mode='w') as out_file:
     counter_reads=0
-    for file in metadata_reads:
-        with open(file["path"],'r') as f:
+    for v,k in metadata_reads.items():
+        print(v)
+        with open(k["path"],'r') as f:
             # introduce one description line for each read
             for line in f:
                 # specify number of read introduced in the file (0 based)

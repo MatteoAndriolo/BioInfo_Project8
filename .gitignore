@@ -1,2 +1,6 @@
 ref/
 reads/
+old_reads/
+script/__*
+tools/
+.idea

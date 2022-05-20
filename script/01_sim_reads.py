@@ -66,18 +66,19 @@ def gen_read_mason(data) -> list:
 if __name__ == "__main__":
     # multitread read simiojn
     with Pool(cpu_count() * 2) as p:
-        jsonDataMason = [{} for i in RANGE_SHORT]
         jsonDataSimlord = [{} for i in RANGE_LONG]
         for par in p.map(gen_read_simlord, metadata_ref.items()):
             for i, pa in enumerate(par):
                 jsonDataSimlord[i][pa[0]] = pa[1]
+    with Pool(cpu_count() * 2) as p:
+        jsonDataMason = [{} for i in RANGE_SHORT]
         for par in p.map(gen_read_mason, metadata_ref.items()):
-           for i, pa in enumerate(par):
-               jsonDataMason[i][pa[0]] = pa[1]
+            for i, pa in enumerate(par):
+                jsonDataMason[i][pa[0]] = pa[1]
 
 for i, n in enumerate(RANGE_LONG):
     with open(DIR_READS_SIMLORD / str(n) / "metadata.json", "w") as f:
-        json.dump(jsonDataSimlord[n], f, indent=4)
+        json.dump(jsonDataSimlord[i], f, indent=4)
 for i, n in enumerate(RANGE_SHORT):
     with open(DIR_READS_MASON / str(n) / "metadata.json", "w") as f:
-        json.dump(jsonDataMason[n], f, indent=4)
+        json.dump(jsonDataMason[i], f, indent=4)

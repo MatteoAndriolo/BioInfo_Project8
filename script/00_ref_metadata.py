@@ -25,7 +25,7 @@ def getSeqLength(text) -> int:
             somma = 0
         else:
             somma += len(line)
-    if somma!=0:
+    if somma != 0:
         lengthSeq.append(somma)
     print(somma, lengthSeq)
     return int(sum(lengthSeq) / len(lengthSeq))

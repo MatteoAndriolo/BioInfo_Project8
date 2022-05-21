@@ -1,14 +1,16 @@
 #!/bin/bash
 
-#SBATCH --job-name kraken2_Sim_50_DBKraken2
-#SBATCH --output out_kraken2_Sim_50_DBKraken2
-#SBATCH --error error_kraken2_Sim_50_DBKraken2
-#SBATCH --mail-user mattia.luciani.2@studenti.unipd.it
+#SBATCH --job-name kraken2_BioInfo8
+#SBATCH --output out_kraken2_BioInfo8
+#SBATCH --error error_kraken2_BioInfo8
+#SBATCH --mail-user matteo.andriolo.2@studenti.unipd.it
+#SBATCH --mail-user matteo.andriolo.2@studenti.unipd.it
 #SBATCH	--mail-type ALL
 #SBATCH --time 10:00:00
 #SBATCH --ntasks 1
+#SBATCH --cpu-per-task 1
 #SBATCH --partition allgroups
-#SBATCH --mem 100G
+#SBATCH --mem 80G
 
 cd /nfsd/bcb/bcbg/luciani/Kraken2
 

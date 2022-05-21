@@ -4,7 +4,7 @@ from multiprocessing import Pool, cpu_count
 
 # support data
 from config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, MAX_LONG, \
-    MIN_LONG, STEP_LONG, RANGE_SHORT, RANGE_LONG
+    MIN_LONG, STEP_LONG, RANGE_SHORT, RANGE_LONG, COVERAGE
 
 metadata_ref = json.load(open(PATH_METADATA_REF))
 
@@ -20,14 +20,14 @@ def gen_read_simlord(data) -> list:
     name = data[0]
     metadata = data[1]
     # SimLoRD parameters
-    c = 20
+    c = COVERAGE
     pi = 0.11
     pd = 0.4
     ps = 0.01
     fref = metadata["path"]
     # execute SimLoRD
     for n in range(MIN_LONG, MAX_LONG, STEP_LONG):
-        fread = DIR_READS_SIMLORD / str(n) / name
+        fread = DIR_READS_SIMLORD / str(n) / (name + ".fastq")
         command = f'simlord --fixed-readlength {n} --read-reference {fref} -c {c} -pi {pi} -pd {pd} -ps {ps} --no-sam {fread}'
         os.system(f'echo "{command}"')
         os.system(command)
@@ -50,8 +50,8 @@ def gen_read_mason(data) -> list:
     fref = metadata["path"]
 
     for n in range(MIN_LONG, MAX_LONG, STEP_LONG):
-        fread = DIR_READS_MASON / (name + ".fq")
-        command = f'{MASON_SIMULATOR} -seed 0 --num-threads {cpu_count()} -ir {fref} --num-fragments {getNumberReads(20, 150, metadata["mean_length_sequence"])} -o {fread} '
+        fread = DIR_READS_MASON / str(n) / (name + ".fq")
+        command = f'{MASON_SIMULATOR} -seed 0 --num-threads {cpu_count()} -ir {fref} --num-fragments {getNumberReads(COVERAGE, n, metadata["mean_length_sequence"])} -o {fread} '
         os.system(f'echo "{command}"')
         os.system(command)
 

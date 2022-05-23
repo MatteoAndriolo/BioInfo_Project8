@@ -16,7 +16,7 @@ jsonData = {}
 
 # jsonData["data_creation"]= date.today().strftime("%Y%m%d")
 
-def getSeqLength(text) -> int:
+def getSeqLength(text) -> (int, int, int):
     lengthSeq = []
     somma = 0
     for line in text:
@@ -28,7 +28,7 @@ def getSeqLength(text) -> int:
     if somma != 0:
         lengthSeq.append(somma)
     print(somma, lengthSeq)
-    return int(sum(lengthSeq) / len(lengthSeq))
+    return (min(lengthSeq), max(lengthSeq), int(sum(lengthSeq) / len(lengthSeq)))
 
 
 # parse files
@@ -39,11 +39,14 @@ for f_path in files_path:
 
     description_lines = re.findall(p, open(f_path).read())
 
+    minn, maxx, meann = getSeqLength(open(f_path).readlines())
     jsonData[name] = {
         "path": f_path,
         "n_sequences": len(description_lines),
         "sequences": [i for i in description_lines],
-        "mean_length_sequence": getSeqLength(open(f_path).readlines())
+        "mean_length_sequence": meann,
+        "min":minn,
+        "max":maxx
     }
 
 # with open(mtdt_seq, "w") as f:

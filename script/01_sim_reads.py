@@ -12,6 +12,12 @@ def getNumberReads(coverage, read_lenghts, genome_size) -> int:
     return int(coverage * genome_size / read_lenghts)
 
 
+def count_reads(path) -> int:
+    with open(path, "r") as f:
+        reads_metadata = f.read().count("@")  # simlord
+    return reads_metadata
+
+
 # def function multithread
 def gen_read_simlord(data) -> list:
     out = []
@@ -56,7 +62,7 @@ def gen_read_mason(data) -> list:
         out.append([name + '.fastq', {
             "path": str(fread),
             'path_ref': str(fref),
-            "nreads": c
+            "nreads": count_reads(str(fread))
         }])
 
     return out
@@ -77,7 +83,7 @@ if __name__ == "__main__":
     #     with open(DIR_READS_SIMLORD / str(n) / "metadata.json", "w") as f:
     #         json.dump(jsonDataSimlord[i], f, indent=4)
 
-    with Pool(int(cpu_count() / 2)) as p:
+    with Pool(cpu_count()) as p:
         # with Pool(1) as p:
         jsonDataMason = [{} for i in RANGE_SHORT]
         for par in p.map(gen_read_mason, metadata_ref.items()):

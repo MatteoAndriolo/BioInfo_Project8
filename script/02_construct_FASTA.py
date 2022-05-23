@@ -1,48 +1,73 @@
 import json
-
-# support data
 from multiprocessing import Pool, cpu_count
 
-from config import DIR_READS_MASON, DIR_READS_SIMLORD, RANGE_LONG, RANGE_SHORT, DIR_FASTA_MASON, DIR_FASTA_SIMLORD
+from config import DIR_READS_MASON, RANGE_SHORT, DIR_FASTA_MASON, DIR_FASTA_SIMLORD, DIR_READS_SIMLORD, RANGE_LONG
 
 
 def generateFasta(folder):
+    # reads/reads_50/simlord/10000
     s = str(folder).split("/")
-    n, typ = s[-1], s[-2]
-    fastaDir = DIR_FASTA_SIMLORD if typ == "simlord" else DIR_FASTA_MASON
+    n, simulator = s[-1], s[-2]
+    fastaDir = DIR_FASTA_SIMLORD if simulator == "simlord" else DIR_FASTA_MASON
 
-    with open(fastaDir / f"{typ}_{n}.fasta", "w") as outfile, \
-            open(folder / "metadata.json", "r") as mdf:
+    with open(folder / "metadata.json", "r") as mdf:
         metadata = json.load(mdf)
+
+    fasta_file_path = fastaDir / f"{simulator}_{n}.fasta"
+    with open(fasta_file_path, "w") as outfile:
+        next = False
         read_number = 0
         for k, v in metadata.items():
             print(v["path"])
             with open(v["path"], "r") as f:
                 for line in f.readlines():
-                    if line[0] in ["A", "C", "G", "T"]:
+                    if line[0] == "@":
+                        next = True
+                    elif next and line[0] in ["A", "C", "G", "T"]:
                         outfile.write(f">S0R{read_number}\n{str(line)}\n")
+                        read_number += 1
+                        next = False
+                    else:
+                        next = False
+    return (simulator, n, {"path": str(fasta_file_path), "nreads": read_number + 1})
 
 
-listFolders = [DIR_READS_MASON / str(n) for n in RANGE_SHORT]
-listFolders.extend([DIR_READS_SIMLORD / str(n) for n in RANGE_LONG])
+if __name__ == "__main__":
+    # listFolders = [DIR_READS_SIMLORD / str(n) for n in RANGE_LONG]
+    listFolders = [DIR_READS_MASON / str(900)]
 
-with Pool(2 * cpu_count()) as p:
-    p.map(generateFasta, listFolders)
+    # listFolders = [DIR_READS_MASON / str(n) for n in RANGE_SHORT]
+    # listFolders.extend([DIR_READS_SIMLORD / str(n) for n in RANGE_LONG])
+    masonJson = {}
+    simlordJson = {}
+    with Pool(2 * cpu_count()) as p:
+        for out in p.map(generateFasta, listFolders):
+            if out[0] == "mason":
+                masonJson[out[1]] = out[2]
+            elif out[0] == "simlord":
+                simlordJson[out[1]] = out[2]
+            else:
+                raise ValueError
+
+    if masonJson:
+        with open(DIR_FASTA_MASON / "metadata2.json", "w") as f:
+            json.dump(masonJson, f, indent=4, sort_keys=True)
+    if simlordJson:
+        with open(DIR_FASTA_SIMLORD / "metadata2.json", "w") as f:
+            json.dump(simlordJson, f, indent=4, sort_keys=True)
 
 exit(5)
-##############################################################################################################à
 
-
-for n in RANGE_LONG:
-    metadata_simlord = json.load(open(DIR_READS_SIMLORD / str(n) / "metadata.json"))
-    fasta_out_simlord = DIR_READS_SIMLORD / str(n) / f"simlord_{n}.fasta"
-    with open(fasta_out_simlord, "w") as out_simlord:
-        counter_reads = 0
-        for v, k in metadata_simlord.items():
-            print(v)
-            with open(k["path"], 'r') as f:
-                # introduce one description line for each read
-                generateFasta(f.readlines(), out_simlord)
+# for n in RANGE_LONG:
+#    metadata_simlord = json.load(open(DIR_READS_SIMLORD / str(n) / "metadata.json"))
+#    fasta_out_simlord = DIR_READS_SIMLORD / str(n) / f"simlord_{n}.fasta"
+#    with open(fasta_out_simlord, "w") as out_simlord:
+#        counter_reads = 0
+#        for v, k in metadata_simlord.items():
+#            print(v)
+#            with open(k["path"], 'r') as f:
+#                # introduce one description line for each read
+#                generateFasta(f.readlines(), out_simlord)
 
 # for n in RANGE_SHORT:
 #    metadata_mason = json.load(open(DIR_READS_MASON / str(n) / "metadata.json"))

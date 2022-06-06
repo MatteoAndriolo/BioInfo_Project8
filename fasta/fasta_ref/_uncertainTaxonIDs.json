@@ -1,0 +1,814 @@
+{
+    "Bacillus_pacificus": [
+        {
+            "186817": {
+                "name": "Bacillaceae (taxid 186817)",
+                "acc": 0.0392156862745098
+            }
+        },
+        {
+            "86661": {
+                "name": "Bacillus cereus group (taxid 86661)",
+                "acc": 0.06862745098039216
+            }
+        },
+        {
+            "2026186": {
+                "name": "Bacillus paranthracis (taxid 2026186)",
+                "acc": 0.00980392156862745
+            }
+        },
+        {
+            "2026187": {
+                "name": "Bacillus pacificus (taxid 2026187)",
+                "acc": 0.029411764705882353
+            }
+        },
+        {
+            "361100": {
+                "name": "Bacillus cereus Q1 (taxid 361100)",
+                "acc": 0.00980392156862745
+            }
+        },
+        {
+            "1386": {
+                "name": "Bacillus (taxid 1386)",
+                "acc": 0.049019607843137254
+            }
+        },
+        {
+            "1392": {
+                "name": "Bacillus anthracis (taxid 1392)",
+                "acc": 0.00980392156862745
+            }
+        },
+        {
+            "1428": {
+                "name": "Bacillus thuringiensis (taxid 1428)",
+                "acc": 0.00980392156862745
+            }
+        },
+        {
+            "1396": {
+                "name": "Bacillus cereus (taxid 1396)",
+                "acc": 0.0392156862745098
+            }
+        },
+        {
+            "1126681": {
+                "name": "Bacillus cereus F (taxid 1126681)",
+                "acc": 0.00980392156862745
+            }
+        },
+        {
+            "526970": {
+                "name": "Bacillus cereus BGSC 6E1 (taxid 526970)",
+                "acc": 0.00980392156862745
+            }
+        },
+        {
+            "222523": {
+                "name": "Bacillus cereus ATCC 10987 (taxid 222523)",
+                "acc": 0.7058823529411765
+            }
+        },
+        {
+            "405535": {
+                "name": "Bacillus cereus AH820 (taxid 405535)",
+                "acc": 0.00980392156862745
+            }
+        }
+    ],
+    "Erysipelothrix_rhusiopathiae": [
+        {
+            "2": {
+                "name": "Bacteria (taxid 2)",
+                "acc": 0.25
+            }
+        },
+        {
+            "1313290": {
+                "name": "Erysipelothrix rhusiopathiae SY1027 (taxid 1313290)",
+                "acc": 0.75
+            }
+        }
+    ],
+    "Faecalibacterium_prausnitzii": [
+        {
+            "411483": {
+                "name": "Faecalibacterium prausnitzii A2-165 (taxid 411483)",
+                "acc": 0.04
+            }
+        },
+        {
+            "853": {
+                "name": "Faecalibacterium prausnitzii (taxid 853)",
+                "acc": 0.88
+            }
+        },
+        {
+            "1350": {
+                "name": "Enterococcus (taxid 1350)",
+                "acc": 0.04
+            }
+        },
+        {
+            "536231": {
+                "name": "Roseburia intestinalis L1-82 (taxid 536231)",
+                "acc": 0.04
+            }
+        }
+    ],
+    "Francisella_novicida": [
+        {
+            "1386968": {
+                "name": "Francisella tularensis subsp. novicida PA10-7858 (taxid 1386968)",
+                "acc": 0.09375
+            }
+        },
+        {
+            "984129": {
+                "name": "Francisella cf. novicida Fx1 (taxid 984129)",
+                "acc": 0.125
+            }
+        },
+        {
+            "401614": {
+                "name": "Francisella tularensis subsp. novicida U112 (taxid 401614)",
+                "acc": 0.03125
+            }
+        },
+        {
+            "1450527": {
+                "name": "Francisella tularensis subsp. novicida D9876 (taxid 1450527)",
+                "acc": 0.75
+            }
+        }
+    ],
+    "Haemophilus_parainfluenzae": [
+        {
+            "0": {
+                "name": "unclassified (taxid 0)",
+                "acc": 0.1
+            }
+        },
+        {
+            "1": {
+                "name": "root (taxid 1)",
+                "acc": 0.1
+            }
+        },
+        {
+            "11801": {
+                "name": "Moloney murine leukemia virus (taxid 11801)",
+                "acc": 0.1
+            }
+        },
+        {
+            "862965": {
+                "name": "Haemophilus parainfluenzae T3T1 (taxid 862965)",
+                "acc": 0.3
+            }
+        },
+        {
+            "729": {
+                "name": "Haemophilus parainfluenzae (taxid 729)",
+                "acc": 0.3
+            }
+        },
+        {
+            "735": {
+                "name": "Haemophilus parahaemolyticus (taxid 735)",
+                "acc": 0.1
+            }
+        }
+    ],
+    "Haemophilus_somnus": [
+        {
+            "712": {
+                "name": "Pasteurellaceae (taxid 712)",
+                "acc": 0.03333333333333333
+            }
+        },
+        {
+            "747": {
+                "name": "Pasteurella multocida (taxid 747)",
+                "acc": 0.016666666666666666
+            }
+        },
+        {
+            "228400": {
+                "name": "Histophilus somni 2336 (taxid 228400)",
+                "acc": 0.7833333333333333
+            }
+        },
+        {
+            "91347": {
+                "name": "Enterobacterales (taxid 91347)",
+                "acc": 0.016666666666666666
+            }
+        },
+        {
+            "1236": {
+                "name": "Gammaproteobacteria (taxid 1236)",
+                "acc": 0.016666666666666666
+            }
+        },
+        {
+            "1263832": {
+                "name": "Bibersteinia trehalosi USDA-ARS-USMARC-190 (taxid 1263832)",
+                "acc": 0.016666666666666666
+            }
+        },
+        {
+            "205914": {
+                "name": "Histophilus somni 129PT (taxid 205914)",
+                "acc": 0.03333333333333333
+            }
+        },
+        {
+            "731": {
+                "name": "Histophilus somni (taxid 731)",
+                "acc": 0.08333333333333333
+            }
+        }
+    ],
+    "Halobacterium": [
+        {
+            "1760": {
+                "name": "Actinobacteria (taxid 1760)",
+                "acc": 0.004784688995215311
+            }
+        },
+        {
+            "2242": {
+                "name": "Halobacterium salinarum (taxid 2242)",
+                "acc": 0.009569377990430622
+            }
+        },
+        {
+            "2": {
+                "name": "Bacteria (taxid 2)",
+                "acc": 0.004784688995215311
+            }
+        },
+        {
+            "1604004": {
+                "name": "Halanaeroarchaeum sulfurireducens (taxid 1604004)",
+                "acc": 0.004784688995215311
+            }
+        },
+        {
+            "2599399": {
+                "name": "Salarchaeum sp. JOR-1 (taxid 2599399)",
+                "acc": 0.004784688995215311
+            }
+        },
+        {
+            "751944": {
+                "name": "Halobacterium sp. DL1 (taxid 751944)",
+                "acc": 0.009569377990430622
+            }
+        },
+        {
+            "1407499": {
+                "name": "Halobacterium hubeiense (taxid 1407499)",
+                "acc": 0.9282296650717703
+            }
+        },
+        {
+            "348780": {
+                "name": "Natronomonas pharaonis DSM 2160 (taxid 348780)",
+                "acc": 0.004784688995215311
+            }
+        },
+        {
+            "478009": {
+                "name": "Halobacterium salinarum R1 (taxid 478009)",
+                "acc": 0.004784688995215311
+            }
+        },
+        {
+            "1853690": {
+                "name": "Halolamina sp. CBA1230 (taxid 1853690)",
+                "acc": 0.009569377990430622
+            }
+        },
+        {
+            "64091": {
+                "name": "Halobacterium salinarum NRC-1 (taxid 64091)",
+                "acc": 0.004784688995215311
+            }
+        },
+        {
+            "869886": {
+                "name": "Halosimplex pelagicum (taxid 869886)",
+                "acc": 0.009569377990430622
+            }
+        }
+    ],
+    "Lawsonia_intracellularis": [
+        {
+            "1234378": {
+                "name": "Lawsonia intracellularis N343 (taxid 1234378)",
+                "acc": 0.25
+            }
+        },
+        {
+            "29546": {
+                "name": "Lawsonia intracellularis (taxid 29546)",
+                "acc": 0.25
+            }
+        },
+        {
+            "363253": {
+                "name": "Lawsonia intracellularis PHE/MN1-00 (taxid 363253)",
+                "acc": 0.5
+            }
+        }
+    ],
+    "Mycobacterium_bovis": [
+        {
+            "572418": {
+                "name": "Mycobacterium tuberculosis variant africanum GM041182 (taxid 572418)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "83331": {
+                "name": "Mycobacterium tuberculosis CDC1551 (taxid 83331)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1352590": {
+                "name": "Mycobacterium tuberculosis PanR0805 (taxid 1352590)",
+                "acc": 0.003663003663003663
+            }
+        },
+        {
+            "1352591": {
+                "name": "Mycobacterium tuberculosis PanR0902 (taxid 1352591)",
+                "acc": 0.0018315018315018315
+            }
+        },
+        {
+            "115862": {
+                "name": "Mycobacterium tuberculosis variant caprae (taxid 115862)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1334051": {
+                "name": "Mycobacterium tuberculosis TRS5 (taxid 1334051)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1205674": {
+                "name": "Mycobacterium canettii CIPT 140070010 (taxid 1205674)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "757419": {
+                "name": "Mycobacterium tuberculosis H37RvCO (taxid 757419)",
+                "acc": 0.0018315018315018315
+            }
+        },
+        {
+            "1205677": {
+                "name": "Mycobacterium canettii CIPT 140070017 (taxid 1205677)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "757421": {
+                "name": "Mycobacterium tuberculosis H37RvLP (taxid 757421)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1344047": {
+                "name": "Mycobacterium tuberculosis PanR0208 (taxid 1344047)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "882098": {
+                "name": "Mycobacterium tuberculosis S96-129 (taxid 882098)",
+                "acc": 0.003663003663003663
+            }
+        },
+        {
+            "1452723": {
+                "name": "Mycobacterium tuberculosis 18b (taxid 1452723)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "882099": {
+                "name": "Mycobacterium tuberculosis BTB05-552 (taxid 882099)",
+                "acc": 0.0027472527472527475
+            }
+        },
+        {
+            "1334071": {
+                "name": "Mycobacterium tuberculosis TRS25 (taxid 1334071)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1334072": {
+                "name": "Mycobacterium tuberculosis TRS26 (taxid 1334072)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1334077": {
+                "name": "Mycobacterium tuberculosis 1821ADB36 (taxid 1334077)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1334079": {
+                "name": "Mycobacterium tuberculosis 1821ADB38 (taxid 1334079)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "652616": {
+                "name": "Mycobacterium tuberculosis str. Erdman = ATCC 35801 (taxid 652616)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "77643": {
+                "name": "Mycobacterium tuberculosis complex (taxid 77643)",
+                "acc": 0.14102564102564102
+            }
+        },
+        {
+            "998092": {
+                "name": "Mycobacterium tuberculosis variant bovis BCG str. ATCC 35743 (taxid 998092)",
+                "acc": 0.003663003663003663
+            }
+        },
+        {
+            "1346770": {
+                "name": "Mycobacterium tuberculosis PanR0407 (taxid 1346770)",
+                "acc": 0.009157509157509158
+            }
+        },
+        {
+            "1346775": {
+                "name": "Mycobacterium tuberculosis PanR0401 (taxid 1346775)",
+                "acc": 0.0018315018315018315
+            }
+        },
+        {
+            "1346776": {
+                "name": "Mycobacterium tuberculosis PanR0317 (taxid 1346776)",
+                "acc": 0.004578754578754579
+            }
+        },
+        {
+            "1346778": {
+                "name": "Mycobacterium tuberculosis PanR0315 (taxid 1346778)",
+                "acc": 0.0027472527472527475
+            }
+        },
+        {
+            "1346781": {
+                "name": "Mycobacterium tuberculosis PanR0311 (taxid 1346781)",
+                "acc": 0.0027472527472527475
+            }
+        },
+        {
+            "1346783": {
+                "name": "Mycobacterium tuberculosis PanR0308 (taxid 1346783)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1346787": {
+                "name": "Mycobacterium tuberculosis PanR0304 (taxid 1346787)",
+                "acc": 0.003663003663003663
+            }
+        },
+        {
+            "33892": {
+                "name": "Mycobacterium tuberculosis variant bovis BCG (taxid 33892)",
+                "acc": 0.007326007326007326
+            }
+        },
+        {
+            "1765": {
+                "name": "Mycobacterium tuberculosis variant bovis (taxid 1765)",
+                "acc": 0.018315018315018316
+            }
+        },
+        {
+            "1445606": {
+                "name": "Mycobacterium tuberculosis str. Kurono (taxid 1445606)",
+                "acc": 0.0009157509157509158
+            }
+        },
+        {
+            "1773": {
+                "name": "Mycobacterium tuberculosis (taxid 1773)",
+                "acc": 0.7664835164835165
+            }
+        },
+        {
+            "1352573": {
+                "name": "Mycobacterium tuberculosis PanR0601 (taxid 1352573)",
+                "acc": 0.010073260073260074
+            }
+        }
+    ],
+    "Paenibacillus_mucilaginosus": [
+        {
+            "0": {
+                "name": "unclassified (taxid 0)",
+                "acc": 0.012987012987012988
+            }
+        },
+        {
+            "1036673": {
+                "name": "Paenibacillus mucilaginosus KNP414 (taxid 1036673)",
+                "acc": 0.8701298701298701
+            }
+        },
+        {
+            "997761": {
+                "name": "Paenibacillus mucilaginosus K02 (taxid 997761)",
+                "acc": 0.025974025974025976
+            }
+        },
+        {
+            "1116391": {
+                "name": "Paenibacillus mucilaginosus 3016 (taxid 1116391)",
+                "acc": 0.05194805194805195
+            }
+        },
+        {
+            "395495": {
+                "name": "Leptothrix cholodnii SP-6 (taxid 395495)",
+                "acc": 0.012987012987012988
+            }
+        },
+        {
+            "61624": {
+                "name": "Paenibacillus mucilaginosus (taxid 61624)",
+                "acc": 0.025974025974025976
+            }
+        }
+    ],
+    "Photobacterium_profundum": [
+        {
+            "298386": {
+                "name": "Photobacterium profundum SS9 (taxid 298386)",
+                "acc": 0.9090909090909091
+            }
+        },
+        {
+            "299262": {
+                "name": "Tateyamaria omphalii (taxid 299262)",
+                "acc": 0.09090909090909091
+            }
+        }
+    ],
+    "Prevotella_corporis": [
+        {
+            "0": {
+                "name": "unclassified (taxid 0)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "28129": {
+                "name": "Prevotella denticola (taxid 28129)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "28131": {
+                "name": "Prevotella intermedia (taxid 28131)",
+                "acc": 0.34523809523809523
+            }
+        },
+        {
+            "28132": {
+                "name": "Prevotella melaninogenica (taxid 28132)",
+                "acc": 0.03571428571428571
+            }
+        },
+        {
+            "1236517": {
+                "name": "Prevotella fusca JCM 17724 (taxid 1236517)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "1177574": {
+                "name": "Prevotella jejuni (taxid 1177574)",
+                "acc": 0.10714285714285714
+            }
+        },
+        {
+            "1236518": {
+                "name": "Prevotella scopos JCM 17725 (taxid 1236518)",
+                "acc": 0.03571428571428571
+            }
+        },
+        {
+            "1122984": {
+                "name": "Prevotella intermedia ATCC 25611 = DSM 20706 (taxid 1122984)",
+                "acc": 0.32142857142857145
+            }
+        },
+        {
+            "838": {
+                "name": "Prevotella (taxid 838)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "817": {
+                "name": "Bacteroides fragilis (taxid 817)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "2420309": {
+                "name": "Streptococcus sp. FDAARGOS_521 (taxid 2420309)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "553174": {
+                "name": "Prevotella melaninogenica ATCC 25845 (taxid 553174)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "28118": {
+                "name": "Odoribacter splanchnicus (taxid 28118)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "76123": {
+                "name": "Prevotella enoeca (taxid 76123)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "357276": {
+                "name": "Phocaeicola dorei (taxid 357276)",
+                "acc": 0.011904761904761904
+            }
+        },
+        {
+            "171549": {
+                "name": "Bacteroidales (taxid 171549)",
+                "acc": 0.011904761904761904
+            }
+        }
+    ],
+    "Rhodobacter_sphaeroides": [
+        {
+            "557760": {
+                "name": "Rhodobacter sphaeroides KD131 (taxid 557760)",
+                "acc": 0.42857142857142855
+            }
+        },
+        {
+            "992186": {
+                "name": "Rhodobacter sphaeroides WS8N (taxid 992186)",
+                "acc": 0.14285714285714285
+            }
+        },
+        {
+            "272943": {
+                "name": "Rhodobacter sphaeroides 2.4.1 (taxid 272943)",
+                "acc": 0.42857142857142855
+            }
+        }
+    ],
+    "Saccharomyces_cerevisiae": [
+        {
+            "28384": {
+                "name": "other sequences (taxid 28384)",
+                "acc": 0.17647058823529413
+            }
+        },
+        {
+            "526973": {
+                "name": "Bacillus cereus m1293 (taxid 526973)",
+                "acc": 0.058823529411764705
+            }
+        },
+        {
+            "9606": {
+                "name": "Homo sapiens (taxid 9606)",
+                "acc": 0.7647058823529411
+            }
+        }
+    ],
+    "Veillonella_rogosae": [
+        {
+            "2682456": {
+                "name": "Veillonella sp. T1-7 (taxid 2682456)",
+                "acc": 0.6666666666666666
+            }
+        },
+        {
+            "1316254": {
+                "name": "Veillonella parvula HSIVP1 (taxid 1316254)",
+                "acc": 0.3333333333333333
+            }
+        }
+    ],
+    "Xanthobacter_autotrophicus": [
+        {
+            "1408224": {
+                "name": "Sinorhizobium americanum CCGM7 (taxid 1408224)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "33057": {
+                "name": "Thauera (taxid 33057)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "438753": {
+                "name": "Azorhizobium caulinodans ORS 571 (taxid 438753)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "78245": {
+                "name": "Xanthobacter autotrophicus Py2 (taxid 78245)",
+                "acc": 0.6428571428571429
+            }
+        },
+        {
+            "265959": {
+                "name": "Komagataeibacter saccharivorans (taxid 265959)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "1235591": {
+                "name": "Pseudorhodoplanes sinuspersici (taxid 1235591)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "926570": {
+                "name": "Acidiphilium multivorum AIU301 (taxid 926570)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "46680": {
+                "name": "Pseudomonas nitroreducens (taxid 46680)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "2483404": {
+                "name": "Mesorhizobium sp. NZP2077 (taxid 2483404)",
+                "acc": 0.047619047619047616
+            }
+        },
+        {
+            "2493675": {
+                "name": "Mesorhizobium sp. M4B.F.Ca.ET.058.02.1.1 (taxid 2493675)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "1355477": {
+                "name": "Bradyrhizobium diazoefficiens (taxid 1355477)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "348824": {
+                "name": "Rhizobium favelukesii (taxid 348824)",
+                "acc": 0.023809523809523808
+            }
+        },
+        {
+            "395965": {
+                "name": "Methylocella silvestris BL2 (taxid 395965)",
+                "acc": 0.07142857142857142
+            }
+        }
+    ]
+}

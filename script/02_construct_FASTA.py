@@ -1,9 +1,8 @@
 import json
-import random
 from multiprocessing import Pool, cpu_count
-from random import Random
 
-from _config import DIR_READS_MASON, RANGE_SHORT, DIR_FASTA_MASON, DIR_FASTA_SIMLORD, DIR_READS_SIMLORD, RANGE_LONG
+from _config import DIR_READS_MASON, RANGE_SHORT, DIR_FASTA_MASON, DIR_FASTA_SIMLORD, DIR_READS_SIMLORD, RANGE_LONG, \
+    PATH_TAXID_REF
 
 
 def generateFasta(folder):
@@ -14,19 +13,23 @@ def generateFasta(folder):
     # manage path and files path
     fastaDir = DIR_FASTA_SIMLORD if simulator == "simlord" else DIR_FASTA_MASON
     fasta_file_path = fastaDir / f"{simulator}_{n}.fasta"
-    fasta_truth_file_path = fastaDir / f"{simulator}_{n}.fasta"
+    fasta_truth_file_path = fastaDir / f"{simulator}_{n}.truth"
 
-    with  as mdf:
-        metadata = json.load(open(folder / "metadata.json", "r"))
+    mtdt = json.load(open(folder / "metadata.json", "r"))
 
     # with open(fasta_file_path, "w") as outfile:
-    with open(fasta_truth_file_path, "w") as truthfile:
+    # with open(fasta_truth_file_path, "w") as truthfile:
+    with open(fasta_file_path, "w") as outfile, open(fasta_truth_file_path, "w") as truthfile, open(PATH_TAXID_REF,"r") as ftid:
         next = False
         read_number = 0
+        taxid=json.load(ftid)
+        # 0 based indexes
         blocks={}
-        for k, v in metadata.items():
+        for k, v in mtdt.items():
             if v["nreads"]==0:
-               blocks[k]=read_number
+               # TODO check cotrrectness
+               # blocks[k]=read_number
+               blocks[k]=None
                continue
             print(v["path"])
             with open(v["path"], "r") as f:
@@ -34,13 +37,13 @@ def generateFasta(folder):
                     if line[0] == "@":
                         next = True
                     elif next and line[0] in ["A", "C", "G", "T"]:
-                        # outfile.write(f">S0R{read_number}\n{str(line)}\n")
-                        truthfile.write(f">S0R{read_number}\n{v['taxid']}\n")
+                        outfile.write(f">S0R{read_number}\n{str(line)}\n")
+                        truthfile.write(f">S0R{read_number}\t{taxid[k[:-6]]['taxId']}\n")
                         read_number += 1
                         next = False
                     else:
                         next = False
-            blocks[k] = read_number
+        blocks[k] = read_number-1
     return (simulator, n, {"path": str(fasta_file_path), "nreads": read_number + 1, "index_end":blocks})
 
 
@@ -48,7 +51,6 @@ if __name__ == "__main__":
     # Folder where take files in order to generate fasta
     listFolders = [DIR_READS_MASON / str(n) for n in RANGE_SHORT]
     listFolders.extend([DIR_READS_SIMLORD / str(n) for n in RANGE_LONG])
-
 
     masonJson = {}      # output dictionary for mason
     simlordJson = {}    # output dictionary for simlord

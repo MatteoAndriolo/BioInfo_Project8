@@ -4,7 +4,7 @@ from multiprocessing import Pool, cpu_count
 from pathlib import Path
 
 from _config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, MAX_LONG, \
-    MIN_LONG, STEP_LONG, RANGE_SHORT, COVERAGE, MAX_SHORT, DIR_TEMP
+    MIN_LONG, STEP_LONG, RANGE_SHORT, COVERAGE, MAX_SHORT, DIR_TEMP, RANGE_LONG
 
 path_metadata_ref = PATH_METADATA_REF
 dir_reads_simlord = DIR_READS_SIMLORD
@@ -99,27 +99,36 @@ def gen_read_mason(data) -> list:
     return out
 
 
-if __name__ == "__main__":
+def simlordReads():
     with open(path_metadata_ref) as file_metadata:
         metadata_ref = json.load(file_metadata)
 
-    # # multitread read simiojn
-    # with Pool(cpu_count() * 2) as p:
-    #     jsonDataSimlord = [{} for i in RANGE_LONG]
-    #     for par in p.map(gen_read_simlord, metadata_ref.items()):
-    #         for i, pa in enumerate(par):
-    #             jsonDataSimlord[i][pa[0]] = pa[1]
-    #
-    # for i, n in enumerate(RANGE_LONG):
-    #     with open(dir_reads_simlord / str(n) / "metadata.json", "w") as f:
-    #         json.dump(jsonDataSimlord[i], f, indent=4)
+    with Pool(cpu_count() * 2) as p:
+        jsonDataSimlord = [{} for i in RANGE_LONG]
+        for par in p.map(gen_read_simlord, metadata_ref.items()):
+            for i, pa in enumerate(par):
+                jsonDataSimlord[i][pa[0]] = pa[1]
+
+    for i, n in enumerate(RANGE_LONG):
+        with open(dir_reads_simlord / str(n) / "metadata.json", "w") as f:
+            json.dump(jsonDataSimlord[i], f, indent=4)
+
+
+def masonReads():
+    with open(path_metadata_ref) as file_metadata:
+        metadata_ref = json.load(file_metadata)
 
     with Pool(cpu_count()) as p:
         jsonDataMason = [{} for i in RANGE_SHORT]
         for par in p.map(gen_read_mason, metadata_ref.items()):
             for i, pa in enumerate(par):
                 jsonDataMason[i][pa[0]] = pa[1]
-
     for i, n in enumerate(RANGE_SHORT):
         with open(dir_reads_mason / str(n) / "metadata.json", "w") as f:
             json.dump(jsonDataMason[i], f, indent=4)
+
+
+if __name__ == "__main__":
+    # simlordReads()
+    # masonReads()
+    pass

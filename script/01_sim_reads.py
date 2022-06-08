@@ -4,7 +4,7 @@ from multiprocessing import Pool, cpu_count
 from pathlib import Path
 
 from _config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, MAX_LONG, \
-    MIN_LONG, STEP_LONG, RANGE_SHORT, COVERAGE, MAX_SHORT, DIR_TEMP, RANGE_LONG
+    MIN_LONG, STEP_LONG, RANGE_SHORT, COVERAGE, DIR_TEMP, RANGE_LONG
 
 path_metadata_ref = PATH_METADATA_REF
 dir_reads_simlord = DIR_READS_SIMLORD

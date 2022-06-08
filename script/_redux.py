@@ -79,6 +79,6 @@ if __name__ == "__main__":
         jData = {}
         for out in p.map(filter, mtdt_ref.items()):
             # for out in p.map(filter, todo.items()):
-                jData[out[0]] = out[1]
+            jData[out[0]] = out[1]
 
         json.dump(jData, foutmtdt, indent=4)

@@ -1,6 +1,6 @@
 import os
 
-dir_reads="./reads/"
+dir_reads = "./reads/"
 output_file = './Sim_50.fastq'
 
 name_file = []
@@ -16,7 +16,7 @@ for name_file in os.listdir(dir_reads):
         listfile.append(name_file)
         listfile.sort()
         num_file = num_file + 1
-        
+
 with open(output_file, mode='w') as out_file:
     for i in range(len(listfile)):
         with open(dir_reads + listfile[i], 'r') as file:

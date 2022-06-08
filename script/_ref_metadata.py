@@ -18,11 +18,14 @@ from _config import DIR_REF, PATH_METADATA_REF, PATH_TAXID_REF
 ##### SETUP
 dir_ref = DIR_REF
 path_metadata_ref = PATH_METADATA_REF
+path_taxid = PATH_TAXID_REF
 #####
 
 ##### regex patterns
 pat_descriptionLines = re.compile(r'^\>(.*)', re.M)  # description lines pattern search in FASTA files
 pat_codename = "N\w_[\w\d]*.[\w\d]?"  # code for contigs
+
+
 #####
 
 
@@ -40,7 +43,7 @@ def getSeqLength(text) -> (int, int, int):
     return (min(lengthSeq), max(lengthSeq), int(sum(lengthSeq) / len(lengthSeq)))
 
 
-def full_ref_metadata():
+def extract_ref_metadata() -> dict:
     jsonData = {}
     for f_path in glob.glob(str(dir_ref / '*.fna')):  # for all .fna files in reference directory
         name = Path(f_path).stem
@@ -86,7 +89,6 @@ def full_ref_metadata():
             "max": maxx
         }
 
-    # dump json
     # with open(DIR_REF / "_newmetadata.json", "w") as f:
     with open(PATH_METADATA_REF) as f:
         json.dump(jsonData, f, indent=4)
@@ -94,14 +96,17 @@ def full_ref_metadata():
     with open(PATH_TAXID_REF) as f:
         json.dump({k: {"taxId": v["taxId"]} for k, v in jsonData.items()}, f, indent=4)
 
+    return jsonData
 
-# def transferidfrommetadata():
-#     with open(DIR_REF / "_metadata.json", "r") as f:
-#         mtdt = json.load(f)
-#     with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
-#         json.dump({k: {"taxId": v["taxId"]} for k, v in mtdt.items()}, f, indent=4)
+
+def getTIDFromMetadata():
+    with open(DIR_REF / "_metadata.json", "r") as f:
+        mtdt = json.load(f)
+    with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
+        json.dump({k: {"taxId": v["taxId"]} for k, v in mtdt.items()}, f, indent=4)
 
 
 if __name__ == "__main__":
-    full_ref_metadata()
-    # transferidfrommetadata()
+    # extract_ref_metadata()
+    # getTIDFromMetadata()
+    pass

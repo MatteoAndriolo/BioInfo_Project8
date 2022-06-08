@@ -54,3 +54,4 @@ if __name__ == "__main__":
         (DIR_READS_MASON / str(n)).mkdir(parents=True, exist_ok=True)
         (DIR_FASTA_MASON / str(n)).mkdir(parents=True, exist_ok=True)
     DIR_FASTA_REF.mkdir(parents=True, exist_ok=True)
+    DIR_TEMP.mkdir(parents=True, exist_ok=True)

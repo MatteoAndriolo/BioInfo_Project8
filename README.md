@@ -128,13 +128,26 @@ At the same time is also generated file with the correct taxonomy ID of read_seq
 
 <h2 id="s03"><code>03_study.py</code></h2>
 <!--[Link ot script](script/03_study.py)-->
-
 Automate evaluation of results using `evaluation` builded from `evaluation.cc` 
 Generate [result.json](results/results_50/results.json) file which summarize all evaluations
 
-Then generate plot for the results
+```commandline
+    ./evaluate nodes.dmp rank results.cut truth.cut > evaluation.txt
+```
+<dl>
+    <dt>nodes.dmp</dt>
+    <dd>file containing the filogenetic tree in text form </dd>
+    <dt>rank</dt>
+    <dd>minimum correct rank level required to a mark a kraken answer as correct </dd>
+    <dt>result.cut</dt>
+    <dd>file containing taxonomy id for each read</dd>
+    <dt>truth.cut</dt>
+    <dd>file containing the correct taxonomy id for each read </dd>
+     <dt>evaluation.txt</dt>
+    <dd>output file</dd>
+</dl>
 
-
+Then generate plot of the results using matplotlib.
 
 
 # SETUP

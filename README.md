@@ -61,3 +61,9 @@ read
 ## COVERAGE
 * coverage = 20x, number of reads calculated using (rough formula) for coverage $coverage=(reads_lenght*number_reads)/genome_size$
 * probability errors = have been used the default ones
+## Enterz
+[ncbi doc](https://www.ncbi.nlm.nih.gov/books/NBK179288/)
+Utility used for query automation on ncbi databases.
+
+There were some problems with taxid of reference file. Using this tool has been possible to fetch taxids for each contig and that has been used as true value. (! only in Saccharomyces cerevisiae there is sequence _NC_001136.1_ that has got taxid (_4932_) different from the other 16 (_559292_))
+

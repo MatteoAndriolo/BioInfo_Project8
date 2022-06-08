@@ -1,6 +1,26 @@
-ref/
-reads/
-old_reads/
-script/__*
-tools/
+# folders
+test
+reads
+results/06*
+script/DBKraken2
+script/Evaluation
+script/__pycache__
+script/nodes.dmp
+
+
+# data file extension
+*.fna
+*.fai
+*.fasta
+*.zip
+*.cut
+*.out
+*.rescd
+*.truth
+fasta/**/*.txt
+
+# hidden files
 .idea
+.temp
+.vscode
+

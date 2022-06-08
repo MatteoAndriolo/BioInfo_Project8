@@ -3,9 +3,8 @@ import json
 from multiprocessing import Pool, cpu_count
 from pathlib import Path
 
-
 # PATH_METADATA_REF_REDUCED, DIR_REF_REDUCED, DIR_READS_REDUCED, DIR_READS_MASON_REDUCED
-from _config import ROOT_DIR
+from _config import ROOT_DIR, RANGE_SHORT
 
 
 def count_reads(path) -> None:
@@ -83,10 +82,9 @@ def getNamesOf0FromBoth():
 
 
 def _mp(data):
-    from _config import DIR_FASTA_REF
     name = data[0]
     path = data[1]["path"]
-    out = open(ROOT_DIR / "fasta" /"ref" / f"{name}.fasta", "w")
+    out = open(ROOT_DIR / "fasta" / "ref" / f"{name}.fasta", "w")
     read = ""
     count = 0
     for line in open(path, "r").readlines():
@@ -99,14 +97,14 @@ def _mp(data):
         else:
             read += line
     if len(read):
-        out.write(read.replace("\n","") + "\n")
+        out.write(read.replace("\n", "") + "\n")
         read = ""
 
     out.close()
 
 
 def fasta_from_ref():
-    from _config import PATH_METADATA_REF, DIR_FASTA_REF
+    from _config import PATH_METADATA_REF
     mtdt: dict = json.load(open(PATH_METADATA_REF, "r"))
 
     with Pool(cpu_count()) as p:

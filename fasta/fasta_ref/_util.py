@@ -6,7 +6,7 @@ p_taxid = ".?(\d{1,})\)"
 p_initfasta = "S.*\t"
 
 
-def uncertainTaxidsFromKraken():
+def uncertainTaxidsFromKraken() -> dict:
     uncertainJson = {}
     for file in glob.glob("*.cut"):
         name = file[:-4]
@@ -27,10 +27,11 @@ def uncertainTaxidsFromKraken():
 
     #############################
     json.dump(uncertainJson, open("_uncertainTaxonIDs.json", "w"), indent=4)
+    return uncertainJson
 
 
-def taxid_finals():
-    forcednames = json.load(open("supporto/_forcedTaxID.json", "r"))
+def taxid_manual_finals() -> dict:
+    forcednames = json.load(open("supportData/_forcedTaxID.json", "r"))
     jsonData = {}
     for file in glob.glob("*.cut"):
         name = file[:-4]
@@ -42,7 +43,6 @@ def taxid_finals():
         elif name.replace(" ", "_") in forcednames:
             tid = forcednames[name]["taxId"]
         elif len(settaxid) == len(taxid):
-            # print("######################################################")
             tid = settaxid
         else:
             exit(5)
@@ -55,9 +55,10 @@ def taxid_finals():
 
     #############################
     json.dump(jsonData, open("_krakenTaxonID.json", "w"), indent=4)
-    print(len(jsonData))
+    return jsonData
 
 
 if __name__ == "__main__":
-    uncertainTaxidsFromKraken()
-    taxid_finals()
+    # uncertainTaxidsFromKraken()
+    # taxid_manual_finals()
+    pass

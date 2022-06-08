@@ -1,0 +1,252 @@
+{
+    "Amycolatopsis_mediterranei.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Amycolatopsis_mediterranei.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Amycolatopsis_mediterranei_Ref.fna",
+        "nreads": 34122
+    },
+    "Arthrobacter_arilaitensis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Arthrobacter_arilaitensis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Arthrobacter_arilaitensis_Ref.fna",
+        "nreads": 13060
+    },
+    "Azorhizobium_caulinodans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Azorhizobium_caulinodans.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Azorhizobium_caulinodans_Ref.fna",
+        "nreads": 17899
+    },
+    "Bacillus_pacificus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Bacillus_pacificus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bacillus_pacificus.fna",
+        "nreads": 18055
+    },
+    "Bdellovibrio_bacteriovorus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Bdellovibrio_bacteriovorus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bdellovibrio_bacteriovorus_Ref.fna",
+        "nreads": 12609
+    },
+    "Bifidobacterium_adolescentis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Bifidobacterium_adolescentis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bifidobacterium_adolescentis.fna",
+        "nreads": 6965
+    },
+    "Bifidobacterium_animalis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Bifidobacterium_animalis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bifidobacterium_animalis_Ref.fna",
+        "nreads": 6445
+    },
+    "Brachyspira_intermedia.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Brachyspira_intermedia.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Brachyspira_intermedia_Ref.fna",
+        "nreads": 11026
+    },
+    "Candidatus_Pelagibacter_ubique.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Candidatus_Pelagibacter_ubique.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Candidatus_Pelagibacter_ubique_Ref.fna",
+        "nreads": 4337
+    },
+    "Candida_albicans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Candida_albicans.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Candida_albicans.fna",
+        "nreads": 47608
+    },
+    "Clostridium_beijerinckii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Clostridium_beijerinckii.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_beijerinckii.fna",
+        "nreads": 20002
+    },
+    "Clostridium_tetani.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Clostridium_tetani.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_tetani_Ref.fna",
+        "nreads": 9577
+    },
+    "Clostridium_thermocellum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Clostridium_thermocellum.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_thermocellum_Ref.fna",
+        "nreads": 12811
+    },
+    "Corynebacterium_ulcerans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Corynebacterium_ulcerans.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Corynebacterium_ulcerans_Ref.fna",
+        "nreads": 8340
+    },
+    "Deinococcus_radiodurans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Deinococcus_radiodurans.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Deinococcus_radiodurans.fna",
+        "nreads": 10947
+    },
+    "Ehrlichia_ruminantium.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Ehrlichia_ruminantium.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Ehrlichia_ruminantium.fna",
+        "nreads": 5054
+    },
+    "Erysipelothrix_rhusiopathiae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Erysipelothrix_rhusiopathiae.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Erysipelothrix_rhusiopathiae_Ref.fna",
+        "nreads": 5821
+    },
+    "Faecalibacterium_prausnitzii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Faecalibacterium_prausnitzii.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Faecalibacterium_prausnitzii.fna",
+        "nreads": 10424
+    },
+    "Fervidicoccus_fontis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Fervidicoccus_fontis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Fervidicoccus_fontis.fna",
+        "nreads": 4397
+    },
+    "Francisella_novicida.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Francisella_novicida.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Francisella_novicida_Ref.fna",
+        "nreads": 6363
+    },
+    "Fusobacterium_nucleatum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Fusobacterium_nucleatum.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Fusobacterium_nucleatum.fna",
+        "nreads": 8138
+    },
+    "Haemophilus_parainfluenzae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Haemophilus_parainfluenzae.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Haemophilus_parainfluenzae.fna",
+        "nreads": 7082
+    },
+    "Haemophilus_somnus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Haemophilus_somnus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Haemophilus_somnus.fna",
+        "nreads": 7546
+    },
+    "Halobacterium.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Halobacterium.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Halobacterium_Ref.fna",
+        "nreads": 9102
+    },
+    "Lactobacillus_fermentum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Lactobacillus_fermentum.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lactobacillus_fermentum.fna",
+        "nreads": 6995
+    },
+    "Lactobacillus_gasseri.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Lactobacillus_gasseri.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lactobacillus_gasseri.fna",
+        "nreads": 6314
+    },
+    "Lawsonia_intracellularis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Lawsonia_intracellularis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lawsonia_intracellularis.fna",
+        "nreads": 5730
+    },
+    "Metallosphaera_cuprina.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Metallosphaera_cuprina.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Metallosphaera_cuprina.fna",
+        "nreads": 6134
+    },
+    "Methanobrevibacter_smithii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Methanobrevibacter_smithii.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Methanobrevibacter_smithii.fna",
+        "nreads": 6177
+    },
+    "Methanosarcina_barkeri.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Methanosarcina_barkeri.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Methanosarcina_barkeri.fna",
+        "nreads": 16357
+    },
+    "Micrococcus_luteus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Micrococcus_luteus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Micrococcus_luteus.fna",
+        "nreads": 8336
+    },
+    "Mycobacterium_bovis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Mycobacterium_bovis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Mycobacterium_bovis_Ref.fna",
+        "nreads": 13596
+    },
+    "Mycoplasma_gallisepticum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Mycoplasma_gallisepticum.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Mycoplasma_gallisepticum.fna",
+        "nreads": 3373
+    },
+    "Nitrosococcus_watsonii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Nitrosococcus_watsonii.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Nitrosococcus_watsonii_Ref.fna",
+        "nreads": 11244
+    },
+    "Paenibacillus_mucilaginosus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Paenibacillus_mucilaginosus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Paenibacillus_mucilaginosus_Ref.fna",
+        "nreads": 28589
+    },
+    "Photobacterium_profundum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Photobacterium_profundum.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Photobacterium_profundum_Ref.fna",
+        "nreads": 20621
+    },
+    "Porphyromonas_gingivalis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Porphyromonas_gingivalis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Porphyromonas_gingivalis.fna",
+        "nreads": 7811
+    },
+    "Prevotella_corporis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Prevotella_corporis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Prevotella_corporis.fna",
+        "nreads": 9334
+    },
+    "Rhodobacter_sphaeroides.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Rhodobacter_sphaeroides.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rhodobacter_sphaeroides.fna",
+        "nreads": 15343
+    },
+    "Rickettsia_prowazekii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Rickettsia_prowazekii.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rickettsia_prowazekii_Ref.fna",
+        "nreads": 3696
+    },
+    "Rickettsia_rickettsii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Rickettsia_rickettsii.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rickettsia_rickettsii.fna",
+        "nreads": 4227
+    },
+    "Roseburia_hominis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Roseburia_hominis.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Roseburia_hominis.fna",
+        "nreads": 11973
+    },
+    "Saccharomyces_cerevisiae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Saccharomyces_cerevisiae.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Saccharomyces_cerevisiae.fna",
+        "nreads": 40523
+    },
+    "Schaalia_odontolytica.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Schaalia_odontolytica.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Schaalia_odontolytica.fna",
+        "nreads": 7979
+    },
+    "Streptomyces_scabiei.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Streptomyces_scabiei.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Streptomyces_scabiei.fna",
+        "nreads": 33828
+    },
+    "Symbiobacterium_thermophilum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Symbiobacterium_thermophilum.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Symbiobacterium_thermophilum_Ref.fna",
+        "nreads": 11887
+    },
+    "Thermococcus_sibiricus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Thermococcus_sibiricus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Thermococcus_sibiricus_Ref.fna",
+        "nreads": 6152
+    },
+    "Variovorax_paradoxus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Variovorax_paradoxus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Variovorax_paradoxus.fna",
+        "nreads": 21833
+    },
+    "Veillonella_rogosae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Veillonella_rogosae.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Veillonella_rogosae.fna",
+        "nreads": 7290
+    },
+    "Xanthobacter_autotrophicus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/6000/Xanthobacter_autotrophicus.fastq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Xanthobacter_autotrophicus_Ref.fna",
+        "nreads": 16710
+    }
+}

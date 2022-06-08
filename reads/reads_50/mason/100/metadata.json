@@ -1,0 +1,302 @@
+{
+    "Amycolatopsis_mediterranei.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Amycolatopsis_mediterranei.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Amycolatopsis_mediterranei_Ref.fna",
+        "nreads": 549567,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Amycolatopsis_mediterranei_Ref.fna --num-fragments 207294 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Amycolatopsis_mediterranei.fq "
+    },
+    "Arthrobacter_arilaitensis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Arthrobacter_arilaitensis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Arthrobacter_arilaitensis_Ref.fna",
+        "nreads": 70020,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Arthrobacter_arilaitensis_Ref.fna --num-fragments 26448 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Arthrobacter_arilaitensis.fq "
+    },
+    "Azorhizobium_caulinodans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Azorhizobium_caulinodans.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Azorhizobium_caulinodans_Ref.fna",
+        "nreads": 287972,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Azorhizobium_caulinodans_Ref.fna --num-fragments 108739 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Azorhizobium_caulinodans.fq "
+    },
+    "Bacillus_pacificus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bacillus_pacificus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bacillus_pacificus.fna",
+        "nreads": 2777,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bacillus_pacificus.fna --num-fragments 1075 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bacillus_pacificus.fq "
+    },
+    "Bdellovibrio_bacteriovorus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bdellovibrio_bacteriovorus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bdellovibrio_bacteriovorus_Ref.fna",
+        "nreads": 202509,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bdellovibrio_bacteriovorus_Ref.fna --num-fragments 76606 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bdellovibrio_bacteriovorus.fq "
+    },
+    "Bifidobacterium_adolescentis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bifidobacterium_adolescentis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bifidobacterium_adolescentis.fna",
+        "nreads": 112053,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bifidobacterium_adolescentis.fna --num-fragments 42316 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bifidobacterium_adolescentis.fq "
+    },
+    "Bifidobacterium_animalis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bifidobacterium_animalis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bifidobacterium_animalis_Ref.fna",
+        "nreads": 103612,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Bifidobacterium_animalis_Ref.fna --num-fragments 39158 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Bifidobacterium_animalis.fq "
+    },
+    "Brachyspira_intermedia.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Brachyspira_intermedia.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Brachyspira_intermedia_Ref.fna",
+        "nreads": 88603,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Brachyspira_intermedia_Ref.fna --num-fragments 33494 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Brachyspira_intermedia.fq "
+    },
+    "Candidatus_Pelagibacter_ubique.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Candidatus_Pelagibacter_ubique.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Candidatus_Pelagibacter_ubique_Ref.fna",
+        "nreads": 13844,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Candidatus_Pelagibacter_ubique_Ref.fna --num-fragments 5270 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Candidatus_Pelagibacter_ubique.fq "
+    },
+    "Candida_albicans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Candida_albicans.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Candida_albicans.fna",
+        "nreads": 95696,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Candida_albicans.fna --num-fragments 36153 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Candida_albicans.fq "
+    },
+    "Clostridium_beijerinckii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Clostridium_beijerinckii.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_beijerinckii.fna",
+        "nreads": 322043,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_beijerinckii.fna --num-fragments 121514 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Clostridium_beijerinckii.fq "
+    },
+    "Clostridium_tetani.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Clostridium_tetani.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_tetani_Ref.fna",
+        "nreads": 76847,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_tetani_Ref.fna --num-fragments 29093 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Clostridium_tetani.fq "
+    },
+    "Clostridium_thermocellum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Clostridium_thermocellum.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_thermocellum_Ref.fna",
+        "nreads": 205753,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Clostridium_thermocellum_Ref.fna --num-fragments 77828 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Clostridium_thermocellum.fq "
+    },
+    "Corynebacterium_ulcerans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Corynebacterium_ulcerans.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Corynebacterium_ulcerans_Ref.fna",
+        "nreads": 134053,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Corynebacterium_ulcerans_Ref.fna --num-fragments 50668 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Corynebacterium_ulcerans.fq "
+    },
+    "Deinococcus_radiodurans.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Deinococcus_radiodurans.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Deinococcus_radiodurans.fna",
+        "nreads": 43811,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Deinococcus_radiodurans.fna --num-fragments 16626 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Deinococcus_radiodurans.fq "
+    },
+    "Ehrlichia_ruminantium.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Ehrlichia_ruminantium.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Ehrlichia_ruminantium.fna",
+        "nreads": 81160,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Ehrlichia_ruminantium.fna --num-fragments 30707 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Ehrlichia_ruminantium.fq "
+    },
+    "Erysipelothrix_rhusiopathiae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Erysipelothrix_rhusiopathiae.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Erysipelothrix_rhusiopathiae_Ref.fna",
+        "nreads": 23284,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Erysipelothrix_rhusiopathiae_Ref.fna --num-fragments 8842 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Erysipelothrix_rhusiopathiae.fq "
+    },
+    "Faecalibacterium_prausnitzii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Faecalibacterium_prausnitzii.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Faecalibacterium_prausnitzii.fna",
+        "nreads": 6597,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Faecalibacterium_prausnitzii.fna --num-fragments 2533 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Faecalibacterium_prausnitzii.fq "
+    },
+    "Fervidicoccus_fontis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Fervidicoccus_fontis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Fervidicoccus_fontis.fna",
+        "nreads": 70619,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Fervidicoccus_fontis.fna --num-fragments 26715 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Fervidicoccus_fontis.fq "
+    },
+    "Francisella_novicida.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Francisella_novicida.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Francisella_novicida_Ref.fna",
+        "nreads": 3151,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Francisella_novicida_Ref.fna --num-fragments 1208 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Francisella_novicida.fq "
+    },
+    "Fusobacterium_nucleatum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Fusobacterium_nucleatum.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Fusobacterium_nucleatum.fna",
+        "nreads": 65316,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Fusobacterium_nucleatum.fna --num-fragments 24722 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Fusobacterium_nucleatum.fq "
+    },
+    "Haemophilus_parainfluenzae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Haemophilus_parainfluenzae.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Haemophilus_parainfluenzae.fna",
+        "nreads": 11354,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Haemophilus_parainfluenzae.fna --num-fragments 4302 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Haemophilus_parainfluenzae.fq "
+    },
+    "Haemophilus_somnus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Haemophilus_somnus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Haemophilus_somnus.fna",
+        "nreads": 1988,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Haemophilus_somnus.fna --num-fragments 764 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Haemophilus_somnus.fq "
+    },
+    "Halobacterium.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Halobacterium.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Halobacterium_Ref.fna",
+        "nreads": 737,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Halobacterium_Ref.fna --num-fragments 264 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Halobacterium.fq "
+    },
+    "Lactobacillus_fermentum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Lactobacillus_fermentum.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lactobacillus_fermentum.fna",
+        "nreads": 112540,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lactobacillus_fermentum.fna --num-fragments 42499 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Lactobacillus_fermentum.fq "
+    },
+    "Lactobacillus_gasseri.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Lactobacillus_gasseri.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lactobacillus_gasseri.fna",
+        "nreads": 101435,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lactobacillus_gasseri.fna --num-fragments 38362 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Lactobacillus_gasseri.fq "
+    },
+    "Lawsonia_intracellularis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Lawsonia_intracellularis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lawsonia_intracellularis.fna",
+        "nreads": 22981,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Lawsonia_intracellularis.fna --num-fragments 8702 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Lawsonia_intracellularis.fq "
+    },
+    "Metallosphaera_cuprina.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Metallosphaera_cuprina.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Metallosphaera_cuprina.fna",
+        "nreads": 98530,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Metallosphaera_cuprina.fna --num-fragments 37268 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Metallosphaera_cuprina.fq "
+    },
+    "Methanobrevibacter_smithii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Methanobrevibacter_smithii.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Methanobrevibacter_smithii.fna",
+        "nreads": 99226,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Methanobrevibacter_smithii.fna --num-fragments 37527 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Methanobrevibacter_smithii.fq "
+    },
+    "Methanosarcina_barkeri.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Methanosarcina_barkeri.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Methanosarcina_barkeri.fna",
+        "nreads": 131499,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Methanosarcina_barkeri.fna --num-fragments 49686 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Methanosarcina_barkeri.fq "
+    },
+    "Micrococcus_luteus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Micrococcus_luteus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Micrococcus_luteus.fna",
+        "nreads": 134016,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Micrococcus_luteus.fna --num-fragments 50648 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Micrococcus_luteus.fq "
+    },
+    "Mycobacterium_bovis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Mycobacterium_bovis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Mycobacterium_bovis_Ref.fna",
+        "nreads": 0,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Mycobacterium_bovis_Ref.fna --num-fragments 75 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Mycobacterium_bovis.fq "
+    },
+    "Mycoplasma_gallisepticum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Mycoplasma_gallisepticum.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Mycoplasma_gallisepticum.fna",
+        "nreads": 54166,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Mycoplasma_gallisepticum.fna --num-fragments 20494 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Mycoplasma_gallisepticum.fq "
+    },
+    "Nitrosococcus_watsonii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Nitrosococcus_watsonii.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Nitrosococcus_watsonii_Ref.fna",
+        "nreads": 60111,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Nitrosococcus_watsonii_Ref.fna --num-fragments 22770 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Nitrosococcus_watsonii.fq "
+    },
+    "Paenibacillus_mucilaginosus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Paenibacillus_mucilaginosus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Paenibacillus_mucilaginosus_Ref.fna",
+        "nreads": 6015,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Paenibacillus_mucilaginosus_Ref.fna --num-fragments 2255 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Paenibacillus_mucilaginosus.fq "
+    },
+    "Photobacterium_profundum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Photobacterium_profundum.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Photobacterium_profundum_Ref.fna",
+        "nreads": 29786,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Photobacterium_profundum_Ref.fna --num-fragments 11388 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Photobacterium_profundum.fq "
+    },
+    "Porphyromonas_gingivalis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Porphyromonas_gingivalis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Porphyromonas_gingivalis.fna",
+        "nreads": 125651,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Porphyromonas_gingivalis.fna --num-fragments 47456 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Porphyromonas_gingivalis.fq "
+    },
+    "Prevotella_corporis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Prevotella_corporis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Prevotella_corporis.fna",
+        "nreads": 1772,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Prevotella_corporis.fna --num-fragments 675 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Prevotella_corporis.fq "
+    },
+    "Rhodobacter_sphaeroides.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Rhodobacter_sphaeroides.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rhodobacter_sphaeroides.fna",
+        "nreads": 35109,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rhodobacter_sphaeroides.fna --num-fragments 13315 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Rhodobacter_sphaeroides.fq "
+    },
+    "Rickettsia_prowazekii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Rickettsia_prowazekii.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rickettsia_prowazekii_Ref.fna",
+        "nreads": 59317,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rickettsia_prowazekii_Ref.fna --num-fragments 22459 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Rickettsia_prowazekii.fq "
+    },
+    "Rickettsia_rickettsii.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Rickettsia_rickettsii.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rickettsia_rickettsii.fna",
+        "nreads": 67876,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Rickettsia_rickettsii.fna --num-fragments 25682 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Rickettsia_rickettsii.fq "
+    },
+    "Roseburia_hominis.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Roseburia_hominis.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Roseburia_hominis.fna",
+        "nreads": 192370,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Roseburia_hominis.fna --num-fragments 72741 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Roseburia_hominis.fq "
+    },
+    "Saccharomyces_cerevisiae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Saccharomyces_cerevisiae.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Saccharomyces_cerevisiae.fna",
+        "nreads": 38088,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Saccharomyces_cerevisiae.fna --num-fragments 14481 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Saccharomyces_cerevisiae.fq "
+    },
+    "Schaalia_odontolytica.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Schaalia_odontolytica.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Schaalia_odontolytica.fna",
+        "nreads": 64036,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Schaalia_odontolytica.fna --num-fragments 24239 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Schaalia_odontolytica.fq "
+    },
+    "Streptomyces_scabiei.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Streptomyces_scabiei.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Streptomyces_scabiei.fna",
+        "nreads": 544832,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Streptomyces_scabiei.fna --num-fragments 205512 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Streptomyces_scabiei.fq "
+    },
+    "Symbiobacterium_thermophilum.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Symbiobacterium_thermophilum.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Symbiobacterium_thermophilum_Ref.fna",
+        "nreads": 190951,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Symbiobacterium_thermophilum_Ref.fna --num-fragments 72215 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Symbiobacterium_thermophilum.fq "
+    },
+    "Thermococcus_sibiricus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Thermococcus_sibiricus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Thermococcus_sibiricus_Ref.fna",
+        "nreads": 98824,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Thermococcus_sibiricus_Ref.fna --num-fragments 37378 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Thermococcus_sibiricus.fq "
+    },
+    "Variovorax_paradoxus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Variovorax_paradoxus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Variovorax_paradoxus.fna",
+        "nreads": 351493,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Variovorax_paradoxus.fna --num-fragments 132639 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Variovorax_paradoxus.fq "
+    },
+    "Veillonella_rogosae.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Veillonella_rogosae.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Veillonella_rogosae.fna",
+        "nreads": 7904,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Veillonella_rogosae.fna --num-fragments 2952 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Veillonella_rogosae.fq "
+    },
+    "Xanthobacter_autotrophicus.fastq": {
+        "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Xanthobacter_autotrophicus.fq",
+        "path_ref": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Xanthobacter_autotrophicus_Ref.fna",
+        "nreads": 6395,
+        "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/Xanthobacter_autotrophicus_Ref.fna --num-fragments 2417 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/100/Xanthobacter_autotrophicus.fq "
+    }
+}

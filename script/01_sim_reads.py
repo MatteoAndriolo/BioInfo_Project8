@@ -13,16 +13,19 @@ dir_reads_mason = DIR_READS_MASON
 
 def getNumberReads(coverage, read_lenghts, genome_size) -> int:
     '''coverage=read_length*number_reads/genome_size'''
-    return int(coverage * genome_size / read_lenghts)
+    return int(coverage * genome_size / (read_lenghts * 10))
 
 
 def count_reads(path: Path) -> int:
-    with open(path, "r") as f:
-        reads_metadata = f.read().count("@")  # simlord
-    return reads_metadata
+    try:
+        with open(path, "r") as f:
+            reads_metadata = f.read().count("@")  # simlord
+            return reads_metadata
+    except:
+        return 0
 
 
-def gen_read_simlord(data) -> list:
+def _gen_read_simlord(data) -> list:
     out = []
     name = data[0]
     metadata = data[1]
@@ -34,7 +37,7 @@ def gen_read_simlord(data) -> list:
     fref = metadata["path"]
     # execute SimLoRD
     for nreads in range(MIN_LONG, MAX_LONG, STEP_LONG):
-        fread = dir_reads_simlord / str(n) / name
+        fread = dir_reads_simlord / str(nreads) / name
         command = f'simlord ' \
                   f'--fixed-readlength {nreads}' \
                   f'--read-reference {fref}' \
@@ -44,32 +47,32 @@ def gen_read_simlord(data) -> list:
                   f'-ps {ps}' \
                   f'--no-sam {fread}'
         os.system(f'echo "{command}"')
-        os.system(command)
+        # os.system(command)
 
         out.append([name + '.fastq', {
             "path": str(fread) + ".fastq",
-            'path_ref': str(fref)
+            'path_ref': str(fref),
+            "command": command
         }])
     return out
 
 
-def generateTempFileWithMinimumFragmentLenghts(path: Path, nreads: int) -> Path:
-    path_temp = DIR_TEMP / (Path(path).name)
-    min_lines = nreads / 80
-    with open(path, "r") as file, open(path_temp, "w") as tempfile:
-        frag = []
-        for line in file:
-            if line[0] != ">":
-                frag.append(line)
-            elif len(frag) > min_lines:
-                tempfile.writelines(frag)
-                frag = []
-            else:
-                frag = []
-    return path_temp
+def simlordReads():
+    with open(path_metadata_ref, "r") as file_metadata:
+        metadata_ref = json.load(file_metadata)
+
+    with Pool(cpu_count() * 2) as p:
+        jsonDataSimlord = [{} for i in RANGE_LONG]
+        for par in p.map(_gen_read_simlord, metadata_ref.items()):
+            for i, pa in enumerate(par):
+                jsonDataSimlord[i][pa[0]] = pa[1]
+
+    for i, n in enumerate(RANGE_LONG):
+        with open(dir_reads_simlord / str(n) / "metadata.json", "w") as f:
+            json.dump(jsonDataSimlord[i], f, indent=4)
 
 
-def gen_read_mason(data) -> list:
+def _gen_read_mason(data) -> list:
     out = []
     name: str = data[0]
     metadata: dict = data[1]
@@ -82,36 +85,36 @@ def gen_read_mason(data) -> list:
         command = f'{MASON_SIMULATOR}' \
                   f' -seed 0 ' \
                   f'--num-threads {int(cpu_count() / 2)} ' \
-                  f'--num-fragments {c} ' \
+                  f'--fragment-mean-size {nreads * 3} ' \
                   f'--illumina-read-length {nreads} ' \
-                  f'-ir {generateTempFileWithMinimumFragmentLenghts(Path(fref), nreads)} ' \
+                  f'-ir {fref} ' \
+                  f'--num-fragments {c} ' \
                   f'-o {fread} '
 
         os.system(f'echo "{command}"')
-        os.system(command)
+        try:
+            os.system(command)
 
-        out.append([name + '.fastq', {
-            "path": str(fread),
-            'path_ref': str(fref),
-            "nreads": count_reads(str(fread))
-        }])
-
+            out.append([name + '.fastq', {
+                "path": str(fread),
+                'path_ref': str(fref),
+                "nreads": count_reads(fread),
+                "command": command
+            }])
+            if count_reads(fread) == 0:
+                os.remove(fread)
+        except:
+            try:
+                os.remove(fread)
+            except:
+                print("already removed")
+            out.append([name + '.fastq', {
+                "path": str(fread),
+                'path_ref': str(fref),
+                "nreads": 0,
+                "command": command
+            }])
     return out
-
-
-def simlordReads():
-    with open(path_metadata_ref) as file_metadata:
-        metadata_ref = json.load(file_metadata)
-
-    with Pool(cpu_count() * 2) as p:
-        jsonDataSimlord = [{} for i in RANGE_LONG]
-        for par in p.map(gen_read_simlord, metadata_ref.items()):
-            for i, pa in enumerate(par):
-                jsonDataSimlord[i][pa[0]] = pa[1]
-
-    for i, n in enumerate(RANGE_LONG):
-        with open(dir_reads_simlord / str(n) / "metadata.json", "w") as f:
-            json.dump(jsonDataSimlord[i], f, indent=4)
 
 
 def masonReads():
@@ -120,15 +123,17 @@ def masonReads():
 
     with Pool(cpu_count()) as p:
         jsonDataMason = [{} for i in RANGE_SHORT]
-        for par in p.map(gen_read_mason, metadata_ref.items()):
+        for par in p.map(_gen_read_mason, metadata_ref.items()):
             for i, pa in enumerate(par):
                 jsonDataMason[i][pa[0]] = pa[1]
+
     for i, n in enumerate(RANGE_SHORT):
         with open(dir_reads_mason / str(n) / "metadata.json", "w") as f:
+            print(i, pa)
             json.dump(jsonDataMason[i], f, indent=4)
 
 
 if __name__ == "__main__":
-    # simlordReads()
+    simlordReads()
     # masonReads()
     pass

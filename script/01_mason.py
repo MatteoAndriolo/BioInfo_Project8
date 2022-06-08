@@ -23,7 +23,7 @@ def count_reads(path: Path) -> int:
         return 0
 
 
-def gen_read_mason(data) -> list:
+def _gen_read_mason(data) -> list:
     out = []
     name: str = data[0]
     metadata: dict = data[1]

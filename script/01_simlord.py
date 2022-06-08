@@ -103,17 +103,6 @@ if __name__ == "__main__":
     with open(path_metadata_ref) as file_metadata:
         metadata_ref = json.load(file_metadata)
 
-    # # multitread read simiojn
-    # with Pool(cpu_count() * 2) as p:
-    #     jsonDataSimlord = [{} for i in RANGE_LONG]
-    #     for par in p.map(gen_read_simlord, metadata_ref.items()):
-    #         for i, pa in enumerate(par):
-    #             jsonDataSimlord[i][pa[0]] = pa[1]
-    #
-    # for i, n in enumerate(RANGE_LONG):
-    #     with open(dir_reads_simlord / str(n) / "metadata.json", "w") as f:
-    #         json.dump(jsonDataSimlord[i], f, indent=4)
-
     with Pool(cpu_count()) as p:
         jsonDataMason = [{} for i in RANGE_SHORT]
         for par in p.map(gen_read_mason, metadata_ref.items()):

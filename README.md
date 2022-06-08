@@ -52,23 +52,23 @@ Long reads Simulator
 * **KrakenOnRef**
     * Directory containing specific study on the accuracy of kraken given ??complete, correct, unmodified,
       genomes??.<br>
-      <d> Contains in particular:
+      <dl> Contains in particular:
           <dt><code>_krakenTaxonID.json</code></dt>
           <dd>Taxonomy id given by kraken (partially manually manipulated because of some conflicts)</dd>
           <dt><code>_uncertainTaxonID.json</code></dt>
           <dd>List of genomes file where different taxonId where attribuited for different contigs of the same genome</dd>
           <dt><code>results.json</code></dt>
           <dd>Results of evaluation results krakenID vs trueID</dd>
-      </d>
+      </dl>
 * **reads**
     * Directory containing _reads_ produced by [Simlord]() and [Mason]() simulators.
         * input genomes stored in ` ref\ ` folder <br>
-        * <d> Contains in particular:
+        * <dl> Contains in particular:
             <dt><code>metadata.json</code></dt>
             <dd>For each read length simulation is present a folder. In each folder there is a metadata.json file with contains paths, command used for the simulation and number of reads generated </dd>
             <dt><code>**/mason/missing.json</code></dt>
             <dd>Mason cannot generate reads for some genomes. This file is used to store list of cases for which this errors happens. Cause are at the moment unknown (various hypothesis have been made nut it's been impossible to fix this error in time)</dd>
-      </d>
+          </dl>
 * **ref**
     * Directory containing the reference genomes used for the simulation
 * **script**
@@ -140,7 +140,7 @@ Then generate plot for the results
 ```commandline
 simlord --fixed-readlength 1000--read-reference ref/ref_50/Amycolatopsis_mediterranei_Ref.fna --coverage 20 -pi 0.11 -pd 0.4 -ps 0.01 --no-sam reads/reads_50/simlord/1000/Amycolatopsis_mediterranei
 ```
-<d>
+<dl>
     <dt>--fixed-readlength LEN</dt>
     <dd>constant read length for all reads</dd>
     <dt>--read-reference PATH</dt>
@@ -156,22 +156,45 @@ simlord --fixed-readlength 1000--read-reference ref/ref_50/Amycolatopsis_mediter
     <dd>substitution prob. for one-pass reads [default=0.01][short -ps]</dd>
     <dt>--no-sam</dt>
     <dd>do not create SAM file</dd>
-</d>
+</dl>
 
+### Outputs
+Files in `.fastq` format
 
+## MASON
+```commandline
+tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir ref/ref_50/Amycolatopsis_mediterranei_Ref.fna --num-fragments 207294 -o reads/reads_50/mason/100/Amycolatopsis_mediterranei.fq
+```
+<dl>
+    <dt> --seed INTEGER</dt>
+    <dd> Seed to use for random number generator. Default: 0. </dd>
+    <dt> --num-threads NUM</dt>
+    <dt>-num-threads INTEGER</dt>
+    <dd>Number of threads to use. In range [1..inf]. Default: 1.</dd>
+    <dt>--fragment-mean-size INTEGER</dt>
+    <dd> Mean fragment size for normally distributed fragment size simulation. In range [1..inf]. Default: 300.</dd>
+    <dt>--illumina-read-length INTEGER</dt>
+    <dd> Read length for Illumina simulation. In range [1..inf]. Default: 100</dd>
+    <dt>-ir, --input-reference INPUT_FILE</dt>
+    <dd>Path to FASTA file to read the reference from. Valid filetypes are: .sam[.*], .raw[.*], .gbk[.*], .frn[.*], .fq[.*], .fna[.*], .ffn[.*], .fastq[.*], .fasta[.*], .faa[.*], .fa[.*], .embl[.*], and .bam, where * is any of the following extensions: gz and bgzf for transparent (de)compression.</dd>
+    <dt>-n, --num-fragments INTEGER</dt>
+    <dd>Number of reads/pairs to simulate. In range [1..inf].</dd>
+    <dt>-o, --out OUTPUT_FILE</dt>
+    <dd> Output of single-end/left end reads. Valid filetypes are: .sam[.*], .raw[.*], .frn[.*], .fq[.*], .fna[.*], .ffn[.*], .fastq[.*], .fasta[.*], .faa[.*], .fa[.*], and .bam, where * is any of the following extensions: gz and bgzf for transparent (de)compression </dd>
+</dl>
 
 ## COVERAGE
+The coverage value ha been set at _20x_.
+Simlord calculates autonomaly the number of reads to generate.
+On the contrary Mason have to receive explicitly the number reads. It has been calculate using indicativelly the (rough) formula for coverage $coverage=(reads_lenght*number_reads)/(genome_size)$
 
-* coverage = 20x, number of reads calculated using (rough formula) for coverage $coverage=(reads_lenght*number_reads)
-  /genome_size$
-* probability errors = have been used the default ones
-
-## Enterz
+## ENTERZ
 
 [ncbi doc](https://www.ncbi.nlm.nih.gov/books/NBK179288/)
 Utility used for query automation on ncbi databases.
 
-There were some problems with taxid of reference file. Using this tool has been possible to fetch taxids for each contig
-and that has been used as true value. (! only in Saccharomyces cerevisiae there is sequence _NC_001136.1_ that has got
-taxid (_4932_) different from the other 16 (_559292_))
+It has been used for fetching the correct taxonomy ID of the genomes.
+
+There were some problems with taxid of reference file. Taxonomi ID has been queryed searching for taxid of each contigs inside the genomes but happened that the same genomes contained contigs appartaining to different species.
+(only in Saccharomyces cerevisiae there is sequence _NC_001136.1_ that has got taxid (_4932_) different from the other 16 (_559292_))
 

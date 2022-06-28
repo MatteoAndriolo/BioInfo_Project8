@@ -1,5 +1,6 @@
 import glob
 import json
+import logging
 import os.path
 import re
 import shutil
@@ -10,10 +11,11 @@ from pathlib import Path
 # or
 # sh -c "$(wget -q ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh -O -)"
 # and then add directory to path
+
 sys.path.insert(1, os.path.dirname(shutil.which('xtract')))
 import edirect
 
-from _config import DIR_REF, PATH_METADATA_REF, PATH_TAXID_REF
+from config import DIR_REF, PATH_METADATA_REF, PATH_TAXID_REF
 
 ##### SETUP
 dir_ref = DIR_REF
@@ -27,6 +29,20 @@ pat_codename = "N\w_[\w\d]*.[\w\d]?"  # code for contigs
 
 
 #####
+
+
+def buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequences: dict, mean: int,
+                     minn: int, maxx: int):
+    return {
+        "path": path,
+        "taxid": taxid,
+        "organism": organism,
+        "nsequences": nsequences,
+        "sequences": sequences,
+        "mean": mean,
+        "min": minn,
+        "max": maxx
+    }
 
 
 def getSeqLength(text) -> (int, int, int):
@@ -61,40 +77,41 @@ def extract_ref_metadata() -> dict:
         out = out.split("\n")
 
         taxids = [a.split("\t")[0] for a in out]
-        organism = [a.split("\t")[1] for a in out]
-        title = [a.split("\t")[2] for a in out]
+        organisms = [a.split("\t")[1] for a in out]
+        titles = [a.split("\t")[2] for a in out]
 
-        print(taxids, organism, title)
+        logging.debug(f"{taxids}, {organisms}, {titles}")
 
         # sequences
         sequences = {i: [] for i in taxids}
-        for t, n1, n2 in zip(taxids, codename, title):
+        for t, n1, n2 in zip(taxids, codename, titles):
             sequences[t].append({n1: n2})
-        if len(sequences) == 1:
-            taxid = list(sequences.keys())[0]
-        else:
-            taxid = sorted(list(sequences.keys()), key=lambda x: taxids.count(x), reverse=True)[0]
 
-        # get statistics contigs
+        # if len(sequences) == 1:
+        #     taxid = list(sequences.keys())[0]
+        #     organism=organism[0]
+        #     title=title[0]
+        # else:
+        taxid: int = sorted(list(sequences.keys()), key=lambda x: taxids.count(x), reverse=True)[0]
+        organism: str = sorted(set(organisms), key=lambda x: organisms.count(x), reverse=True)[0]
+        title: str = sorted(set(titles), key=lambda x: titles.count(x), reverse=True)[0]
+
+        # get statistics contigso
         minn, maxx, meann = getSeqLength(open(f_path).readlines())
+        newpath = dir_ref / f"{taxid:0>7}-{organism.replace(' ', '_').replace('/', '').replace('.', '')}.fna"
+        # shutil.copy(f_path, newpath)
+        taxid_str = f"{taxid:0>7}"
 
-        # populate metadata
-        jsonData[name] = {
-            "path": f_path,
-            "taxId": taxid,
-            "n_sequences": len(description_lines),
-            "sequences": sequences,
-            "mean_length_sequence": meann,
-            "min": minn,
-            "max": maxx
-        }
+        jsonData[taxid_str] = buildRefMetadata(path=str(newpath), taxid=taxid, organism=organism,
+                                               nsequences=len(description_lines), sequences=sequences, mean=meann,
+                                               minn=minn, maxx=maxx)
 
     # with open(DIR_REF / "_newmetadata.json", "w") as f:
-    with open(PATH_METADATA_REF) as f:
+    with open(PATH_METADATA_REF, "w") as f:
         json.dump(jsonData, f, indent=4)
     # with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
-    with open(PATH_TAXID_REF) as f:
-        json.dump({k: {"taxId": v["taxId"]} for k, v in jsonData.items()}, f, indent=4)
+    with open(PATH_TAXID_REF, "w") as f:
+        json.dump({k: {"taxid": v["taxid"]} for k, v in jsonData.items()}, f, indent=4)
 
     return jsonData
 
@@ -103,10 +120,10 @@ def getTIDFromMetadata():
     with open(DIR_REF / "_metadata.json", "r") as f:
         mtdt = json.load(f)
     with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
-        json.dump({k: {"taxId": v["taxId"]} for k, v in mtdt.items()}, f, indent=4)
+        json.dump({k: {"taxid": v["taxid"]} for k, v in mtdt.items()}, f, indent=4)
 
 
 if __name__ == "__main__":
-    # extract_ref_metadata()
+    logging.basicConfig(filename="_ref_metadata.log", level=logging.DEBUG)
+    extract_ref_metadata()
     # getTIDFromMetadata()
-    pass

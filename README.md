@@ -1,3 +1,4 @@
+<!---
 <style>
 h1{
     font-weight: bold
@@ -19,8 +20,10 @@ href > code{
     font-weight: bold
 }
 </style>
-
 <title>Project 8 -- BioInformatics -- Andriolo M., Pisacreta G.</title>
+--->
+
+
 
 # Metagenomics classification: long reads vs short reads
 
@@ -129,9 +132,23 @@ At the same time is also generated file with the correct taxonomy ID of read_seq
 Automate evaluation of results using `evaluation` builded from `evaluation.cc` 
 Generate [result.json](results/results_50/results.json) file which summarize all evaluations
 
-Then generate plot for the results
+```commandline
+    ./evaluate nodes.dmp rank results.cut truth.cut > evaluation.txt
+```
+<dl>
+    <dt>nodes.dmp</dt>
+    <dd>file containing the filogenetic tree in text form </dd>
+    <dt>rank</dt>
+    <dd>minimum correct rank level required to a mark a kraken answer as correct </dd>
+    <dt>result.cut</dt>
+    <dd>file containing taxonomy id for each read</dd>
+    <dt>truth.cut</dt>
+    <dd>file containing the correct taxonomy id for each read </dd>
+     <dt>evaluation.txt</dt>
+    <dd>output file</dd>
+</dl>
 
-
+Then generate plot of the results using matplotlib.
 
 
 # SETUP
@@ -186,7 +203,7 @@ tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 30
 ## COVERAGE
 The coverage value ha been set at _20x_.
 Simlord calculates autonomaly the number of reads to generate.
-On the contrary Mason have to receive explicitly the number reads. It has been calculate using indicativelly the (rough) formula for coverage $coverage=(reads_lenght*number_reads)/(genome_size)$
+On the contrary Mason have to receive explicitly the number reads. It has been calculate using indicativelly the (rough) formula for coverage $coverage=(readsLenght*numberReads)/(genomeSize)$
 
 ## ENTERZ
 

@@ -1,3 +1,4 @@
+from config import DIR_REF, PATH_METADATA_REF, PATH_TAXID_REF
 import glob
 import json
 import logging
@@ -12,27 +13,36 @@ from pathlib import Path
 # sh -c "$(wget -q ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh -O -)"
 # and then add directory to path
 
-sys.path.insert(1, os.path.dirname(shutil.which('xtract')))
+sys.path.append(os.path.dirname(shutil.which("xtract")))
 import edirect
 
-from config import DIR_REF, PATH_METADATA_REF, PATH_TAXID_REF
 
-##### SETUP
+# SETUP
 dir_ref = DIR_REF
 path_metadata_ref = PATH_METADATA_REF
 path_taxid = PATH_TAXID_REF
 #####
 
-##### regex patterns
-pat_descriptionLines = re.compile(r'^\>(.*)', re.M)  # description lines pattern search in FASTA files
+# regex patterns
+pat_descriptionLines = re.compile(
+    r"^\>(.*)", re.M
+)  # description lines pattern search in FASTA files
 pat_codename = "N\w_[\w\d]*.[\w\d]?"  # code for contigs
 
 
 #####
 
 
-def buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequences: dict, mean: int,
-                     minn: int, maxx: int):
+def buildRefMetadata(
+    path: str,
+    taxid: int,
+    organism: str,
+    nsequences: int,
+    sequences: dict,
+    mean: int,
+    minn: int,
+    maxx: int,
+):
     return {
         "path": path,
         "taxid": taxid,
@@ -41,7 +51,7 @@ def buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequ
         "sequences": sequences,
         "mean": mean,
         "min": minn,
-        "max": maxx
+        "max": maxx,
     }
 
 
@@ -61,7 +71,9 @@ def getSeqLength(text) -> (int, int, int):
 
 def extract_ref_metadata() -> dict:
     jsonData = {}
-    for f_path in glob.glob(str(dir_ref / '*.fna')):  # for all .fna files in reference directory
+    for f_path in glob.glob(
+        str(dir_ref / "*.fna")
+    ):  # for all .fna files in reference directory
         name = Path(f_path).stem
         if name[-4:] == "_Ref":
             name = name[:-4]
@@ -92,19 +104,33 @@ def extract_ref_metadata() -> dict:
         #     organism=organism[0]
         #     title=title[0]
         # else:
-        taxid: int = sorted(list(sequences.keys()), key=lambda x: taxids.count(x), reverse=True)[0]
-        organism: str = sorted(set(organisms), key=lambda x: organisms.count(x), reverse=True)[0]
+        taxid: int = sorted(
+            list(sequences.keys()), key=lambda x: taxids.count(x), reverse=True
+        )[0]
+        organism: str = sorted(
+            set(organisms), key=lambda x: organisms.count(x), reverse=True
+        )[0]
         title: str = sorted(set(titles), key=lambda x: titles.count(x), reverse=True)[0]
 
         # get statistics contigso
         minn, maxx, meann = getSeqLength(open(f_path).readlines())
-        newpath = dir_ref / f"{taxid:0>7}-{organism.replace(' ', '_').replace('/', '').replace('.', '')}.fna"
+        newpath = (
+            dir_ref
+            / f"{taxid:0>7}-{organism.replace(' ', '_').replace('/', '').replace('.', '')}.fna"
+        )
         # shutil.copy(f_path, newpath)
         taxid_str = f"{taxid:0>7}"
 
-        jsonData[taxid_str] = buildRefMetadata(path=str(newpath), taxid=taxid, organism=organism,
-                                               nsequences=len(description_lines), sequences=sequences, mean=meann,
-                                               minn=minn, maxx=maxx)
+        jsonData[taxid_str] = buildRefMetadata(
+            path=str(newpath),
+            taxid=taxid,
+            organism=organism,
+            nsequences=len(description_lines),
+            sequences=sequences,
+            mean=meann,
+            minn=minn,
+            maxx=maxx,
+        )
 
     # with open(DIR_REF / "_newmetadata.json", "w") as f:
     with open(PATH_METADATA_REF, "w") as f:

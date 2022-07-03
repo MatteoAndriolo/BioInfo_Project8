@@ -3,7 +3,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000280-Xanthobacter_autotrophicus.fna",
         "taxid": "280",
         "organism": "Xanthobacter autotrophicus",
-        "nsequences": 42,
+        "n_sequences": 42,
         "sequences": {
             "280": [
                 {
@@ -142,7 +142,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000731-Histophilus_somni.fna",
         "taxid": "731",
         "organism": "Histophilus somni",
-        "nsequences": 60,
+        "n_sequences": 60,
         "sequences": {
             "731": [
                 {
@@ -335,7 +335,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0061624-Paenibacillus_mucilaginosus.fna",
         "taxid": "61624",
         "organism": "Paenibacillus mucilaginosus",
-        "nsequences": 77,
+        "n_sequences": 77,
         "sequences": {
             "61624": [
                 {
@@ -579,7 +579,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0105559-Nitrosococcus_watsonii_C-113.fna",
         "taxid": "105559",
         "organism": "Nitrosococcus watsonii C-113",
-        "nsequences": 3,
+        "n_sequences": 3,
         "sequences": {
             "105559": [
                 {
@@ -601,7 +601,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0203119-Acetivibrio_thermocellus_ATCC_27405.fna",
         "taxid": "203119",
         "organism": "Acetivibrio thermocellus ATCC 27405",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "203119": [
                 {
@@ -617,7 +617,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0212717-Clostridium_tetani_E88.fna",
         "taxid": "212717",
         "organism": "Clostridium tetani E88",
-        "nsequences": 2,
+        "n_sequences": 2,
         "sequences": {
             "212717": [
                 {
@@ -636,7 +636,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0237561-Candida_albicans_SC5314.fna",
         "taxid": "237561",
         "organism": "Candida albicans SC5314",
-        "nsequences": 8,
+        "n_sequences": 8,
         "sequences": {
             "237561": [
                 {
@@ -673,7 +673,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0242619-Porphyromonas_gingivalis_W83.fna",
         "taxid": "242619",
         "organism": "Porphyromonas gingivalis W83",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "242619": [
                 {
@@ -689,7 +689,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0243230-Deinococcus_radiodurans_R1.fna",
         "taxid": "243230",
         "organism": "Deinococcus radiodurans R1",
-        "nsequences": 4,
+        "n_sequences": 4,
         "sequences": {
             "243230": [
                 {
@@ -714,7 +714,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0254945-Ehrlichia_ruminantium_str_Welgevonden.fna",
         "taxid": "254945",
         "organism": "Ehrlichia ruminantium str. Welgevonden",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "254945": [
                 {
@@ -730,7 +730,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0264462-Bdellovibrio_bacteriovorus_HD100.fna",
         "taxid": "264462",
         "organism": "Bdellovibrio bacteriovorus HD100",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "264462": [
                 {
@@ -746,7 +746,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0272943-Cereibacter_sphaeroides_241.fna",
         "taxid": "272943",
         "organism": "Cereibacter sphaeroides 2.4.1",
-        "nsequences": 7,
+        "n_sequences": 7,
         "sequences": {
             "272943": [
                 {
@@ -780,7 +780,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0290402-Clostridium_beijerinckii_NCIMB_8052.fna",
         "taxid": "290402",
         "organism": "Clostridium beijerinckii NCIMB 8052",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "290402": [
                 {
@@ -796,7 +796,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0292459-Symbiobacterium_thermophilum_IAM_14863.fna",
         "taxid": "292459",
         "organism": "Symbiobacterium thermophilum IAM 14863",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "292459": [
                 {
@@ -812,7 +812,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0314280-Photobacterium_profundum_3TCK.fna",
         "taxid": "314280",
         "organism": "Photobacterium profundum 3TCK",
-        "nsequences": 11,
+        "n_sequences": 11,
         "sequences": {
             "314280": [
                 {
@@ -858,7 +858,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0324831-Lactobacillus_gasseri_ATCC_33323_=_JCM_1131.fna",
         "taxid": "324831",
         "organism": "Lactobacillus gasseri ATCC 33323 = JCM 1131",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "324831": [
                 {
@@ -874,7 +874,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0334390-Limosilactobacillus_fermentum_IFO_3956.fna",
         "taxid": "334390",
         "organism": "Limosilactobacillus fermentum IFO 3956",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "334390": [
                 {
@@ -890,7 +890,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0363253-Lawsonia_intracellularis_PHEMN1-00.fna",
         "taxid": "363253",
         "organism": "Lawsonia intracellularis PHE/MN1-00",
-        "nsequences": 4,
+        "n_sequences": 4,
         "sequences": {
             "363253": [
                 {
@@ -915,7 +915,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0367928-Bifidobacterium_adolescentis_ATCC_15703.fna",
         "taxid": "367928",
         "organism": "Bifidobacterium adolescentis ATCC 15703",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "367928": [
                 {
@@ -931,7 +931,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0393480-Fusobacterium_nucleatum_subsp_polymorphum_ATCC_10953.fna",
         "taxid": "393480",
         "organism": "Fusobacterium nucleatum subsp. polymorphum ATCC 10953",
-        "nsequences": 2,
+        "n_sequences": 2,
         "sequences": {
             "393480": [
                 {
@@ -950,7 +950,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411466-Schaalia_odontolytica_ATCC_17982.fna",
         "taxid": "411466",
         "organism": "Schaalia odontolytica ATCC 17982",
-        "nsequences": 2,
+        "n_sequences": 2,
         "sequences": {
             "411466": [
                 {
@@ -969,7 +969,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411485-Faecalibacterium_prausnitzii_M212.fna",
         "taxid": "411485",
         "organism": "Faecalibacterium prausnitzii M21/2",
-        "nsequences": 25,
+        "n_sequences": 25,
         "sequences": {
             "411485": [
                 {
@@ -1057,7 +1057,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0420247-Methanobrevibacter_smithii_ATCC_35061.fna",
         "taxid": "420247",
         "organism": "Methanobrevibacter smithii ATCC 35061",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "420247": [
                 {
@@ -1073,7 +1073,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0438753-Azorhizobium_caulinodans_ORS_571.fna",
         "taxid": "438753",
         "organism": "Azorhizobium caulinodans ORS 571",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "438753": [
                 {
@@ -1089,7 +1089,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0442563-Bifidobacterium_animalis_subsp_lactis_AD011.fna",
         "taxid": "442563",
         "organism": "Bifidobacterium animalis subsp. lactis AD011",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "442563": [
                 {
@@ -1105,7 +1105,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0452659-Rickettsia_rickettsii_str_Iowa.fna",
         "taxid": "452659",
         "organism": "Rickettsia rickettsii str. Iowa",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "452659": [
                 {
@@ -1121,7 +1121,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0465515-Micrococcus_luteus_NCTC_2665.fna",
         "taxid": "465515",
         "organism": "Micrococcus luteus NCTC 2665",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "465515": [
                 {
@@ -1137,7 +1137,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0525280-Erysipelothrix_rhusiopathiae_ATCC_19414.fna",
         "taxid": "525280",
         "organism": "Erysipelothrix rhusiopathiae ATCC 19414",
-        "nsequences": 4,
+        "n_sequences": 4,
         "sequences": {
             "525280": [
                 {
@@ -1162,7 +1162,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0559292-Saccharomyces_cerevisiae_S288C.fna",
         "taxid": "559292",
         "organism": "Saccharomyces cerevisiae S288C",
-        "nsequences": 17,
+        "n_sequences": 17,
         "sequences": {
             "559292": [
                 {
@@ -1228,7 +1228,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0585394-Roseburia_hominis_A2-183.fna",
         "taxid": "585394",
         "organism": "Roseburia hominis A2-183",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "585394": [
                 {
@@ -1244,7 +1244,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0595537-Variovorax_paradoxus_EPS.fna",
         "taxid": "595537",
         "organism": "Variovorax paradoxus EPS",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "595537": [
                 {
@@ -1260,7 +1260,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0604354-Thermococcus_sibiricus_MM_739.fna",
         "taxid": "604354",
         "organism": "Thermococcus sibiricus MM 739",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "604354": [
                 {
@@ -1276,7 +1276,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0680198-Streptomyces_scabiei_8722.fna",
         "taxid": "680198",
         "organism": "Streptomyces scabiei 87.22",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "680198": [
                 {
@@ -1292,7 +1292,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0710128-Mycoplasma_gallisepticum_str_R(high).fna",
         "taxid": "710128",
         "organism": "Mycoplasma gallisepticum str. R(high)",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "710128": [
                 {
@@ -1308,7 +1308,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0749927-Amycolatopsis_mediterranei_U32.fna",
         "taxid": "749927",
         "organism": "Amycolatopsis mediterranei U32",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "749927": [
                 {
@@ -1324,7 +1324,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0861360-Glutamicibacter_arilaitensis_Re117.fna",
         "taxid": "861360",
         "organism": "Glutamicibacter arilaitensis Re117",
-        "nsequences": 3,
+        "n_sequences": 3,
         "sequences": {
             "861360": [
                 {
@@ -1346,7 +1346,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0888828-Haemophilus_parainfluenzae_ATCC_33392.fna",
         "taxid": "888828",
         "organism": "Haemophilus parainfluenzae ATCC 33392",
-        "nsequences": 10,
+        "n_sequences": 10,
         "sequences": {
             "888828": [
                 {
@@ -1389,7 +1389,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0945711-Corynebacterium_ulcerans_809.fna",
         "taxid": "945711",
         "organism": "Corynebacterium ulcerans 809",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "945711": [
                 {
@@ -1405,7 +1405,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1006006-Metallosphaera_cuprina_Ar-4.fna",
         "taxid": "1006006",
         "organism": "Metallosphaera cuprina Ar-4",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "1006006": [
                 {
@@ -1421,7 +1421,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1045858-Brachyspira_intermedia_PWSA.fna",
         "taxid": "1045858",
         "organism": "Brachyspira intermedia PWS/A",
-        "nsequences": 2,
+        "n_sequences": 2,
         "sequences": {
             "1045858": [
                 {
@@ -1440,7 +1440,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1088879-Francisella_tularensis_subsp_novicida_FSC159.fna",
         "taxid": "1088879",
         "organism": "Francisella tularensis subsp. novicida FSC159",
-        "nsequences": 32,
+        "n_sequences": 32,
         "sequences": {
             "1088879": [
                 {
@@ -1549,7 +1549,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1105097-Rickettsia_prowazekii_str_Dachau.fna",
         "taxid": "1105097",
         "organism": "Rickettsia prowazekii str. Dachau",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "1105097": [
                 {
@@ -1565,7 +1565,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1122981-Prevotella_corporis_DSM_18810_=_JCM_8529.fna",
         "taxid": "1122981",
         "organism": "Prevotella corporis DSM 18810 = JCM 8529",
-        "nsequences": 84,
+        "n_sequences": 84,
         "sequences": {
             "1122981": [
                 {
@@ -1830,7 +1830,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1163730-Fervidicoccus_fontis_Kam940.fna",
         "taxid": "1163730",
         "organism": "Fervidicoccus fontis Kam940",
-        "nsequences": 1,
+        "n_sequences": 1,
         "sequences": {
             "1163730": [
                 {
@@ -1846,7 +1846,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1195469-Mycobacterium_tuberculosis_variant_bovis_BCG_str_Sweden.fna",
         "taxid": "1195469",
         "organism": "Mycobacterium tuberculosis variant bovis BCG str. Sweden",
-        "nsequences": 1092,
+        "n_sequences": 1092,
         "sequences": {
             "1195469": [
                 {
@@ -5135,7 +5135,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1265757-Candidatus_Pelagibacter_ubique_HTCC1013.fna",
         "taxid": "1265757",
         "organism": "Candidatus Pelagibacter ubique HTCC1013",
-        "nsequences": 5,
+        "n_sequences": 5,
         "sequences": {
             "1265757": [
                 {
@@ -5163,7 +5163,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1298595-Veillonella_rogosae_JCM_15642.fna",
         "taxid": "1298595",
         "organism": "Veillonella rogosae JCM 15642",
-        "nsequences": 15,
+        "n_sequences": 15,
         "sequences": {
             "1298595": [
                 {
@@ -5221,7 +5221,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1434109-Methanosarcina_barkeri_str_Wiesmoor.fna",
         "taxid": "1434109",
         "organism": "Methanosarcina barkeri str. Wiesmoor",
-        "nsequences": 2,
+        "n_sequences": 2,
         "sequences": {
             "1434109": [
                 {
@@ -5240,7 +5240,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2026187-Bacillus_pacificus.fna",
         "taxid": "2026187",
         "organism": "Bacillus pacificus",
-        "nsequences": 102,
+        "n_sequences": 102,
         "sequences": {
             "2026187": [
                 {
@@ -5559,7 +5559,7 @@
         "path": "/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2668074-Halobacterium_sp_CBA1126.fna",
         "taxid": "2668074",
         "organism": "Halobacterium sp. CBA1126",
-        "nsequences": 209,
+        "n_sequences": 209,
         "sequences": {
             "2668074": [
                 {

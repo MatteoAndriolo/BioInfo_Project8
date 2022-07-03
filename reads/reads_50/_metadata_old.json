@@ -1,0 +1,1087 @@
+{
+    "0000280": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000280-Xanthobacter_autotrophicus.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0000280",
+            "nreads": 1002657,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0000280.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000280-Xanthobacter_autotrophicus.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0000280\"",
+            "nreads": 501328,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0000280.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000280-Xanthobacter_autotrophicus.fna' --num-fragments 50760 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0000280.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0000280.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000280-Xanthobacter_autotrophicus.fna' --num-fragments 33840 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0000280.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0000280.fq"
+        },
+        "010000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 30000 --illumina-read-length 10000 -ir /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000280-Xanthobacter_autotrophicus.fna --num-fragments 10152 -o /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/010000/0000280.fq ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/010000/0000280.fq"
+        }
+    },
+    "0000731": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000731-Histophilus_somni.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0000731",
+            "nreads": 452782,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0000731.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000731-Histophilus_somni.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0000731\"",
+            "nreads": 226391,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0000731.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000731-Histophilus_somni.fna' --num-fragments 22923 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0000731.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0000731.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0000731-Histophilus_somni.fna' --num-fragments 15282 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0000731.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0000731.fq"
+        }
+    },
+    "0061624": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0061624-Paenibacillus_mucilaginosus.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0061624",
+            "nreads": 1715395,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0061624.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0061624-Paenibacillus_mucilaginosus.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0061624",
+            "nreads": 857697,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0061624.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0061624-Paenibacillus_mucilaginosus.fna' --num-fragments 86842 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0061624.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0061624.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0061624-Paenibacillus_mucilaginosus.fna' --num-fragments 57895 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0061624.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0061624.fq"
+        }
+    },
+    "0105559": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0105559-Nitrosococcus_watsonii_C-113.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0105559",
+            "nreads": 674657,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0105559.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0105559-Nitrosococcus_watsonii_C-113.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0105559",
+            "nreads": 337328,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0105559.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0105559-Nitrosococcus_watsonii_C-113.fna\" --num-fragments 34155 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0105559.fq\" ",
+            "nreads": 34155,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0105559.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0105559-Nitrosococcus_watsonii_C-113.fna\" --num-fragments 22770 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0105559.fq\" ",
+            "nreads": 22770,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0105559.fq"
+        }
+    },
+    "0203119": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0203119-Acetivibrio_thermocellus_ATCC_27405.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0203119",
+            "nreads": 768660,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0203119.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0203119-Acetivibrio_thermocellus_ATCC_27405.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0203119\"",
+            "nreads": 384330,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0203119.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0203119-Acetivibrio_thermocellus_ATCC_27405.fna\" --num-fragments 38914 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0203119.fq\" ",
+            "nreads": 38914,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0203119.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0203119-Acetivibrio_thermocellus_ATCC_27405.fna\" --num-fragments 25942 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0203119.fq\" ",
+            "nreads": 25942,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0203119.fq"
+        }
+    },
+    "0212717": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0212717-Clostridium_tetani_E88.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0212717",
+            "nreads": 574666,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0212717.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0212717-Clostridium_tetani_E88.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0212717\"",
+            "nreads": 287333,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0212717.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0212717-Clostridium_tetani_E88.fna\" --num-fragments 29093 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0212717.fq\" ",
+            "nreads": 29093,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0212717.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0212717-Clostridium_tetani_E88.fna\" --num-fragments 19395 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0212717.fq\" ",
+            "nreads": 19395,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0212717.fq"
+        }
+    },
+    "0237561": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0237561-Candida_albicans_SC5314.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0237561",
+            "nreads": 2856533,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0237561.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0237561-Candida_albicans_SC5314.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0237561",
+            "nreads": 1428266,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0237561.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0237561-Candida_albicans_SC5314.fna' --num-fragments 144612 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0237561.fq' ",
+            "nreads": 144612,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0237561.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0237561-Candida_albicans_SC5314.fna\" --num-fragments 96408 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0237561.fq\" ",
+            "nreads": 96408,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0237561.fq"
+        }
+    },
+    "0242619": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0242619-Porphyromonas_gingivalis_W83.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0242619",
+            "nreads": 468695,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0242619.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0242619-Porphyromonas_gingivalis_W83.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0242619",
+            "nreads": 234347,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0242619.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0242619-Porphyromonas_gingivalis_W83.fna\" --num-fragments 23728 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0242619.fq\" ",
+            "nreads": 23728,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0242619.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0242619-Porphyromonas_gingivalis_W83.fna\" --num-fragments 15818 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0242619.fq\" ",
+            "nreads": 15818,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0242619.fq"
+        }
+    },
+    "0243230": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0243230-Deinococcus_radiodurans_R1.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0243230",
+            "nreads": 656831,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0243230.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0243230-Deinococcus_radiodurans_R1.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0243230\"",
+            "nreads": 328415,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0243230.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0243230-Deinococcus_radiodurans_R1.fna\" --num-fragments 33252 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0243230.fq\" ",
+            "nreads": 33252,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0243230.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0243230-Deinococcus_radiodurans_R1.fna\" --num-fragments 22168 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0243230.fq\" ",
+            "nreads": 22168,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0243230.fq"
+        }
+    },
+    "0254945": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0254945-Ehrlichia_ruminantium_str_Welgevonden.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0254945",
+            "nreads": 303271,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0254945.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0254945-Ehrlichia_ruminantium_str_Welgevonden.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0254945\"",
+            "nreads": 151635,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0254945.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0254945-Ehrlichia_ruminantium_str_Welgevonden.fna\" --num-fragments 15353 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0254945.fq\" ",
+            "nreads": 15353,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0254945.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0254945-Ehrlichia_ruminantium_str_Welgevonden.fna\" --num-fragments 10235 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0254945.fq\" ",
+            "nreads": 10235,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0254945.fq"
+        }
+    },
+    "0264462": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0264462-Bdellovibrio_bacteriovorus_HD100.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0264462",
+            "nreads": 756590,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0264462.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0264462-Bdellovibrio_bacteriovorus_HD100.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0264462\"",
+            "nreads": 378295,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0264462.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0264462-Bdellovibrio_bacteriovorus_HD100.fna\" --num-fragments 38303 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0264462.fq\" ",
+            "nreads": 38303,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0264462.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0264462-Bdellovibrio_bacteriovorus_HD100.fna\" --num-fragments 25535 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0264462.fq\" ",
+            "nreads": 25535,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0264462.fq"
+        }
+    },
+    "0272943": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0272943-Cereibacter_sphaeroides_241.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0272943",
+            "nreads": 920595,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0272943.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0272943-Cereibacter_sphaeroides_241.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0272943",
+            "nreads": 460297,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0272943.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0272943-Cereibacter_sphaeroides_241.fna' --num-fragments 46605 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0272943.fq' ",
+            "nreads": 46605,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0272943.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0272943-Cereibacter_sphaeroides_241.fna\" --num-fragments 31070 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0272943.fq\" ",
+            "nreads": 31070,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0272943.fq"
+        }
+    },
+    "0290402": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0290402-Clostridium_beijerinckii_NCIMB_8052.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0290402",
+            "nreads": 1200126,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0290402.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0290402-Clostridium_beijerinckii_NCIMB_8052.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0290402\"",
+            "nreads": 600063,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0290402.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0290402-Clostridium_beijerinckii_NCIMB_8052.fna' --num-fragments 60757 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0290402.fq' ",
+            "nreads": 60757,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0290402.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0290402-Clostridium_beijerinckii_NCIMB_8052.fna' --num-fragments 40504 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0290402.fq' ",
+            "nreads": 40504,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0290402.fq"
+        }
+    },
+    "0292459": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0292459-Symbiobacterium_thermophilum_IAM_14863.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0292459",
+            "nreads": 713227,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0292459.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0292459-Symbiobacterium_thermophilum_IAM_14863.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0292459",
+            "nreads": 356613,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0292459.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0292459-Symbiobacterium_thermophilum_IAM_14863.fna\" --num-fragments 36107 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0292459.fq\" ",
+            "nreads": 36107,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0292459.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0292459-Symbiobacterium_thermophilum_IAM_14863.fna\" --num-fragments 24071 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0292459.fq\" ",
+            "nreads": 24071,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0292459.fq"
+        }
+    },
+    "0314280": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0314280-Photobacterium_profundum_3TCK.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0314280",
+            "nreads": 1237265,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0314280.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0314280-Photobacterium_profundum_3TCK.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0314280\"",
+            "nreads": 618632,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0314280.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0314280-Photobacterium_profundum_3TCK.fna' --num-fragments 62637 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0314280.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0314280.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0314280-Photobacterium_profundum_3TCK.fna' --num-fragments 41758 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0314280.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0314280.fq"
+        }
+    },
+    "0324831": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0324831-Lactobacillus_gasseri_ATCC_33323_=_JCM_1131.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0324831",
+            "nreads": 378872,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0324831.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0324831-Lactobacillus_gasseri_ATCC_33323_=_JCM_1131.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0324831\"",
+            "nreads": 189436,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0324831.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0324831-Lactobacillus_gasseri_ATCC_33323_=_JCM_1131.fna\" --num-fragments 19181 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0324831.fq\" ",
+            "nreads": 19181,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0324831.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0324831-Lactobacillus_gasseri_ATCC_33323_=_JCM_1131.fna\" --num-fragments 12787 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0324831.fq\" ",
+            "nreads": 12787,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0324831.fq"
+        }
+    },
+    "0334390": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0334390-Limosilactobacillus_fermentum_IFO_3956.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0334390",
+            "nreads": 419737,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0334390.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0334390-Limosilactobacillus_fermentum_IFO_3956.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0334390\"",
+            "nreads": 209868,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0334390.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0334390-Limosilactobacillus_fermentum_IFO_3956.fna\" --num-fragments 21249 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0334390.fq\" ",
+            "nreads": 21249,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0334390.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0334390-Limosilactobacillus_fermentum_IFO_3956.fna\" --num-fragments 14166 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0334390.fq\" ",
+            "nreads": 14166,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0334390.fq"
+        }
+    },
+    "0363253": {
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0363253-Lawsonia_intracellularis_PHEMN1-00.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0363253\"",
+            "nreads": 171901,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0363253.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0363253-Lawsonia_intracellularis_PHEMN1-00.fna\" --num-fragments 17405 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0363253.fq\" ",
+            "nreads": 17405,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0363253.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0363253-Lawsonia_intracellularis_PHEMN1-00.fna\" --num-fragments 11603 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0363253.fq\" ",
+            "nreads": 11603,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0363253.fq"
+        }
+    },
+    "0367928": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0367928-Bifidobacterium_adolescentis_ATCC_15703.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0367928",
+            "nreads": 417929,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0367928.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0367928-Bifidobacterium_adolescentis_ATCC_15703.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0367928\"",
+            "nreads": 208964,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0367928.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0367928-Bifidobacterium_adolescentis_ATCC_15703.fna\" --num-fragments 21158 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0367928.fq\" ",
+            "nreads": 21158,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0367928.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0367928-Bifidobacterium_adolescentis_ATCC_15703.fna\" --num-fragments 14105 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0367928.fq\" ",
+            "nreads": 14105,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0367928.fq"
+        }
+    },
+    "0393480": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0393480-Fusobacterium_nucleatum_subsp_polymorphum_ATCC_10953.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0393480",
+            "nreads": 488326,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0393480.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0393480-Fusobacterium_nucleatum_subsp_polymorphum_ATCC_10953.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0393480\"",
+            "nreads": 244163,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0393480.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0393480-Fusobacterium_nucleatum_subsp_polymorphum_ATCC_10953.fna\" --num-fragments 24722 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0393480.fq\" ",
+            "nreads": 24722,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0393480.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0393480-Fusobacterium_nucleatum_subsp_polymorphum_ATCC_10953.fna\" --num-fragments 16481 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0393480.fq\" ",
+            "nreads": 16481,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0393480.fq"
+        }
+    },
+    "0411466": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411466-Schaalia_odontolytica_ATCC_17982.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0411466",
+            "nreads": 478791,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0411466.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411466-Schaalia_odontolytica_ATCC_17982.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0411466\"",
+            "nreads": 239395,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0411466.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411466-Schaalia_odontolytica_ATCC_17982.fna\" --num-fragments 24239 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0411466.fq\" ",
+            "nreads": 24239,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0411466.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411466-Schaalia_odontolytica_ATCC_17982.fna\" --num-fragments 16159 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0411466.fq\" ",
+            "nreads": 16159,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0411466.fq"
+        }
+    },
+    "0411485": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411485-Faecalibacterium_prausnitzii_M212.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0411485",
+            "nreads": 625476,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0411485.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411485-Faecalibacterium_prausnitzii_M212.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0411485\"",
+            "nreads": 312738,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0411485.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411485-Faecalibacterium_prausnitzii_M212.fna' --num-fragments 31665 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0411485.fq' ",
+            "nreads": 31665,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0411485.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0411485-Faecalibacterium_prausnitzii_M212.fna\" --num-fragments 21110 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0411485.fq\" ",
+            "nreads": 21110,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0411485.fq"
+        }
+    },
+    "0420247": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0420247-Methanobrevibacter_smithii_ATCC_35061.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0420247",
+            "nreads": 370632,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0420247.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0420247-Methanobrevibacter_smithii_ATCC_35061.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0420247\"",
+            "nreads": 185316,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0420247.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0420247-Methanobrevibacter_smithii_ATCC_35061.fna\" --num-fragments 18763 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0420247.fq\" ",
+            "nreads": 18763,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0420247.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0420247-Methanobrevibacter_smithii_ATCC_35061.fna\" --num-fragments 12509 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0420247.fq\" ",
+            "nreads": 12509,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0420247.fq"
+        }
+    },
+    "0438753": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0438753-Azorhizobium_caulinodans_ORS_571.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0438753",
+            "nreads": 1073954,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0438753.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0438753-Azorhizobium_caulinodans_ORS_571.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0438753\"",
+            "nreads": 536977,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0438753.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0438753-Azorhizobium_caulinodans_ORS_571.fna' --num-fragments 54369 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0438753.fq' ",
+            "nreads": 54369,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0438753.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0438753-Azorhizobium_caulinodans_ORS_571.fna\" --num-fragments 36246 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0438753.fq\" ",
+            "nreads": 36246,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0438753.fq"
+        }
+    },
+    "0442563": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0442563-Bifidobacterium_animalis_subsp_lactis_AD011.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0442563",
+            "nreads": 386739,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0442563.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0442563-Bifidobacterium_animalis_subsp_lactis_AD011.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0442563\"",
+            "nreads": 193369,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0442563.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0442563-Bifidobacterium_animalis_subsp_lactis_AD011.fna\" --num-fragments 19579 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0442563.fq\" ",
+            "nreads": 19579,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0442563.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0442563-Bifidobacterium_animalis_subsp_lactis_AD011.fna\" --num-fragments 13052 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0442563.fq\" ",
+            "nreads": 13052,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0442563.fq"
+        }
+    },
+    "0452659": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0452659-Rickettsia_rickettsii_str_Iowa.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0452659",
+            "nreads": 253640,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0452659.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0452659-Rickettsia_rickettsii_str_Iowa.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0452659\"",
+            "nreads": 126820,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0452659.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0452659-Rickettsia_rickettsii_str_Iowa.fna' --num-fragments 12841 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0452659.fq' ",
+            "nreads": 12841,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0452659.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0452659-Rickettsia_rickettsii_str_Iowa.fna' --num-fragments 8560 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0452659.fq' ",
+            "nreads": 8560,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0452659.fq"
+        }
+    },
+    "0465515": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0465515-Micrococcus_luteus_NCTC_2665.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0465515",
+            "nreads": 500219,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0465515.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0465515-Micrococcus_luteus_NCTC_2665.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0465515\"",
+            "nreads": 250109,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0465515.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0465515-Micrococcus_luteus_NCTC_2665.fna' --num-fragments 25324 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0465515.fq' ",
+            "nreads": 25324,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0465515.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0465515-Micrococcus_luteus_NCTC_2665.fna\" --num-fragments 16882 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0465515.fq\" ",
+            "nreads": 16882,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0465515.fq"
+        }
+    },
+    "0525280": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0525280-Erysipelothrix_rhusiopathiae_ATCC_19414.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0525280",
+            "nreads": 349293,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0525280.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0525280-Erysipelothrix_rhusiopathiae_ATCC_19414.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0525280\"",
+            "nreads": 174646,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0525280.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0525280-Erysipelothrix_rhusiopathiae_ATCC_19414.fna' --num-fragments 17684 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0525280.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0525280.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0525280-Erysipelothrix_rhusiopathiae_ATCC_19414.fna' --num-fragments 11789 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0525280.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0525280.fq"
+        }
+    },
+    "0559292": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0559292-Saccharomyces_cerevisiae_S288C.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0559292",
+            "nreads": 2431421,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0559292.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0559292-Saccharomyces_cerevisiae_S288C.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0559292",
+            "nreads": 1215710,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0559292.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0559292-Saccharomyces_cerevisiae_S288C.fna' --num-fragments 123091 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0559292.fq' ",
+            "nreads": 123091,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0559292.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0559292-Saccharomyces_cerevisiae_S288C.fna\" --num-fragments 82060 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0559292.fq\" ",
+            "nreads": 82060,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0559292.fq"
+        }
+    },
+    "0585394": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0585394-Roseburia_hominis_A2-183.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0585394",
+            "nreads": 718425,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0585394.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0585394-Roseburia_hominis_A2-183.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0585394",
+            "nreads": 359212,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0585394.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0585394-Roseburia_hominis_A2-183.fna' --num-fragments 36370 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0585394.fq' ",
+            "nreads": 36370,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0585394.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0585394-Roseburia_hominis_A2-183.fna\" --num-fragments 24247 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0585394.fq\" ",
+            "nreads": 24247,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0585394.fq"
+        }
+    },
+    "0595537": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0595537-Variovorax_paradoxus_EPS.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0595537",
+            "nreads": 1310011,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0595537.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0595537-Variovorax_paradoxus_EPS.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0595537\"",
+            "nreads": 655005,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0595537.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0595537-Variovorax_paradoxus_EPS.fna' --num-fragments 66319 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0595537.fq' ",
+            "nreads": 66319,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0595537.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0595537-Variovorax_paradoxus_EPS.fna\" --num-fragments 44213 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0595537.fq\" ",
+            "nreads": 44213,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0595537.fq"
+        }
+    },
+    "0604354": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0604354-Thermococcus_sibiricus_MM_739.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0604354",
+            "nreads": 369160,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0604354.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0604354-Thermococcus_sibiricus_MM_739.fna' --num-fragments 18689 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0604354.fq' ",
+            "nreads": 18689,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0604354.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0604354-Thermococcus_sibiricus_MM_739.fna\" --num-fragments 12459 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0604354.fq\" ",
+            "nreads": 12459,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0604354.fq"
+        }
+    },
+    "0680198": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0680198-Streptomyces_scabiei_8722.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0680198",
+            "nreads": 2029739,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0680198.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0680198-Streptomyces_scabiei_8722.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0680198",
+            "nreads": 1014869,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0680198.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0680198-Streptomyces_scabiei_8722.fna' --num-fragments 102756 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0680198.fq' ",
+            "nreads": 102756,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0680198.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0680198-Streptomyces_scabiei_8722.fna\" --num-fragments 68504 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0680198.fq\" ",
+            "nreads": 68504,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0680198.fq"
+        }
+    },
+    "0710128": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0710128-Mycoplasma_gallisepticum_str_R(high).fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0710128\"",
+            "nreads": 5934,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0710128.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0710128-Mycoplasma_gallisepticum_str_R(high).fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0710128\"",
+            "nreads": 5419,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0710128.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0710128-Mycoplasma_gallisepticum_str_R(high).fna' --num-fragments 10247 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0710128.fq' ",
+            "nreads": 10247,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0710128.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0710128-Mycoplasma_gallisepticum_str_R(high).fna\" --num-fragments 6831 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0710128.fq\" ",
+            "nreads": 6831,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0710128.fq"
+        }
+    },
+    "0749927": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0749927-Amycolatopsis_mediterranei_U32.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0749927",
+            "nreads": 2047343,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0749927.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0749927-Amycolatopsis_mediterranei_U32.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0749927",
+            "nreads": 1023671,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0749927.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0749927-Amycolatopsis_mediterranei_U32.fna' --num-fragments 103647 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0749927.fq' ",
+            "nreads": 103647,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0749927.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0749927-Amycolatopsis_mediterranei_U32.fna\" --num-fragments 69098 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/0030",
+            "nreads": 69098,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0749927.fq"
+        }
+    },
+    "0861360": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0861360-Glutamicibacter_arilaitensis_Re117.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0861360",
+            "nreads": 783638,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0861360.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0861360-Glutamicibacter_arilaitensis_Re117.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0861360",
+            "nreads": 391819,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0861360.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0861360-Glutamicibacter_arilaitensis_Re117.fna' --num-fragments 39672 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0861360.fq' ",
+            "nreads": 39672,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0861360.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0861360-Glutamicibacter_arilaitensis_Re117.fna\" --num-fragments 26448 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0861360.fq\" ",
+            "nreads": 26448,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0861360.fq"
+        }
+    },
+    "0888828": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0888828-Haemophilus_parainfluenzae_ATCC_33392.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0888828",
+            "nreads": 424951,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/0888828.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0888828-Haemophilus_parainfluenzae_ATCC_33392.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0888828\"",
+            "nreads": 212475,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0888828.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0888828-Haemophilus_parainfluenzae_ATCC_33392.fna' --num-fragments 21514 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0888828.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0888828.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0888828-Haemophilus_parainfluenzae_ATCC_33392.fna' --num-fragments 14342 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0888828.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0888828.fq"
+        }
+    },
+    "0945711": {
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0945711-Corynebacterium_ulcerans_809.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0945711",
+            "nreads": 250209,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/0945711.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0945711-Corynebacterium_ulcerans_809.fna' --num-fragments 25334 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0945711.fq' ",
+            "nreads": 25334,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/0945711.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/0945711-Corynebacterium_ulcerans_809.fna\" --num-fragments 16889 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0945711.fq\" ",
+            "nreads": 16889,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/0945711.fq"
+        }
+    },
+    "1006006": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1006006-Metallosphaera_cuprina_Ar-4.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1006006",
+            "nreads": 368069,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1006006.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1006006-Metallosphaera_cuprina_Ar-4.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1006006\"",
+            "nreads": 184034,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1006006.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1006006-Metallosphaera_cuprina_Ar-4.fna' --num-fragments 18634 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1006006.fq' ",
+            "nreads": 18634,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1006006.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1006006-Metallosphaera_cuprina_Ar-4.fna\" --num-fragments 12422 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1006006.fq\" ",
+            "nreads": 12422,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1006006.fq"
+        }
+    },
+    "1045858": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1045858-Brachyspira_intermedia_PWSA.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1045858",
+            "nreads": 661609,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1045858.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1045858-Brachyspira_intermedia_PWSA.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1045858",
+            "nreads": 330804,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1045858.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1045858-Brachyspira_intermedia_PWSA.fna' --num-fragments 33494 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1045858.fq' ",
+            "nreads": 33494,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1045858.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1045858-Brachyspira_intermedia_PWSA.fna\" --num-fragments 22329 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1045858.fq\" ",
+            "nreads": 22329,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1045858.fq"
+        }
+    },
+    "1088879": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1088879-Francisella_tularensis_subsp_novicida_FSC159.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1088879",
+            "nreads": 381802,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1088879.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1088879-Francisella_tularensis_subsp_novicida_FSC159.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1088879\"",
+            "nreads": 190901,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1088879.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1088879-Francisella_tularensis_subsp_novicida_FSC159.fna' --num-fragments 19329 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1088879.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1088879.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1088879-Francisella_tularensis_subsp_novicida_FSC159.fna\" --num-fragments 12886 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1088879.fq\" ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1088879.fq"
+        }
+    },
+    "1105097": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1105097-Rickettsia_prowazekii_str_Dachau.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1105097",
+            "nreads": 221810,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1105097.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1105097-Rickettsia_prowazekii_str_Dachau.fna\" -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1105097\"",
+            "nreads": 110905,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1105097.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1105097-Rickettsia_prowazekii_str_Dachau.fna' --num-fragments 11229 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1105097.fq' ",
+            "nreads": 11229,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1105097.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1105097-Rickettsia_prowazekii_str_Dachau.fna\" --num-fragments 7486 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1105097.fq\" ",
+            "nreads": 7486,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1105097.fq"
+        }
+    },
+    "1122981": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1122981-Prevotella_corporis_DSM_18810_=_JCM_8529.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1122981",
+            "nreads": 560041,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1122981.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1122981-Prevotella_corporis_DSM_18810_=_JCM_8529.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1122981",
+            "nreads": 280020,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1122981.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1122981-Prevotella_corporis_DSM_18810_=_JCM_8529.fna' --num-fragments 28353 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1122981.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1122981.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1122981-Prevotella_corporis_DSM_18810_=_JCM_8529.fna' --num-fragments 18902 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1122981.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1122981.fq"
+        }
+    },
+    "1163730": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1163730-Fervidicoccus_fontis_Kam940.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1163730",
+            "nreads": 263841,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1163730.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1163730-Fervidicoccus_fontis_Kam940.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1163730",
+            "nreads": 131920,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1163730.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1163730-Fervidicoccus_fontis_Kam940.fna' --num-fragments 13357 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1163730.fq' ",
+            "nreads": 13357,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1163730.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1163730-Fervidicoccus_fontis_Kam940.fna\" --num-fragments 8905 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1163730.fq\" ",
+            "nreads": 8905,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1163730.fq"
+        }
+    },
+    "1195469": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1195469-Mycobacterium_tuberculosis_variant_bovis_BCG_str_Sweden.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1195469",
+            "nreads": 815767,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1195469.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1195469-Mycobacterium_tuberculosis_variant_bovis_BCG_str_Sweden.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1195469",
+            "nreads": 407883,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1195469.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1195469-Mycobacterium_tuberculosis_variant_bovis_BCG_str_Sweden.fna' --num-fragments 41299 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1195469.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1195469.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1195469-Mycobacterium_tuberculosis_variant_bovis_BCG_str_Sweden.fna' --num-fragments 27532 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1195469.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1195469.fq"
+        }
+    },
+    "1265757": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1265757-Candidatus_Pelagibacter_ubique_HTCC1013.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1265757",
+            "nreads": 260224,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1265757.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1265757-Candidatus_Pelagibacter_ubique_HTCC1013.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1265757",
+            "nreads": 130112,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1265757.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1265757-Candidatus_Pelagibacter_ubique_HTCC1013.fna' --num-fragments 13175 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1265757.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1265757.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1265757-Candidatus_Pelagibacter_ubique_HTCC1013.fna' --num-fragments 8783 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1265757.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1265757.fq"
+        }
+    },
+    "1298595": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1298595-Veillonella_rogosae_JCM_15642.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1298595",
+            "nreads": 437421,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1298595.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1298595-Veillonella_rogosae_JCM_15642.fna' --num-fragments 22145 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1298595.fq' ",
+            "nreads": 22145,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1298595.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1298595-Veillonella_rogosae_JCM_15642.fna\" --num-fragments 14763 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1298595.fq\" ",
+            "nreads": 14763,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1298595.fq"
+        }
+    },
+    "1434109": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1434109-Methanosarcina_barkeri_str_Wiesmoor.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1434109",
+            "nreads": 981437,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/1434109.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1434109-Methanosarcina_barkeri_str_Wiesmoor.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1434109",
+            "nreads": 490718,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/1434109.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1434109-Methanosarcina_barkeri_str_Wiesmoor.fna' --num-fragments 49686 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1434109.fq' ",
+            "nreads": 49686,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/1434109.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir \"/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/1434109-Methanosarcina_barkeri_str_Wiesmoor.fna\" --num-fragments 33124 -o \"/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1434109.fq\" ",
+            "nreads": 33124,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/1434109.fq"
+        }
+    },
+    "2026187": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2026187-Bacillus_pacificus.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/2026187",
+            "nreads": 1083358,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/2026187.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2026187-Bacillus_pacificus.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/2026187",
+            "nreads": 541679,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/2026187.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2026187-Bacillus_pacificus.fna' --num-fragments 54845 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/2026187.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/2026187.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2026187-Bacillus_pacificus.fna' --num-fragments 36563 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/2026187.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/2026187.fq"
+        }
+    },
+    "2668074": {
+        "000100": {
+            "command": "simlord --fixed-readlength 100 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2668074-Halobacterium_sp_CBA1126.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/2668074",
+            "nreads": 546173,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000100/2668074.fastq"
+        },
+        "000200": {
+            "command": "simlord --fixed-readlength 200 --read-reference /mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2668074-Halobacterium_sp_CBA1126.fna -c 20 -pi 0.11 -pd 0.04 -ps 0.01 --no-sam /mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/2668074",
+            "nreads": 273086,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/simlord/000200/2668074.fastq"
+        },
+        "002000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 6000 --illumina-read-length 2000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2668074-Halobacterium_sp_CBA1126.fna' --num-fragments 27650 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/2668074.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/002000/2668074.fq"
+        },
+        "003000": {
+            "command": "/mnt/d/Users/andri/Desktop/bioproject/tools/mason2/bin/mason_simulator -seed 0 --num-threads 8 --fragment-mean-size 9000 --illumina-read-length 3000 -ir '/mnt/d/Users/andri/Desktop/bioproject/ref/ref_50/2668074-Halobacterium_sp_CBA1126.fna' --num-fragments 18433 -o '/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/2668074.fq' ",
+            "nreads": 0,
+            "path": "/mnt/d/Users/andri/Desktop/bioproject/reads/reads_50/mason/003000/2668074.fq"
+        }
+    }
+}

@@ -1,152 +1,152 @@
 {
-    "Amycolatopsis_mediterranei": {
-        "taxId": 749927
+    "0000280": {
+        "taxid": "280"
     },
-    "Arthrobacter_arilaitensis": {
-        "taxId": 861360
+    "0000731": {
+        "taxid": "731"
     },
-    "Azorhizobium_caulinodans": {
-        "taxId": 438753
+    "0061624": {
+        "taxid": "61624"
     },
-    "Bacillus_pacificus": {
-        "taxId": 2026187
+    "0105559": {
+        "taxid": "105559"
     },
-    "Bdellovibrio_bacteriovorus": {
-        "taxId": 264462
+    "0203119": {
+        "taxid": "203119"
     },
-    "Bifidobacterium_adolescentis": {
-        "taxId": 367928
+    "0212717": {
+        "taxid": "212717"
     },
-    "Bifidobacterium_animalis": {
-        "taxId": 442563
+    "0237561": {
+        "taxid": "237561"
     },
-    "Brachyspira_intermedia": {
-        "taxId": 1045858
+    "0242619": {
+        "taxid": "242619"
     },
-    "Candidatus_Pelagibacter_ubique": {
-        "taxId": 1265757
+    "0243230": {
+        "taxid": "243230"
     },
-    "Candida_albicans": {
-        "taxId": 237561
+    "0254945": {
+        "taxid": "254945"
     },
-    "Clostridium_beijerinckii": {
-        "taxId": 290402
+    "0264462": {
+        "taxid": "264462"
     },
-    "Clostridium_tetani": {
-        "taxId": 212717
+    "0272943": {
+        "taxid": "272943"
     },
-    "Clostridium_thermocellum": {
-        "taxId": 203119
+    "0290402": {
+        "taxid": "290402"
     },
-    "Corynebacterium_ulcerans": {
-        "taxId": 945711
+    "0292459": {
+        "taxid": "292459"
     },
-    "Deinococcus_radiodurans": {
-        "taxId": 243230
+    "0314280": {
+        "taxid": "314280"
     },
-    "Ehrlichia_ruminantium": {
-        "taxId": 254945
+    "0324831": {
+        "taxid": "324831"
     },
-    "Erysipelothrix_rhusiopathiae": {
-        "taxId": 525280
+    "0334390": {
+        "taxid": "334390"
     },
-    "Faecalibacterium_prausnitzii": {
-        "taxId": 411485
+    "0363253": {
+        "taxid": "363253"
     },
-    "Fervidicoccus_fontis": {
-        "taxId": 1163730
+    "0367928": {
+        "taxid": "367928"
     },
-    "Francisella_novicida": {
-        "taxId": 1088879
+    "0393480": {
+        "taxid": "393480"
     },
-    "Fusobacterium_nucleatum": {
-        "taxId": 393480
+    "0411466": {
+        "taxid": "411466"
     },
-    "Haemophilus_parainfluenzae": {
-        "taxId": 888828
+    "0411485": {
+        "taxid": "411485"
     },
-    "Haemophilus_somnus": {
-        "taxId": 731
+    "0420247": {
+        "taxid": "420247"
     },
-    "Halobacterium": {
-        "taxId": 2668074
+    "0438753": {
+        "taxid": "438753"
     },
-    "Lactobacillus_fermentum": {
-        "taxId": 334390
+    "0442563": {
+        "taxid": "442563"
     },
-    "Lactobacillus_gasseri": {
-        "taxId": 324831
+    "0452659": {
+        "taxid": "452659"
     },
-    "Lawsonia_intracellularis": {
-        "taxId": 363253
+    "0465515": {
+        "taxid": "465515"
     },
-    "Metallosphaera_cuprina": {
-        "taxId": 1006006
+    "0525280": {
+        "taxid": "525280"
     },
-    "Methanobrevibacter_smithii": {
-        "taxId": 420247
+    "0559292": {
+        "taxid": "559292"
     },
-    "Methanosarcina_barkeri": {
-        "taxId": 1434109
+    "0585394": {
+        "taxid": "585394"
     },
-    "Micrococcus_luteus": {
-        "taxId": 465515
+    "0595537": {
+        "taxid": "595537"
     },
-    "Mycobacterium_bovis": {
-        "taxId": 1195469
+    "0604354": {
+        "taxid": "604354"
     },
-    "Mycoplasma_gallisepticum": {
-        "taxId": 710128
+    "0680198": {
+        "taxid": "680198"
     },
-    "Nitrosococcus_watsonii": {
-        "taxId": 105559
+    "0710128": {
+        "taxid": "710128"
     },
-    "Paenibacillus_mucilaginosus": {
-        "taxId": 61624
+    "0749927": {
+        "taxid": "749927"
     },
-    "Photobacterium_profundum": {
-        "taxId": 314280
+    "0861360": {
+        "taxid": "861360"
     },
-    "Porphyromonas_gingivalis": {
-        "taxId": 242619
+    "0888828": {
+        "taxid": "888828"
     },
-    "Prevotella_corporis": {
-        "taxId": 1122981
+    "0945711": {
+        "taxid": "945711"
     },
-    "Rhodobacter_sphaeroides": {
-        "taxId": 272943
+    "1006006": {
+        "taxid": "1006006"
     },
-    "Rickettsia_prowazekii": {
-        "taxId": 1105097
+    "1045858": {
+        "taxid": "1045858"
     },
-    "Rickettsia_rickettsii": {
-        "taxId": 452659
+    "1088879": {
+        "taxid": "1088879"
     },
-    "Roseburia_hominis": {
-        "taxId": 585394
+    "1105097": {
+        "taxid": "1105097"
     },
-    "Saccharomyces_cerevisiae": {
-        "taxId": 559292
+    "1122981": {
+        "taxid": "1122981"
     },
-    "Schaalia_odontolytica": {
-        "taxId": 411466
+    "1163730": {
+        "taxid": "1163730"
     },
-    "Streptomyces_scabiei": {
-        "taxId": 680198
+    "1195469": {
+        "taxid": "1195469"
     },
-    "Symbiobacterium_thermophilum": {
-        "taxId": 292459
+    "1265757": {
+        "taxid": "1265757"
     },
-    "Thermococcus_sibiricus": {
-        "taxId": 604354
+    "1298595": {
+        "taxid": "1298595"
     },
-    "Variovorax_paradoxus": {
-        "taxId": 595537
+    "1434109": {
+        "taxid": "1434109"
     },
-    "Veillonella_rogosae": {
-        "taxId": 1298595
+    "2026187": {
+        "taxid": "2026187"
     },
-    "Xanthobacter_autotrophicus": {
-        "taxId": 280
+    "2668074": {
+        "taxid": "2668074"
     }
 }

@@ -3,7 +3,7 @@ import logging
 import os
 import subprocess
 import time
-from multiprocessing import Semaphore
+from multiprocessing import Semaphore, Pool
 
 from config import DIR_FASTA_MASON, DIR_FASTA_SIMLORD, DIR_READS, DIR_FASTA, RANGE
 
@@ -14,6 +14,7 @@ dir_fasta_simlord = DIR_FASTA_SIMLORD
 
 
 def _updateJsonRead(taxid_str: str, lread_str: str, data: dict):
+    global semaphore_jsonReadsMTDT
     semaphore_jsonReadsMTDT.acquire()
     try:
         mtdt: dict = json.load(open(path_metadata_fasta, "r"))
@@ -27,12 +28,12 @@ def _updateJsonRead(taxid_str: str, lread_str: str, data: dict):
 
     if data["empty"]["n"] != 0:
         try:
-            mtdt: dict = json.load(open(path_metadata_empty, "r"))
-            if lread_str in mtdt.keys():
-                mtdt[lread_str][taxid_str] = data["empty"]
+            mtdt2: dict = json.load(open(path_metadata_empty, "r"))
+            if lread_str in mtdt2.keys():
+                mtdt2[lread_str][taxid_str] = data["empty"]
             else:
-                mtdt[lread_str] = {taxid_str: data["empty"]}
-            json.dump(mtdt, open(path_metadata_empty, "w"), indent=4, sort_keys=True)
+                mtdt2[lread_str] = {taxid_str: data["empty"]}
+            json.dump(mtdt2, open(path_metadata_empty, "w"), indent=4, sort_keys=True)
         except:
             logging.error(f"updateJsonRead2 ERROR {taxid_str}, {lread_str}, {data}")
     time.sleep(0.02)
@@ -57,24 +58,27 @@ def _readfiles(path):
     return listfasta
 
 
-def _generateFastaAndTruth(lreads):
+def _generateFastaAndTruth(lreads: int) -> None:
+    """
+    Generate fasta and truth file starting from reads
+    Format fasta: ">S0R<nr>\n<sequence>"
+    Format truth: "S0R<nr>\t<taxid>"
+    :param lreads: read length of simulation
+    :return: None
+    """
     lreads_str = f"{lreads:0>6}"
     mtdt = json.load(open(dir_reads / "_metadata.json"))
     read_counter = 0
     empty = []
-    path_fasta = dir_fasta / f"{lreads_str}.fasta"
-    path_truth = dir_fasta / f"{lreads_str}.truth"
+    path_fasta = str(dir_fasta / f"{lreads_str}.fasta")
+    path_truth = str(dir_fasta / f"{lreads_str}.truth")
     bufferTruth = []
-    bufferFasta = []
     with open(path_fasta, "w") as outfile, open(path_truth, "w") as truthfile:
         next = False
-        # 0 based indexes
         dictPaths = {}
         paths = []
         counter = 1
-        # logging.info(f"{lreads_str}: START")
         for taxid_str, data in mtdt.items():
-            # logging.info(f"{taxid_str}: {lreads}, {counter} START")
             data: dict = data[lreads_str]
             if data["nreads"] == 0:
                 empty.append(taxid_str)
@@ -83,74 +87,83 @@ def _generateFastaAndTruth(lreads):
                 paths.append(data["path"])
                 dictPaths[str(data["path"])] = [taxid_str, lreads_str]
 
-            # with open(data["path"], "r") as f:
-            #     for line in f.readlines():
-            #         if line[0] == "@":
-            #             next = True
-            #         elif next and line[0] in ["A", "C", "G", "T"]:
-            #             if len(bufferFasta)<1000000:
-            #                 bufferFasta.append(f">S0R{read_counter}\n{str(line)}")
-            #                 bufferTruth.append(f"S0R{read_counter}\t{int(taxid_str)}\n")
-            #             else:
-            #                 outfile.writelines(bufferFasta)
-            #                 bufferFasta=[]
-            #                 truthfile.writelines(bufferTruth)
-            #                 bufferTruth=[]
-            #             read_counter += 1
-            #             next = False
-            #         else:
-            #             next = False
-            #     # flush buffers
-            #     if len(bufferFasta):
-            #         outfile.writelines(bufferFasta)
-            #         bufferFasta = []
-            #         truthfile.writelines(bufferTruth)
-            #         bufferTruth = []
-            #     counter+=1
+        # nonrelPaths = paths.copy()
+        # paths = [os.path.relpath(a) for a in paths]
 
-        nonrelPaths = paths.copy()
-        paths = [os.path.relpath(a) for a in paths]
-        command = f"sed -n '2~4p' {' '.join(paths)} | awk " + "'{print \">S0R\" NR \"\\n\" $s}' > " + f"{os.path.relpath(path_fasta)}"
-        print(command)
+        # logging.info(f"START: merge {lreads} reads")
+        # start_time = time.time()
+        # os.system("echo '' > .temp/outlen".replace("len", lreads_str))
+        # for i, path in enumerate(paths, start=0):
+        #     if i == 0:
+        #         comamnd_merge_files = '''sed -n '2~4p' pathin | awk '{print $s "\\ttaxid"}' > .temp/outlen''' \
+        #             .replace("pathin", path) \
+        #             .replace("taxid", str(int(dictPaths[path][0]))) \
+        #             .replace("len", lreads_str)
+        #     else:
+        #         comamnd_merge_files = '''sed -n '2~4p' pathin | awk '{print $s "\\ttaxid"}' >> .temp/outlen''' \
+        #             .replace("pathin", path) \
+        #             .replace("taxid", str(int(dictPaths[path][0]))) \
+        #             .replace("len", lreads_str)
+        #     logging.info(comamnd_merge_files)
+        #
+        #     os.system(comamnd_merge_files)        ######
+        #
+        # logging.info(f"ENDED merge: {lreads} in {time.time() - start_time}")
+        # '''<sequence>\t<taxid>'''
+
+        # logging.info(f"START: prefix {lreads} ")
+        # start_time = time.time()
+        # command_add_prefix = '''awk '{print ">S0R" NR "\\t" $s}' .temp/outlen > .temp/outlen2''' \
+        #     .replace("len", lreads_str)
+        # logging.info(command_add_prefix)
+
+        # os.system(command_add_prefix)             ######
+        # logging.info(f"ENDED: prefix {lreads} in {time.time() - start_time}")
+        # '''>S0R<nr>\t<sequence>\t<taxid>'''
+
+        logging.info(f"START: generate truth file {lreads} ")
         start_time = time.time()
-        os.system(command)
-        print(time.time() - start_time)
-        start_time = time.time()
-        os.system(f"touch {os.path.relpath(path_fasta)}")
-        with open(path_truth, "w") as fout:
-            for p, nrp in zip(paths, nonrelPaths):
-                number = int(subprocess.check_output(["wc", "-l", p]).decode("utf-8").split(" ")[0]) / 4
-                command = '''awk 'BEGIN{ for(i=0;i<number;i++) print "S0R" i "\\ttaxid"}' >> out''' \
-                    .replace("number", str(number)) \
-                    .replace("taxid", str(int(dictPaths[str(nrp)][0]))) \
-                    .replace("out", os.path.relpath(path_truth))
-                print(command)
-                os.system(command)
-                fout.write("\n".join(bufferTruth))
-        print(time.time() - start_time)
-        print(counter)
+        logging.info(f" {lreads} ")
+        command_add_prefix = """cut -f 1,3 .temp/outlen2 |sed 's/^.//'  > pathtruth""".replace(
+            "pathtruth", path_truth
+        ).replace(
+            "len", lreads_str
+        )
+        logging.info(command_add_prefix)
 
-        # with Pool(cpu_count()) as p:
-        #     read_counter=0
-        #     for a in p.map(_readfiles, paths):
-        #         a=[f">S0R{counter+i}\n{str(aa)}" for i,aa in enumerate(a)]
-        #         t=[f"S0R{counter+i}\t{str(int(taxid_str))}" for i in range(len(a))]
-        #         read_counter+=len(a)
-        #     truthfile.writelines(t)
-        #     outfile.writelines(a)
+        os.system(command_add_prefix)
+        logging.info(
+            f"ENDED: generate truth file {lreads} in {time.time() - start_time}"
+        )
+        """ truth
+        S0R<nr>\n<taixd>
+        """
 
+        # start_time = time.time()
+        # logging.info(f"START: generate fasta file {lreads} ")
+        # command_add_prefix = '''cut -f 1,2 .temp/outlen2 | sed 's/\\t/\\n/' > pathfasta''' \
+        #     .replace("pathfasta", path_fasta) \
+        #     .replace("len", lreads_str)
+        # logging.info(command_add_prefix)
+        #
+        # os.system(command_add_prefix)             ######
+        # logging.info(f"ENDED: generate fasta file {lreads} in {time.time() - start_time}")
+        # ''' fasta
+        # >S0R<nr>\n<sequence>
+        # '''
+
+    # lenTruth = int(subprocess.check_output(["wc", "-l", path_truth]).decode("utf-8").split(" ")[0])
     # _updateJsonRead(taxid_str, lreads_str, {"empty": {"n": len(empty), "list": empty},
     #                                         "generated": {"path_fasta": str(path_fasta), "path_truth": str(path_truth),
-    #                                                       "nreads": read_counter + 1}})
+    #                                                       "nreads": lenTruth}})
 
 
 def generateFastaAndTruth():
-    # with Pool(cpu_count() ) as p:
-    #     p.map(_generateFastaAndTruth, RANGE)
-    start_time = time.time()
-    for a in RANGE:
-        _generateFastaAndTruth(a)
-    print(time.time() - start_time)
+    os.system("mkdir .temp")
+    with Pool(2) as p:
+        start_time = time.time()
+        p.map(_generateFastaAndTruth, RANGE)
+        print(time.time() - start_time)
 
 
 if __name__ == "__main__":

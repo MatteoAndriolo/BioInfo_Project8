@@ -2,13 +2,15 @@ import json
 import json
 import logging
 import os
+import shutil
 import time
 from multiprocessing import cpu_count, Pool, Lock
 from pathlib import Path
 from threading import Semaphore
 
-from config import PATH_METADATA_REF,MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, COVERAGE, DIR_REF, PATH_METADATA_READS, RANGE
-from utils import _count_reads, _getNumberReads, _raiseParameterError
+from config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, COVERAGE, DIR_REF, \
+    PATH_METADATA_READS, RANGE
+from utils import _count_lines, _getNumberReads, _raiseParameterError
 
 path_metadata_ref = PATH_METADATA_REF
 path_metadata_reads = PATH_METADATA_READS
@@ -18,6 +20,7 @@ dir_reads_mason = DIR_READS_MASON
 
 def _updateJsonRead(taxid_str, lread_str, data):
     with lock:
+        shutil.copy2(path_metadata_reads, path_metadata_reads.parent / f"{path_metadata_reads.name}.bkp")
         try:
             mtdt: dict = json.load(open(path_metadata_reads, "r"))
             if taxid_str in mtdt.keys():
@@ -31,13 +34,13 @@ def _updateJsonRead(taxid_str, lread_str, data):
             )
         except Exception as e:
             logging.error(f"updateJsonRead ERROR {taxid_str}, {lread_str}, {data}")
-            logging.error(f"updateJsonRead ERROR:  {e}")
-        time.sleep(0.04)
+            logging.error(f"updateJsonRead ERROR: {e}")
+        time.sleep(0.05)
 
 
 def _gen_read_simlord(data: dict) -> None:
     path: str = data["path"].replace("(", "\(").replace(")", "\)")
-    taxid: int = data["taxid"]
+    taxid: int = int(data["taxid"])
     taxid_str = f"{taxid:0>7}"
     lread: int = data["lread"]
     lread_str = f"{lread:0>6}"
@@ -50,19 +53,20 @@ def _gen_read_simlord(data: dict) -> None:
     pd = 0.001
     ps = 0.004
 
+    (dir_reads_simlord/ lread_str).mkdir(parents=True, exist_ok=True)
     fread = dir_reads_simlord / lread_str / f"{taxid_str}"
+
     command = f'simlord --fixed-readlength {lread} --read-reference "{path}" -c {c} -pi {pi} -pd {pd} -ps {ps} --no-sam "{fread}"'
 
     if data["togenerate"]:
         # execute SimLoRD
-        (dir_reads_simlord / lread_str).mkdir(parents=True, exist_ok=True)
-        logging.debug(f"SIMLORD_START: lread {lread}, taxid {taxid}")
-        os.system(f'echo "{command}"')
+        logging.info(f"SIMLORD_START: {lread_str}-{taxid_str}")
+        logging.debug(f"{command}")
         os.system(command)
+        logging.info(f"SIMLORD_END: {lread_str}-{taxid_str}")
 
     fread = f"{fread}.fastq"
-    logging.debug(f"SIMLORD_END: lread {lread}, taxid {taxid}")
-    count_reads = _count_reads(Path(fread))
+    count_reads = int(_count_lines(Path(fread))/4)
     _updateJsonRead(
         taxid_str,
         lread_str,
@@ -72,7 +76,7 @@ def _gen_read_simlord(data: dict) -> None:
 
 def _gen_read_mason(data: dict) -> None:
     fref: str = data["path"]
-    taxid: int = data["taxid"]
+    taxid: int = int(data["taxid"])
     taxid_str = f"{taxid:0>7}"
     lread: int = data["lread"]
     lread_str = f"{lread:0>6}"
@@ -96,13 +100,13 @@ def _gen_read_mason(data: dict) -> None:
                 lread_str,
                 {
                     "path": str(fread),
-                    "nreads": _count_reads(fread),
+                    "nreads": _count_lines(fread)/4,
                     "command": str(command),
                 },
             ]
-            if _count_reads(fread) == 0:
+            if out[2]["nreads"] == 0:
                 os.remove(fread)
-            logging.debug(f"MAVEN_END: lread {lread}, taxid {taxid}")
+            logging.debug(f"MAVEN_END: {lread_str}-{taxid_str}")
         except:
             try:
                 os.remove(fread)
@@ -113,14 +117,14 @@ def _gen_read_mason(data: dict) -> None:
                 lread_str,
                 {"path_ref": str(fref), "nreads": 0, "command": str(command)},
             ]
-            logging.debug(f"MAVEN_UNSUCCESSFUL: lread {lread}, taxid {taxid}")
+            logging.debug(f"MAVEN_UNSUCCESSFUL: {lread_str}-{taxid_str}")
     else:
         out = [
             taxid_str,
             lread_str,
             {
                 "path": str(fread),
-                "nreads": _count_reads(fread),
+                "nreads": _count_lines(fread)/4,
                 "command": str(command),
             },
         ]
@@ -135,20 +139,27 @@ def _generateReads(data: dict):
     :return: list containing dictionary of reads metadata
     """
     logging.debug("in generate reads")
-    if int(data["lread"]) <= 1000:
-        logging.info(f"{data['taxid']}: start simlord")
+    lread: int = data["lread"]
+    lread_str: str = f"{lread:0>6}"
+    taxid: int = data["taxid"]
+    taxid_str: str = f"{taxid:0>7}"
+    assert (lread > 0)
+    if lread < 1000:
+        logging.info(f"{lread_str}-{taxid_str}: start simlord")
         _gen_read_simlord(data)
-    elif int(data["lread"]) > 1000:
-        logging.info(f"{data['taxid']}: start mason")
+    elif lread > 1000:
+        logging.info(f"{lread_str}-{taxid_str}: start mason")
         _gen_read_mason(data)
-    # else:
-    #     logging.info(f"{data['taxid']}: read lenght si 1000, start both simlord and mason")
-    #     _gen_read_mason(data)
-    #     _gen_read_simlord(data)
+    else:
+        logging.info(f"{lread_str}-{taxid_str}: read lenght is 1000, start both simlord and mason")
+        data["lread"] = 999
+        _gen_read_simlord(data)
+        data["lread"] = 1001
+        _gen_read_mason(data)
 
 
 def _yetToGenerate(nmtdt: dict, oldmtdt: dict) -> bool:
-    return False
+    return True
     taxid_str = f"{nmtdt['taxid']:0>7}"
     try:
         if oldmtdt[taxid_str][f"{nmtdt['lread']:0>6}"]["nreads"] != 0:
@@ -184,10 +195,10 @@ def _init_child_job(lock_):
 
 
 def generateReads(
-    dir_ref: Path,
-    rangelenght: list = None,
-    minlenght: int = None,
-    maxlenght: int = None,
+        dir_ref: Path,
+        rangelenght: list = None,
+        minlenght: int = None,
+        maxlenght: int = None,
 ):
     if not rangelenght:
         rangelenght = _calculate_range(minlenght, maxlenght)

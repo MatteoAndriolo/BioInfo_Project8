@@ -32,7 +32,7 @@ DIR_REF = ROOT_DIR / "ref" / "ref_50"
 DIR_READS = ROOT_DIR / "reads" / "reads_50"
 DIR_READS_SIMLORD = DIR_READS / "simlord"
 DIR_READS_MASON = DIR_READS / "mason"
-DIR_FASTA = ROOT_DIR / "fasta" / "fasta_50"
+DIR_FASTA = ROOT_DIR / "fasta" / "fasta_50_0704"
 DIR_FASTA_SIMLORD = DIR_FASTA / "simlord"
 DIR_FASTA_MASON = DIR_FASTA / "mason"
 DIR_RESULTS = ROOT_DIR / "results"
@@ -51,7 +51,7 @@ listDir: list = [
 PATH_METADATA_REF = DIR_REF / "_metadata.json"
 PATH_TAXID_REF = DIR_REF / "_ncbiTaxonID.json"
 PATH_METADATA_READS = DIR_READS / "_metadata.json"
-PATH_METADATA_FASTA=DIR_FASTA/"_metadata.json"
+PATH_METADATA_FASTA = DIR_FASTA / "_metadata.json"
 
 # config
 MIN_LONG = 2000
@@ -64,10 +64,10 @@ MAX_SHORT = 1001
 STEP_SHORT = 100
 RANGE_SHORT = list(range(MIN_SHORT, MAX_SHORT, STEP_SHORT))
 
-# RANGE = [100, 200, 300, 400, 500, 600, 700, 800, 900, 999, 1001, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
+RANGE = [100, 200, 300, 400, 500, 600, 700, 800, 900, 999, 1001, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
 # RANGE=RANGE_SHORT
-RANGE = RANGE_LONG
-RANGE.append(100)
+# RANGE = RANGE_LONG
+# RANGE.append(100)
 # RANGE = [100, 300, 400, 500, 600, 700, 800, 900, 1000]
 # RANGE = [*RANGE_SHORT, *RANGE_LONG]
 # RANGE = [1000]
@@ -76,5 +76,6 @@ MIN_FRAG_LENGTH = 15000
 COVERAGE = 20
 
 if __name__ == "__main__":
+
     for a in [*listDir, *listDirTest]:
         a.mkdir(parents=True, exist_ok=True)

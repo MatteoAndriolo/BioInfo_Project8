@@ -221,9 +221,9 @@ void ScoreCalls(const string &calls_file, const string &rank, const unordered_ma
         correct = 0;
       // elevate correct taxon to specified rank
       while (correct > 0) {
-        if (rank_map.at(correct) == rank) {
+        if (rank_map.at(correct) == rank) { //fa in modo che se taxon id del true é superiore al kraken allora si ferma e lo conta come corretto
           break;
-        }
+        } 
         correct = parent_map.at(correct);
       }
       if (! correct) {

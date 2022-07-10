@@ -8,16 +8,20 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-from config import DIR_RESULTS, PATH_METADATA_REF, DIR_FASTA, DIR_TEMP, PATH_METADATA_FASTA
+from config import DIR_RESULTS, PATH_METADATA_REF, DIR_FASTA, DIR_TEMP, PATH_METADATA_FASTA, ROOT_DIR
 
 dir_fasta: Path = DIR_FASTA
 dir_truth: Path = DIR_FASTA
 dir_results: Path = DIR_RESULTS / "0704"
 dir_metadata_results: Path = dir_results / "_results.json"
+dir_results_images: Path = DIR_RESULTS / "0706_hybrid"
+dir_metadata_results_genus: Path = dir_results/ "genus/_results.json"
+dir_metadata_results_hybrid:Path= ROOT_DIR/"0607/results/_metadata_hybrid_species.json"
 path_metadata_fasta: Path = PATH_METADATA_FASTA
 names_ref = sorted(list(set(json.load(open(PATH_METADATA_REF, "r")).keys())))
 names_ref = [n.replace("_", " ") for n in names_ref]
-rank = "species"
+# rank = "species"
+rank = "genus"
 
 
 ## cut and test names
@@ -121,13 +125,13 @@ def graph(show):
     }
 
     mtdt: dict = json.load(open(dir_metadata_results, "r"))
+    mtdt_fasta = json.load(open(path_metadata_fasta, "r"))
     for a in list(mtdt.keys()):
         if math.isnan(mtdt[a]["f1"]):
             del mtdt[a]
     xlabels: list[int] = sorted(list(map(int, mtdt.keys())))
     if show in ["tp", "fp", "fn", "ok", "no"]:
-        mtdt_reads = json.load(open(path_metadata_fasta, "r"))
-        Y = [k[show] / mtdt_reads[v]["nreads"] for v, k in mtdt.items()]
+        Y = [k[show] / mtdt_fasta[v]['nreads'] for v, k in mtdt.items()]
     else:
         Y = [a[show] for a in mtdt.values()]
     # t = Y.pop(2)
@@ -138,17 +142,17 @@ def graph(show):
     # fig, ax=plt.subplots(figsize=(9,7))
     fig, ax = plt.subplots()
     ax.set_xticks(range(1, len(X) + 1, 1), xlabels)
-    if mtdt_reads:
-        ax.set_ylim(min(Y) - .1, max(Y) + .1)
+    if mtdt_fasta:
+        ax.set_ylim(max(0, min(Y) - .1), max(Y) + .1)
     else:
-        ax.set_ylim(min(Y) * 0.9, max(Y) * 1.1)
+        ax.set_ylim(max(0, min(Y) * 0.9), max(Y) * 1.1)
     plt.bar(X, Y)
     plt.title(titles[show])
     plt.xlabel("reads length")
-    plt.ylabel("")
+    plt.ylabel("percentage")
     plt.xticks(rotation=90)
 
-    fig.savefig(dir_results / f"{show}.jpg", bbox_inches="tight")
+    fig.savefig(dir_results_images / f"{show}.jpg", bbox_inches="tight")
 
 
 def count_reads(path: Path) -> int:
@@ -197,25 +201,86 @@ def graph_unclussified(show):
     plt.ylabel("")
     plt.xticks(rotation=90)
 
-    fig.savefig(dir_results / f"{show}.jpg", bbox_inches="tight")
+    fig.savefig(dir_results_images / f"{show}.jpg", bbox_inches="tight")
+
+
+def compare(show):
+    # xlabels = [str(x) for x in range(100, 1001, 100)]
+    # xlabels.extend([str(x) for x in range(1000, 10001, 1000)])
+
+    titles = {
+        "tp": "TRUE POSITIVES",
+        "fp": "FALSE POSITIVES",
+        "fn": "FALSE NEGATIVES",
+        "prec": "PRECISION",
+        "f1": "F SCORE",
+        "sens": "SENSITIVITY",
+        "pears": "PEARSON CORRELATION",
+        "ok": "OK",
+        "no": "UNCLASSIFIED",
+    }
+
+    mtdt_species: dict = json.load(open(dir_metadata_results, "r"))
+    mtdt_genus: dict = json.load(open(dir_metadata_results_genus, "r"))
+    mtdt_hybrid: dict = json.load(open(dir_metadata_results_hybrid, "r"))
+    mtdt_fasta = json.load(open(path_metadata_fasta, "r"))
+    for a in list(mtdt_species.keys()):
+        if math.isnan(mtdt_species[a]["f1"]):
+            del mtdt_species[a]
+        if math.isnan(mtdt_genus[a]["f1"]):
+            del mtdt_genus[a]
+        if math.isnan(mtdt_hybrid[a]["f1"]):
+            del mtdt_hybrid[a]
+    xlabels: list[int] = sorted(list(map(int, mtdt_species.keys())))
+    if show in ["tp", "fp", "fn", "ok", "no"]:
+        Y_species = [k[show] / mtdt_fasta[v]['nreads'] for v, k in mtdt_species.items()]
+        Y_genes = [k[show] / mtdt_fasta[v]['nreads'] for v, k in mtdt_genus.items()]
+        Y_hybrid= [k[show] / mtdt_fasta[v]['nreads'] for v, k in mtdt_hybrid.items()]
+    else:
+        Y_species = [a[show] for a in mtdt_species.values()]
+        Y_genes = [a[show] for a in mtdt_genus.values()]
+        Y_hybrid= [a[show] for a in mtdt_hybrid.values()]
+    # t = Y.pop(2)
+    # Y.insert(9, t)
+    X = np.linspace(1, len(Y_species), len(Y_species))
+    # Y=np.linspace(90,100,50)
+
+    # fig, ax=plt.subplots(figsize=(9,7))
+    fig, ax = plt.subplots()
+    ax.set_xticks(range(1, len(X) + 1, 1), xlabels)
+    if mtdt_fasta:
+        ax.set_ylim(max(0, min(Y_genes + Y_species+Y_hybrid) - .1), min(1,max(Y_species + Y_genes+Y_hybrid) + .1))
+    else:
+        ax.set_ylim(max(0, min(Y_genes + Y_species+Y_hybrid) * 0.9), min(max(Y_species + Y_genes+Y_hybrid) * 1.1,1))
+    plt.plot(X, Y_genes, label="genes")
+    plt.plot(X, Y_species, label="species")
+    plt.plot(X, Y_hybrid, label="hybrid-species")
+    plt.legend()
+    plt.title(titles[show])
+    plt.xlabel("reads length")
+    plt.ylabel("percentage")
+    plt.xticks(rotation=90)
+
+    fig.savefig(dir_results_images / f"{show}.jpg", bbox_inches="tight")
 
 
 if __name__ == "__main__":
     # evaluate()
     show = "tp"
-    graph(show)
+    compare(show)
     show = "fn"
-    graph(show)
+    compare(show)
     show = "prec"
-    graph(show)
+    compare(show)
     show = "sens"
-    graph(show)
+    compare(show)
     show = "f1"
-    graph(show)
+    compare(show)
     show = "pears"
-    graph(show)
+    compare(show)
     show = "ok"
-    graph(show)
+    compare(show)
     show = "no"
+    compare(show)
     # graph_unclussified(show)
     # pass

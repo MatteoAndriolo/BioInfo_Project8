@@ -14,6 +14,11 @@ def _raiseParameterError(msg: str):
 
 
 def _count_lines(path: Path) -> int:
+    '''
+    Count lines of a file
+    :param path: path of file
+    :return: int number of lines
+    '''
     print(str(path))
     try:
         count = int(

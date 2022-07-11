@@ -12,11 +12,6 @@ from config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_RE
     PATH_METADATA_READS, RANGE
 from utils import _count_lines, _getNumberReads, _raiseParameterError
 
-path_metadata_ref = PATH_METADATA_REF
-path_metadata_reads = PATH_METADATA_READS
-dir_reads_simlord = DIR_READS_SIMLORD
-dir_reads_mason = DIR_READS_MASON
-
 
 def _updateJsonRead(taxid_str, lread_str, data):
     with lock:
@@ -53,7 +48,7 @@ def _gen_read_simlord(data: dict) -> None:
     pd = 0.001
     ps = 0.004
 
-    (dir_reads_simlord/ lread_str).mkdir(parents=True, exist_ok=True)
+    (dir_reads_simlord / lread_str).mkdir(parents=True, exist_ok=True)
     fread = dir_reads_simlord / lread_str / f"{taxid_str}"
 
     command = f'simlord --fixed-readlength {lread} --read-reference "{path}" -c {c} -pi {pi} -pd {pd} -ps {ps} --no-sam "{fread}"'
@@ -66,7 +61,7 @@ def _gen_read_simlord(data: dict) -> None:
         logging.info(f"SIMLORD_END: {lread_str}-{taxid_str}")
 
     fread = f"{fread}.fastq"
-    count_reads = int(_count_lines(Path(fread))/4)
+    count_reads = int(_count_lines(Path(fread)) / 4)
     _updateJsonRead(
         taxid_str,
         lread_str,
@@ -100,7 +95,7 @@ def _gen_read_mason(data: dict) -> None:
                 lread_str,
                 {
                     "path": str(fread),
-                    "nreads": _count_lines(fread)/4,
+                    "nreads": _count_lines(fread) / 4,
                     "command": str(command),
                 },
             ]
@@ -124,7 +119,7 @@ def _gen_read_mason(data: dict) -> None:
             lread_str,
             {
                 "path": str(fread),
-                "nreads": _count_lines(fread)/4,
+                "nreads": _count_lines(fread) / 4,
                 "command": str(command),
             },
         ]
@@ -159,7 +154,6 @@ def _generateReads(data: dict):
 
 
 def _yetToGenerate(nmtdt: dict, oldmtdt: dict) -> bool:
-    return True
     taxid_str = f"{nmtdt['taxid']:0>7}"
     try:
         if oldmtdt[taxid_str][f"{nmtdt['lread']:0>6}"]["nreads"] != 0:
@@ -194,12 +188,7 @@ def _init_child_job(lock_):
     lock = lock_
 
 
-def generateReads(
-        dir_ref: Path,
-        rangelenght: list = None,
-        minlenght: int = None,
-        maxlenght: int = None,
-):
+def generateReads(dir_ref: Path, rangelenght: list = None, minlenght: int = None, maxlenght: int = None, ):
     if not rangelenght:
         rangelenght = _calculate_range(minlenght, maxlenght)
 
@@ -231,7 +220,10 @@ def generateReads(
 
 
 if __name__ == "__main__":
-    # generateReads(dir_ref=Path(DIR_REF), minlenght=100, maxlenght=10000)
-    semaphore_jsonReadsMTDT = Semaphore(1)
     logging.basicConfig(level=logging.INFO)
+    path_metadata_ref = PATH_METADATA_REF
+    path_metadata_reads = PATH_METADATA_READS
+    dir_reads_simlord = DIR_READS_SIMLORD
+    dir_reads_mason = DIR_READS_MASON
+    # semaphore_jsonReadsMTDT = Semaphore(1)
     generateReads(dir_ref=Path(DIR_REF), rangelenght=list(RANGE))

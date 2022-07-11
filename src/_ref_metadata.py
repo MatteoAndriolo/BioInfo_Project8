@@ -1,6 +1,8 @@
-from multiprocessing import Pool, Semaphore, cpu_count
+from multiprocessing import Pool, Semaphore, cpu_count, Lock
 from tkinter.messagebox import NO
 from tkinter.ttk import Separator
+from typing import Tuple
+
 from config import DIR_REF, PATH_METADATA_REF, PATH_TAXID_REF
 from utils import updateJson
 import glob
@@ -38,7 +40,7 @@ def buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequ
     }
 
 
-def getSeqLength(text) -> list[int]:
+def getSeqLength(text) -> tuple[int, int, int]:
     lengthSeq = []
     somma = 0
     for line in text:
@@ -52,13 +54,13 @@ def getSeqLength(text) -> list[int]:
     return (min(lengthSeq), max(lengthSeq), int(sum(lengthSeq) / len(lengthSeq)))
 
 
-def _generate_ref_metadata(f_path:str|Path) -> list:
-    global outfile
-    outfile:str
-    global semaphoreJsonUpdate
-    semaphoreJsonUpdate:Semaphore
+def _generate_ref_metadata(f_path: str | Path) -> tuple[str, dict]:
+    # global outfile
+    # outfile:str
+    # global semaphoreJsonUpdate
+    # semaphoreJsonUpdate:Semaphore
     # description lines pattern search in FASTA files
-    pattern_descriptionLines = re.compile(r"^\>(.*)", re.M) 
+    pattern_descriptionLines = re.compile(r"^\>(.*)", re.M)
     pattern_codename = "N\w_[\w\d]*.[\w\d]?"  # code for contigs
     description_lines = re.findall(pattern_descriptionLines, open(f_path).read())
     codename = [(re.findall(pattern_codename, l))[0] for l in description_lines]
@@ -109,15 +111,22 @@ def _generate_ref_metadata(f_path:str|Path) -> list:
         maxx=maxx,
     )
 
-    updateJson(outfile,taxid_str,data,semaphoreJsonUpdate)
+    updateJson(taxid_str, data)
 
     # # with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
     # with open(PATH_TAXID_REF, "w") as f:
     #     json.dump({k: {"taxid": v["taxid"]} for k, v in jsonData.items()}, f, indent=4)
 
-    return  taxid_str,data
+    return taxid_str, data
 
-def generateReferenceGenomesMetadata(folder:str|Path, extension:list[str]=(".fna",),force:bool=False, outfile:str|Path=None)->dict:
+
+def _init_child_job(lock_):
+    global lock
+    lock = lock_
+
+
+def generateReferenceGenomesMetadata(folder: str | Path, extension: list[str] = (".fna",), force: bool = False,
+                                     outfile: str | Path = None) -> dict:
     """Generate reference metadata for all files in folder with extension.
 
     Args:
@@ -129,33 +138,32 @@ def generateReferenceGenomesMetadata(folder:str|Path, extension:list[str]=(".fna
     Returns:
         dict: JSON metadata
     """
-    if outfile==None:
-        outfile=Path(folder)/"_metadata.json"
+    if outfile == None:
+        outfile = Path(folder) / "_metadata.json"
     else:
-        outfile=Path(outfile)
-    outfile.parent.mkdir(exist_ok=True,parents=True)
+        outfile = Path(outfile)
+    outfile.parent.mkdir(exist_ok=True, parents=True)
 
     try:
-        mtdtDict=json.load(open(outfile,"r"))
+        mtdtDict = json.load(open(outfile, "r"))
     except:
-        mtdtDict:dict={}
+        mtdtDict: dict = {}
 
-    files=[]
+    files = []
     for ext in extension:
-        for path in glob.glob(Path(folder)/f"*{ext}"):
+        for path in glob.glob(str(Path(folder) / f"*{ext}")):
             files.append(path)
 
-    semaphoreJsonUpdate=Semaphore(1)
-    with Pool(cpu_count()) as p:
-        for taxid_str,data in p.map(_generate_ref_metadata, files):
-            mtdtDict[taxid_str]=data
-            
+    # semaphoreJsonUpdate = Semaphore(1)
+    lock = Lock()
+    with Pool(cpu_count(), initializer=_init_child_job, initargs=(lock, outfile,)) as p:
+        for taxid_str, data in p.map(_generate_ref_metadata, files):
+            mtdtDict[taxid_str] = data
+
     return mtdtDict
 
 
-
-
-#def getTIDFromMetadata():
+# def getTIDFromMetadata():
 #    """_summary_
 #    """
 #    with open(DIR_REF / "_metadata.json", "r") as f:
@@ -166,5 +174,5 @@ def generateReferenceGenomesMetadata(folder:str|Path, extension:list[str]=(".fna
 
 if __name__ == "__main__":
     dir_ref = DIR_REF
-    path_metadata_ref=PATH_METADATA_REF
-    generateReferenceGenomesMetadata(dir_ref,force=True, outfile=path_metadata_ref)
+    path_metadata_ref = PATH_METADATA_REF
+    generateReferenceGenomesMetadata(dir_ref, force=True, outfile=path_metadata_ref)

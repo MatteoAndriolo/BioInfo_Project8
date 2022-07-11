@@ -1,4 +1,7 @@
+import json
 import logging
+from multiprocessing import Semaphore
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -28,3 +31,24 @@ def _count_lines(path: Path) -> int:
     except:
         print(f"{path} not opened")
         return 0
+
+def updateJson(file:str|Path, key:int|str, value:dict|list, semaphore:Semaphore)-> None:
+    """Safely update json files
+
+    Args:
+        file (str | Path): path Json file to update 
+        key (int | str): key
+        value (dict | list): value 
+        semaphore (Semaphore): semaphore for safe multithreading 
+    """
+    semaphore.acquire()
+    shutil.copy2(file, file.parent/f"{file.name}.bkp")
+    try:
+        mtdt:dict=json.load(open(file,"r"))
+        mtdt[key]=value
+        json.dump(mtdt,open(file,"w"),indent=4)
+    except:
+        shutil.move(file.parent/f"{file.name}.bkp",file)
+    semaphore.release()
+
+

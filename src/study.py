@@ -74,47 +74,48 @@ def graph(*listshow):
     # xlabels = [str(x) for x in range(100, 1001, 100)]
     # xlabels.extend([str(x) for x in range(1000, 10001, 1000)])
 
-    titles = {
-        "tp": "TRUE POSITIVES",
-        "fp": "FALSE POSITIVES",
-        "fn": "FALSE NEGATIVES",
-        "prec": "PRECISION",
-        "f1": "F SCORE",
-        "sens": "SENSITIVITY",
-        "pears": "PEARSON CORRELATION",
-        "ok": "OK",
-        "no": "UNCLASSIFIED",
-    }
+    for show in listshow:
+        titles = {
+            "tp": "TRUE POSITIVES",
+            "fp": "FALSE POSITIVES",
+            "fn": "FALSE NEGATIVES",
+            "prec": "PRECISION",
+            "f1": "F SCORE",
+            "sens": "SENSITIVITY",
+            "pears": "PEARSON CORRELATION",
+            "ok": "OK",
+            "no": "UNCLASSIFIED",
+        }
 
-    mtdt: dict = json.load(open(dir_metadata_results, "r"))
-    mtdt_fasta = json.load(open(path_metadata_fasta, "r"))
-    for a in list(mtdt.keys()):
-        if math.isnan(mtdt[a]["f1"]):
-            del mtdt[a]
-    xlabels: list[int] = sorted(list(map(int, mtdt.keys())))
-    if show in ["tp", "fp", "fn", "ok", "no"]:
-        Y = [k[show] / mtdt_fasta[v]['nreads'] for v, k in mtdt.items()]
-    else:
-        Y = [a[show] for a in mtdt.values()]
-    # t = Y.pop(2)
-    # Y.insert(9, t)
-    X = np.linspace(1, len(Y), len(Y))
-    # Y=np.linspace(90,100,50)
+        mtdt: dict = json.load(open(dir_metadata_results, "r"))
+        mtdt_fasta = json.load(open(path_metadata_fasta, "r"))
+        for a in list(mtdt.keys()):
+            if math.isnan(mtdt[a]["f1"]):
+                del mtdt[a]
+        xlabels: list[int] = sorted(list(map(int, mtdt.keys())))
+        if show in ["tp", "fp", "fn", "ok", "no"]:
+            Y = [k[show] / mtdt_fasta[v]['nreads'] for v, k in mtdt.items()]
+        else:
+            Y = [a[show] for a in mtdt.values()]
+        # t = Y.pop(2)
+        # Y.insert(9, t)
+        X = np.linspace(1, len(Y), len(Y))
+        # Y=np.linspace(90,100,50)
 
-    # fig, ax=plt.subplots(figsize=(9,7))
-    fig, ax = plt.subplots()
-    ax.set_xticks(range(1, len(X) + 1, 1), xlabels)
-    if mtdt_fasta:
-        ax.set_ylim(max(0, min(Y) - .1), max(Y) + .1)
-    else:
-        ax.set_ylim(max(0, min(Y) * 0.9), max(Y) * 1.1)
-    plt.bar(X, Y)
-    plt.title(titles[show])
-    plt.xlabel("reads length")
-    plt.ylabel("percentage")
-    plt.xticks(rotation=90)
+        # fig, ax=plt.subplots(figsize=(9,7))
+        fig, ax = plt.subplots()
+        ax.set_xticks(range(1, len(X) + 1, 1), xlabels)
+        if mtdt_fasta:
+            ax.set_ylim(max(0, min(Y) - .1), max(Y) + .1)
+        else:
+            ax.set_ylim(max(0, min(Y) * 0.9), max(Y) * 1.1)
+        plt.bar(X, Y)
+        plt.title(titles[show])
+        plt.xlabel("reads length")
+        plt.ylabel("percentage")
+        plt.xticks(rotation=90)
 
-    fig.savefig(dir_results_images / f"{show}.jpg", bbox_inches="tight")
+        fig.savefig(dir_results_images / f"{show}.jpg", bbox_inches="tight")
 
 
 def count_reads(path: Path) -> int:

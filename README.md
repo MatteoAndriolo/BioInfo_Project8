@@ -1,3 +1,4 @@
+<!---
 <style>
 h1{
     font-weight: bold
@@ -19,8 +20,10 @@ href > code{
     font-weight: bold
 }
 </style>
-
 <title>Project 8 -- BioInformatics -- Andriolo M., Pisacreta G.</title>
+--->
+
+
 
 # Metagenomics classification: long reads vs short reads
 
@@ -80,19 +83,19 @@ Long reads Simulator
 <h1 id="scripts">Scripts</h1>
 
 ## <code>_config.py</code>
-[Link to script](script/_config.py)
+[Link to script](src/_config.py)
 
 Contains parameters required by the others script<br>
 Manages directory organizations
 
 <h2 id="mtdt"><code> _ref_metadata.py </code></h2>
-[Link to script](script/_ref_metadata.py)
+[Link to script](src/_ref_metadata.py)
 
 Generate metadata file `_metadata.json`  of the input genomes.<br> Used by the other scripts and for a fast overview of main specifics. 
 [metadata example](ref/ref_50/_metadata.json)
 
 <h2 id="s01"><code>01_sim_reads.py</code></h2>
-[Link to script](script/01_sim_reads.py)
+[Link to script](src/sim_reads.py)
 
 Script that automates reads generation via Mason and Simlord simulators.  <br>
 For each read length there is a `metadata.json` file which contains paths, command used for the simulation and number of reads generated. [metadata example](reads/reads_50/mason/100/metadata.json)
@@ -109,7 +112,7 @@ For each read length there is a `metadata.json` file which contains paths, comma
 
 <h2 id="s02"><code> 02_construct_fasta.py</code></h2>
 
-[Link to script](script/02_construct_fasta.py)
+[Link to script](src/02_construct_fasta.py)
 
 For each collection of files of specific "read leangth" reads, concatenate them using the `.fasta` format:
 
@@ -124,14 +127,28 @@ where
 At the same time is also generated file with the correct taxonomy ID of read_sequence.
 
 <h2 id="s03"><code>03_study.py</code></h2>
-[Link ot script](script/03_study.py)
+[Link ot script](src/03_study.py)
 
 Automate evaluation of results using `evaluation` builded from `evaluation.cc` 
 Generate [result.json](results/results_50/results.json) file which summarize all evaluations
 
-Then generate plot for the results
+```commandline
+    ./evaluate nodes.dmp rank results.cut truth.cut > evaluation.txt
+```
+<dl>
+    <dt>nodes.dmp</dt>
+    <dd>file containing the filogenetic tree in text form </dd>
+    <dt>rank</dt>
+    <dd>minimum correct rank level required to a mark a kraken answer as correct </dd>
+    <dt>result.cut</dt>
+    <dd>file containing taxonomy id for each read</dd>
+    <dt>truth.cut</dt>
+    <dd>file containing the correct taxonomy id for each read </dd>
+     <dt>evaluation.txt</dt>
+    <dd>output file</dd>
+</dl>
 
-
+Then generate plot of the results using matplotlib.
 
 
 # SETUP
@@ -186,7 +203,7 @@ tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 30
 ## COVERAGE
 The coverage value ha been set at _20x_.
 Simlord calculates autonomaly the number of reads to generate.
-On the contrary Mason have to receive explicitly the number reads. It has been calculate using indicativelly the (rough) formula for coverage $coverage=(reads_lenght*number_reads)/(genome_size)$
+On the contrary Mason have to receive explicitly the number reads. It has been calculate using indicativelly the (rough) formula for coverage $coverage=(readsLenght*numberReads)/(genomeSize)$
 
 ## ENTERZ
 

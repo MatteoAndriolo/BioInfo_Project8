@@ -4,7 +4,7 @@ from multiprocessing import Pool, cpu_count
 from pathlib import Path
 
 # PATH_METADATA_REF_REDUCED, DIR_REF_REDUCED, DIR_READS_REDUCED, DIR_READS_MASON_REDUCED
-from _config import ROOT_DIR, RANGE_SHORT
+from config import ROOT_DIR, RANGE_SHORT
 
 
 def count_reads(path) -> None:
@@ -32,13 +32,17 @@ def return_emptyfile_names(path) -> list:
 
 
 def find_reads_with0():
-    from _config import DIR_READS_MASON_REDUCED
+    from config import DIR_READS_MASON_REDUCED
 
-    mtdt: dict = json.load(open(Path(DIR_READS_MASON_REDUCED) / str(RANGE_SHORT[0]) / "metadata.json", "r"))
+    mtdt: dict = json.load(
+        open(Path(DIR_READS_MASON_REDUCED) / str(RANGE_SHORT[0]) / "metadata.json", "r")
+    )
     jsonDic = {n: {} for n in mtdt.keys()}
 
     for n in RANGE_SHORT:
-        mtdt: dict = json.load(open(Path(DIR_READS_MASON_REDUCED) / str(n) / "metadata.json", "r"))
+        mtdt: dict = json.load(
+            open(Path(DIR_READS_MASON_REDUCED) / str(n) / "metadata.json", "r")
+        )
         for v, k in mtdt.items():
             jsonDic[v][str(n)] = k["nreads"]
     with open("metadata_reads.josn", "w") as fout:
@@ -46,7 +50,9 @@ def find_reads_with0():
 
 
 def filter_json_ref() -> None:
-    with open(Path(PATH_METADATA_REF_REDUCED), "r") as fin, open(Path(DIR_REF_REDUCED) / "missing.json", "w") as fout:
+    with open(Path(PATH_METADATA_REF_REDUCED), "r") as fin, open(
+        Path(DIR_REF_REDUCED) / "missing.json", "w"
+    ) as fout:
         mtdt: dict = json.load(fin)
         jsonDict = {v: k for v, k in mtdt.items() if k["nseq"] == 0}
 
@@ -55,7 +61,9 @@ def filter_json_ref() -> None:
     jsonDict = {}
     with open(Path(DIR_READS_REDUCED) / "missing.json", "w") as fout:
         for n in RANGE_SHORT:
-            for path in glob.glob(str(DIR_READS_REDUCED) + '/mason/' + str(n) + '/metadata.json'):
+            for path in glob.glob(
+                str(DIR_READS_REDUCED) + "/mason/" + str(n) + "/metadata.json"
+            ):
                 with open(path, "r") as fin:
                     mtdt: dict = json.load(fin)
                     temp = {v: k for v, k in mtdt.items() if k["nreads"] == 0}
@@ -104,7 +112,8 @@ def _mp(data):
 
 
 def fasta_from_ref():
-    from _config import PATH_METADATA_REF
+    from config import PATH_METADATA_REF
+
     mtdt: dict = json.load(open(PATH_METADATA_REF, "r"))
 
     with Pool(cpu_count()) as p:

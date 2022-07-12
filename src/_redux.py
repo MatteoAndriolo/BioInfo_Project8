@@ -1,7 +1,7 @@
 import json
 from multiprocessing import Pool, cpu_count
 
-from _config import PATH_METADATA_REF, DIR_REF_REDUCED, MIN_FRAG_LENGTH, PATH_METADATA_REF_REDUCED
+from config import PATH_METADATA_REF, DIR_REF_REDUCED, MIN_FRAG_LENGTH, PATH_METADATA_REF_REDUCED
 
 
 def filter(data):
@@ -49,7 +49,7 @@ def filter(data):
             sj = "".join(vv)
             ls = len(sj)
             nseq = sj.count(">")
-            if (ls > MIN_FRAG_LENGTH):
+            if ls > MIN_FRAG_LENGTH:
                 fout.write(k)
                 nseq += 1
                 fout.writelines(vv)
@@ -58,15 +58,19 @@ def filter(data):
                 reduced = True
 
     print(f"End {name}")
-    return [name, {"path": str(newPath),
-                   "mean_length_sequence": 0 if len(lenseq) == 0 else sum(lenseq) / len(lenseq),
-                   "min": 0 if len(lenseq) == 0 else min(lenseq),
-                   "max": 0 if len(lenseq) == 0 else max(lenseq),
-                   "reduced": reduced,
-                   "nseq_before": nsbefore,
-                   "nseq": nseq,
-                   "wrong_length": wrong_length
-                   }]
+    return [
+        name,
+        {
+            "path": str(newPath),
+            "mean_length_sequence": 0 if len(lenseq) == 0 else sum(lenseq) / len(lenseq),
+            "min": 0 if len(lenseq) == 0 else min(lenseq),
+            "max": 0 if len(lenseq) == 0 else max(lenseq),
+            "reduced": reduced,
+            "nseq_before": nsbefore,
+            "nseq": nseq,
+            "wrong_length": wrong_length,
+        },
+    ]
 
 
 if __name__ == "__main__":

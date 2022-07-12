@@ -1,26 +1,35 @@
 # folders
 test
-reads
 results/06*
-script/DBKraken2
-script/Evaluation
-script/__pycache__
-script/nodes.dmp
+src/DBKraken2
+src/Evaluation
+src/__pycache__
+src/nodes.dmp
 
 
 # data file extension
 *.fna
 *.fai
+*.fq
 *.fasta
 *.zip
 *.cut
 *.out
 *.rescd
 *.truth
+*.fqt
+*.fastq
 fasta/**/*.txt
+reads/**/*.txt
+ref/ref_50/taxids
+KrakenOnRef/
+tools/
+# images
+*.jpg
 
 # hidden files
 .idea
 .temp
 .vscode
+*.log
 

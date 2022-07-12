@@ -46,44 +46,44 @@ Long reads Simulator
 
 # Structure directory
 
-* **docs**
-    * contains general, usefull informations
-* **fasta**
-    * Directory containing all fasta files generate from the reads simulated with Mason and Simlord simulators
-    * Fasta file are created concatenating all reads with a specific format
-    * Automation done with scipt [02_construct_fasta.py](#s02)
-* **KrakenOnRef**
-    * Directory containing specific study on the accuracy of kraken given ??complete, correct, unmodified,
-      genomes??.<br>
-      <dl> Contains in particular:
-          <dt><code>_krakenTaxonID.json</code></dt>
-          <dd>Taxonomy id given by kraken (partially manually manipulated because of some conflicts)</dd>
-          <dt><code>_uncertainTaxonID.json</code></dt>
-          <dd>List of genomes file where different taxonId where attribuited for different contigs of the same genome</dd>
-          <dt><code>results.json</code></dt>
-          <dd>Results of evaluation results krakenID vs trueID</dd>
-      </dl>
-* **reads**
-    * Directory containing _reads_ produced by [Simlord]() and [Mason]() simulators.
-        * input genomes stored in ` ref\ ` folder <br>
-        * <dl> Contains in particular:
-            <dt><code>metadata.json</code></dt>
-            <dd>For each read length simulation is present a folder. In each folder there is a metadata.json file with contains paths, command used for the simulation and number of reads generated </dd>
-            <dt><code>**/mason/missing.json</code></dt>
-            <dd>Mason cannot generate reads for some genomes. This file is used to store list of cases for which this errors happens. Cause are at the moment unknown (various hypothesis have been made nut it's been impossible to fix this error in time)</dd>
-          </dl>
-* **ref**
-    * Directory containing the reference genomes used for the simulation
-* **script**
-  * look at [Scripts](#scripts) section
-* *enviroment.yml*
-    * File usefull to reconstruct enviroment using ***conda*** package manager. <br> (_tested only on linux_)
+[//]: # (* **docs**)
+[//]: # (    * contains general, usefull informations)
+[//]: # (* **fasta**)
+[//]: # (    * Directory containing all fasta files generate from the reads simulated with Mason and Simlord simulators)
+[//]: # (    * Fasta file are created concatenating all reads with a specific format)
+[//]: # (    * Automation done with scipt [02_construct_fasta.py]&#40;#s02&#41;)
+[//]: # (* **KrakenOnRef**)
+[//]: # (    * Directory containing specific study on the accuracy of kraken given ??complete, correct, unmodified,)
+[//]: # (      genomes??.<br>)
+[//]: # (      <dl> Contains in particular:)
+[//]: # (          <dt><code>_krakenTaxonID.json</code></dt>)
+[//]: # (          <dd>Taxonomy id given by kraken &#40;partially manually manipulated because of some conflicts&#41;</dd>)
+[//]: # (          <dt><code>_uncertainTaxonID.json</code></dt>)
+[//]: # (          <dd>List of genomes file where different taxonId where attribuited for different contigs of the same genome</dd>)
+[//]: # (          <dt><code>results.json</code></dt>)
+[//]: # (          <dd>Results of evaluation results krakenID vs trueID</dd>)
+[//]: # (      </dl>)
+[//]: # (* **reads**)
+[//]: # (    * Directory containing _reads_ produced by [Simlord]&#40;&#41; and [Mason]&#40;&#41; simulators.)
+[//]: # (        * input genomes stored in ` ref\ ` folder <br>)
+[//]: # (        * <dl> Contains in particular:)
+[//]: # (            <dt><code>metadata.json</code></dt>)
+[//]: # (            <dd>For each read length simulation is present a folder. In each folder there is a metadata.json file with contains paths, command used for the simulation and number of reads generated </dd>)
+[//]: # (            <dt><code>**/mason/missing.json</code></dt>)
+[//]: # (            <dd>Mason cannot generate reads for some genomes. This file is used to store list of cases for which this errors happens. Cause are at the moment unknown &#40;various hypothesis have been made nut it's been impossible to fix this error in time&#41;</dd>)
+[//]: # (          </dl>)
+[//]: # (* **ref**)
+[//]: # (    * Directory containing the reference genomes used for the simulation)
+* **src**
+  * Contains all the scripts used in this project. Look at [Scripts](#scripts) section for a more detailed description
+* *environment.yml*
+    * File useful to reconstruct environment using ***conda*** package manager. <br> (_tested only on linux_)
 
 
 <h1 id="scripts">Scripts</h1>
 
-## <code>_config.py</code>
-[Link to script](src/_config.py)
+## <code>config.py</code>
+[Link to script](src/config.py)
 
 Contains parameters required by the others script<br>
 Manages directory organizations
@@ -92,13 +92,16 @@ Manages directory organizations
 [Link to script](src/_ref_metadata.py)
 
 Generate metadata file `_metadata.json`  of the input genomes.<br> Used by the other scripts and for a fast overview of main specifics. 
-[metadata example](ref/ref_50/_metadata.json)
 
-<h2 id="s01"><code>01_sim_reads.py</code></h2>
+[//]: # ([metadata example]&#40;ref/ref_50/_metadata.json&#41;)
+
+<h2 id="s01"><code>sim_reads.py</code></h2>
 [Link to script](src/sim_reads.py)
 
 Script that automates reads generation via Mason and Simlord simulators.  <br>
-For each read length there is a `metadata.json` file which contains paths, command used for the simulation and number of reads generated. [metadata example](reads/reads_50/mason/100/metadata.json)
+For each read length there is a `metadata.json` file which contains paths, command used for the simulation and number of reads generated. 
+
+[//]: # ([metadata example]&#40;reads/reads_50/mason/100/metadata.json&#41;)
 
 ### Command samples
 * mason example
@@ -110,11 +113,11 @@ For each read length there is a `metadata.json` file which contains paths, comma
     simlord --fixed-readlength 1000 --read-reference ref/ref_50/Amycolatopsis_mediterranei_Ref.fna -c 20 -pi 0.11 -pd 0.4 -ps 0.01 --no-sam reads/reads_50/simlord/1000/Amycolatopsis_mediterranei
     ```
 
-<h2 id="s02"><code> 02_construct_fasta.py</code></h2>
+<h2 id="s02"><code> construct_FASTA.py</code></h2>
 
-[Link to script](src/02_construct_fasta.py)
+[Link to script](src/construct_FASTA.py)
 
-For each collection of files of specific "read leangth" reads, concatenate them using the `.fasta` format:
+For each collection of files of specific "read length" reads, concatenate them using the `.fasta` format:
 
 ```text
 >S0R[number_read] 
@@ -124,13 +127,16 @@ where
 - read_sequence: read generated 
 - number_read: counter of reads inserted
 
-At the same time is also generated file with the correct taxonomy ID of read_sequence.
+At the same time is also generated file with the correct taxonomy ID of read_sequence (truth file)
 
-<h2 id="s03"><code>03_study.py</code></h2>
-[Link ot script](src/03_study.py)
+<h2 id="s03"><code>study.py, studyhybrid.py</code></h2>
+[Link ot script](src/study.py)
+[Link ot script1](src/studyhybrid.py)
 
 Automate evaluation of results using `evaluation` builded from `evaluation.cc` 
 Generate [result.json](results/results_50/results.json) file which summarize all evaluations
+Plot generation is not completely automatic, code must be customized based on personal needs.
+Study hybrid contains function used for generation of plot from read simulation done using different parameters (different percentage of errors)
 
 ```commandline
     ./evaluate nodes.dmp rank results.cut truth.cut > evaluation.txt

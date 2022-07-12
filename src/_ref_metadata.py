@@ -1,10 +1,3 @@
-from multiprocessing import Pool, Semaphore, cpu_count, Lock
-from tkinter.messagebox import NO
-from tkinter.ttk import Separator
-from typing import Tuple
-
-from config import DIR_REF, PATH_METADATA_REF, PATH_TAXID_REF
-from utils import updateJson
 import glob
 import json
 import logging
@@ -12,7 +5,12 @@ import os.path
 import re
 import shutil
 import sys
+from multiprocessing import Pool, cpu_count, Lock
 from pathlib import Path
+from typing import Tuple, List, Union
+
+from config import DIR_REF, PATH_METADATA_REF
+from utils import updateJson
 
 # sh -c "$(curl -fsSL ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
 # or
@@ -23,11 +21,21 @@ sys.path.append(os.path.dirname(shutil.which("xtract")))
 import edirect
 
 
-def buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequences: dict, mean: int, minn: int,
-                     maxx: int, ) -> dict:
-    '''
-    JSON
-    '''
+def _buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequences: dict, mean: int, minn: int,
+                      maxx: int, ) -> dict:
+    """
+    Build json metadata entry given appropriate data from a reference genome
+
+    :param path:
+    :param taxid:
+    :param organism:
+    :param nsequences:
+    :param sequences:
+    :param mean:
+    :param minn:
+    :param maxx:
+    :return:
+    """
     return {
         "path": path,
         "taxid": taxid,
@@ -40,7 +48,12 @@ def buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequ
     }
 
 
-def getSeqLength(text) -> tuple[int, int, int]:
+def _getSeqLength(text) -> Tuple[int, int, int]:
+    """
+    Read genome data and extract statistics about reference genome
+    :param text: input read from file
+    :return: minimum, maximum, mean sequence length
+    """
     lengthSeq = []
     somma = 0
     for line in text:
@@ -51,15 +64,24 @@ def getSeqLength(text) -> tuple[int, int, int]:
             somma += len(line)
     if somma != 0:
         lengthSeq.append(somma)
-    return (min(lengthSeq), max(lengthSeq), int(sum(lengthSeq) / len(lengthSeq)))
+    return min(lengthSeq), max(lengthSeq), int(sum(lengthSeq) / len(lengthSeq))
 
 
-def _generate_ref_metadata(f_path: str | Path) -> tuple[str, dict]:
+def _generate_ref_metadata(f_path: Union[str, Path]) -> Tuple[str, dict]:
+    """
+    Private function used in multithreading.
+    Generate json metadata from a file
+
+
+    :param f_path: path of reference genome file
+    :return: taxonomicid_str(str), data(dict)
+    """
     # global outfile
     # outfile:str
     # global semaphoreJsonUpdate
     # semaphoreJsonUpdate:Semaphore
     # description lines pattern search in FASTA files
+    logging.info(f"START: {f_path}")
     pattern_descriptionLines = re.compile(r"^\>(.*)", re.M)
     pattern_codename = "N\w_[\w\d]*.[\w\d]?"  # code for contigs
     description_lines = re.findall(pattern_descriptionLines, open(f_path).read())
@@ -90,17 +112,20 @@ def _generate_ref_metadata(f_path: str | Path) -> tuple[str, dict]:
     )[0]
     title: str = sorted(set(titles), key=lambda x: titles.count(x), reverse=True)[0]
 
-    minn, maxx, meann = getSeqLength(open(f_path).readlines())
+    minn, maxx, meann = _getSeqLength(open(f_path).readlines())
     newpath = (
             dir_ref
             / f"{taxid:0>7}-{organism.replace(' ', '_').replace('/', '').replace('.', '')}.fna"
     )
 
-    # rename genome file 
-    shutil.copy(f_path, newpath)
+    # rename genome file
+    try:
+        shutil.copy(f_path, newpath)
+    except:
+        pass
 
     taxid_str = f"{taxid:0>7}"
-    data = buildRefMetadata(
+    data = _buildRefMetadata(
         path=str(newpath),
         taxid=taxid,
         organism=organism,
@@ -111,7 +136,8 @@ def _generate_ref_metadata(f_path: str | Path) -> tuple[str, dict]:
         maxx=maxx,
     )
 
-    updateJson(taxid_str, data)
+    logging.info(f"END: {f_path}")
+    updateJson(Path(f_path).parent / "_metadata.json", taxid_str, data)
 
     # # with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
     # with open(PATH_TAXID_REF, "w") as f:
@@ -120,23 +146,24 @@ def _generate_ref_metadata(f_path: str | Path) -> tuple[str, dict]:
     return taxid_str, data
 
 
-def _init_child_job(lock_):
+def _init_child_job(lock_, outfile_, ):
     global lock
+    global outfile
     lock = lock_
+    outfile = outfile_
 
 
-def generateReferenceGenomesMetadata(folder: str | Path, extension: list[str] = (".fna",), force: bool = False,
-                                     outfile: str | Path = None) -> dict:
-    """Generate reference metadata for all files in folder with extension.
+def generateReferenceGenomesMetadata(folder: Union[str, Path], extension: List[str] = (".fna",), force: bool = False,
+                                     outfile: Union[str, Path] = None) -> dict:
+    """
+    Generate metadata of reference genomes files contained in folder, having extension and write it inside outfile.
+    If metadata already present <force> rewrite.
 
-    Args:
-        folder (str | Path): folder containing reference files genomes
-        extension (list[str], optional): extension of reference files. Defaults to (".fna",).
-        force (bool, optional): Overwrite metadata. Defaults to False.
-        outfile (str | Path, optional): output path. Defaults to folder.
-
-    Returns:
-        dict: JSON metadata
+    @param folder: input folder
+    @param extension: extension used for file search inside folder
+    @param force: force rewrite of files in folder
+    @param outfile: path of metadata file (default to folder/_metadata.json)
+    @return: metadata dictionary
     """
     if outfile == None:
         outfile = Path(folder) / "_metadata.json"
@@ -161,15 +188,6 @@ def generateReferenceGenomesMetadata(folder: str | Path, extension: list[str] = 
             mtdtDict[taxid_str] = data
 
     return mtdtDict
-
-
-# def getTIDFromMetadata():
-#    """_summary_
-#    """
-#    with open(DIR_REF / "_metadata.json", "r") as f:
-#        mtdt = json.load(f)
-#    with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
-#        json.dump({k: {"taxid": v["taxid"]} for k, v in mtdt.items()}, f, indent=4)
 
 
 if __name__ == "__main__":

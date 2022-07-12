@@ -1,9 +1,12 @@
+import glob
 import json
 import logging
-from multiprocessing import Semaphore, Lock
+import os
 import shutil
 import subprocess
+from multiprocessing import Lock, Pool, cpu_count
 from pathlib import Path
+from typing import Union
 
 
 def _getNumberReads(coverage, read_lenghts, genome_size) -> int:
@@ -33,16 +36,14 @@ def _count_lines(path: Path) -> int:
         return 0
 
 
-def updateJson(file: str | Path, key: int | str, value: dict | list, semaphore: Semaphore) -> None:
+def updateJson(file: Union[str, Path], key: Union[int, str], value: Union[dict, list]) -> None:
     """Safely update json files
 
     Args:
         file (str | Path): path Json file to update 
         key (int | str): key
         value (dict | list): value 
-        semaphore (Semaphore): semaphore for safe multithreading 
     """
-    lock: Lock
     with lock:
         # semaphore.acquire()
         shutil.copy2(file, file.parent / f"{file.name}.bkp")
@@ -53,3 +54,13 @@ def updateJson(file: str | Path, key: int | str, value: dict | list, semaphore: 
         except:
             shutil.move(file.parent / f"{file.name}.bkp", file)
         # semaphore.release()
+
+
+def _cut(path):
+    command = f"cut -f 2-3 {path} > {path.replace('.out', '.cut')}"
+    os.system(command)
+
+
+def cutfiles(glob_path):
+    with Pool(cpu_count()) as p:
+        p.map(_cut, glob.glob(glob_path, recursive=True))

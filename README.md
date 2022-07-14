@@ -23,8 +23,6 @@ href > code{
 <title>Project 8 -- BioInformatics -- Andriolo M., Pisacreta G.</title>
 --->
 
-
-
 # Metagenomics classification: long reads vs short reads
 
 One of the most important problem in metagenomic is the analysis of a sample in order to detect all the species (human,
@@ -47,43 +45,17 @@ Long reads Simulator
 # Structure directory
 
 * **docs**
-    * contains general, usefull informations
-* **fasta**
-    * Directory containing all fasta files generate from the reads simulated with Mason and Simlord simulators
-    * Fasta file are created concatenating all reads with a specific format
-    * Automation done with scipt [02_construct_fasta.py](#s02)
-* **KrakenOnRef**
-    * Directory containing specific study on the accuracy of kraken given ??complete, correct, unmodified,
-      genomes??.<br>
-      <dl> Contains in particular:
-          <dt><code>_krakenTaxonID.json</code></dt>
-          <dd>Taxonomy id given by kraken (partially manually manipulated because of some conflicts)</dd>
-          <dt><code>_uncertainTaxonID.json</code></dt>
-          <dd>List of genomes file where different taxonId where attribuited for different contigs of the same genome</dd>
-          <dt><code>results.json</code></dt>
-          <dd>Results of evaluation results krakenID vs trueID</dd>
-      </dl>
-* **reads**
-    * Directory containing _reads_ produced by [Simlord]() and [Mason]() simulators.
-        * input genomes stored in ` ref\ ` folder <br>
-        * <dl> Contains in particular:
-            <dt><code>metadata.json</code></dt>
-            <dd>For each read length simulation is present a folder. In each folder there is a metadata.json file with contains paths, command used for the simulation and number of reads generated </dd>
-            <dt><code>**/mason/missing.json</code></dt>
-            <dd>Mason cannot generate reads for some genomes. This file is used to store list of cases for which this errors happens. Cause are at the moment unknown (various hypothesis have been made nut it's been impossible to fix this error in time)</dd>
-          </dl>
-* **ref**
-    * Directory containing the reference genomes used for the simulation
-* **script**
-  * look at [Scripts](#scripts) section
-* *enviroment.yml*
-    * File usefull to reconstruct enviroment using ***conda*** package manager. <br> (_tested only on linux_)
-
+    * contains general, usefull informations and documentation about tools used
+* **src**
+    * Contains all the scripts used in this project. Look at [Scripts](#scripts) section for a more detailed description
+* *environment.yml*
+    * File useful to reconstruct environment using ***conda*** package manager. <br> (_tested only on linux_)
 
 <h1 id="scripts">Scripts</h1>
 
-## <code>_config.py</code>
-[Link to script](src/_config.py)
+## <code>config.py</code>
+
+[Link to script](src/config.py)
 
 Contains parameters required by the others script<br>
 Manages directory organizations
@@ -91,16 +63,22 @@ Manages directory organizations
 <h2 id="mtdt"><code> _ref_metadata.py </code></h2>
 [Link to script](src/_ref_metadata.py)
 
-Generate metadata file `_metadata.json`  of the input genomes.<br> Used by the other scripts and for a fast overview of main specifics. 
-[metadata example](ref/ref_50/_metadata.json)
+Generate metadata file `_metadata.json`  of the input genomes.<br> Used by the other scripts and for a fast overview of
+main specifics.
 
-<h2 id="s01"><code>01_sim_reads.py</code></h2>
+[//]: # ([metadata example]&#40;ref/ref_50/_metadata.json&#41;)
+
+<h2 id="s01"><code>sim_reads.py</code></h2>
 [Link to script](src/sim_reads.py)
 
 Script that automates reads generation via Mason and Simlord simulators.  <br>
-For each read length there is a `metadata.json` file which contains paths, command used for the simulation and number of reads generated. [metadata example](reads/reads_50/mason/100/metadata.json)
+For each read length there is a `metadata.json` file which contains paths, command used for the simulation and number of
+reads generated.
+
+[//]: # ([metadata example]&#40;reads/reads_50/mason/100/metadata.json&#41;)
 
 ### Command samples
+
 * mason example
     ```commandline
     tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir ref/ref_50/Amycolatopsis_mediterranei_Ref.fna --num-fragments 207294 -o reads/reads_50/mason/100/Amycolatopsis_mediterranei.fq
@@ -110,31 +88,38 @@ For each read length there is a `metadata.json` file which contains paths, comma
     simlord --fixed-readlength 1000 --read-reference ref/ref_50/Amycolatopsis_mediterranei_Ref.fna -c 20 -pi 0.11 -pd 0.4 -ps 0.01 --no-sam reads/reads_50/simlord/1000/Amycolatopsis_mediterranei
     ```
 
-<h2 id="s02"><code> 02_construct_fasta.py</code></h2>
+<h2 id="s02"><code> construct_FASTA.py</code></h2>
 
-[Link to script](src/02_construct_fasta.py)
+[Link to script](src/construct_FASTA.py)
 
-For each collection of files of specific "read leangth" reads, concatenate them using the `.fasta` format:
+For each collection of files of specific "read length" reads, concatenate them using the `.fasta` format:
 
 ```text
 >S0R[number_read] 
 read_sequence
 ```
-where  
-- read_sequence: read generated 
+
+where
+
+- read_sequence: read generated
 - number_read: counter of reads inserted
 
-At the same time is also generated file with the correct taxonomy ID of read_sequence.
+At the same time is also generated file with the correct taxonomy ID of read_sequence (truth file)
 
-<h2 id="s03"><code>03_study.py</code></h2>
-[Link ot script](src/03_study.py)
+<h2 id="s03"><code>study.py, studyhybrid.py</code></h2>
+[Link ot script](src/study.py)
+[Link ot script1](src/studyhybrid.py)
 
-Automate evaluation of results using `evaluation` builded from `evaluation.cc` 
+Automate evaluation of results using `evaluation` builded from `evaluation.cc`
 Generate [result.json](results/results_50/results.json) file which summarize all evaluations
+Plot generation is not completely automatic, code must be customized based on personal needs.
+Study hybrid contains function used for generation of plot from read simulation done using different parameters (
+different percentage of errors)
 
 ```commandline
     ./evaluate nodes.dmp rank results.cut truth.cut > evaluation.txt
 ```
+
 <dl>
     <dt>nodes.dmp</dt>
     <dd>file containing the filogenetic tree in text form </dd>
@@ -150,13 +135,30 @@ Generate [result.json](results/results_50/results.json) file which summarize all
 
 Then generate plot of the results using matplotlib.
 
+# PIPELINE
+
+1) get reference data from NCBI genome databank.
+2) simulate reads with simlord and mason2 introducing errors
+    * numerate each reads inside fasta files
+3) use Kraken for classification
+    * start job in cluster
+        * example job scheduling script can be found in ```src```
+        * cut output only the 2-3 columns
+4) validation
+    * use ```src/evaulation``` binaries in order to check performances of Kraken2 classification.
+        * must be provided rank-level required, file containing entire taxonomic tree (can be found on the NCBI website,
+          node.dmp), results of kraken where are selected only columns containing the id of the sequences read and the
+          taxonomic id assigned, and the truth file.
+        * you can execute ```src/evaluate``` to ger help informations
 
 # SETUP
 
 ## SIMLORD
+
 ```commandline
 simlord --fixed-readlength 1000--read-reference ref/ref_50/Amycolatopsis_mediterranei_Ref.fna --coverage 20 -pi 0.11 -pd 0.4 -ps 0.01 --no-sam reads/reads_50/simlord/1000/Amycolatopsis_mediterranei
 ```
+
 <dl>
     <dt>--fixed-readlength LEN</dt>
     <dd>constant read length for all reads</dd>
@@ -176,12 +178,15 @@ simlord --fixed-readlength 1000--read-reference ref/ref_50/Amycolatopsis_mediter
 </dl>
 
 ### Outputs
+
 Files in `.fastq` format
 
 ## MASON
+
 ```commandline
 tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 300 --illumina-read-length 100 -ir ref/ref_50/Amycolatopsis_mediterranei_Ref.fna --num-fragments 207294 -o reads/reads_50/mason/100/Amycolatopsis_mediterranei.fq
 ```
+
 <dl>
     <dt> --seed INTEGER</dt>
     <dd> Seed to use for random number generator. Default: 0. </dd>
@@ -201,9 +206,11 @@ tools/mason2/bin/mason_simulator -seed 0 --num-threads 4 --fragment-mean-size 30
 </dl>
 
 ## COVERAGE
+
 The coverage value ha been set at _20x_.
 Simlord calculates autonomaly the number of reads to generate.
-On the contrary Mason have to receive explicitly the number reads. It has been calculate using indicativelly the (rough) formula for coverage $coverage=(readsLenght*numberReads)/(genomeSize)$
+On the contrary Mason have to receive explicitly the number reads. It has been calculate using indicativelly the (rough)
+formula for coverage $coverage=(readsLenght*numberReads)/(genomeSize)$
 
 ## ENTERZ
 
@@ -212,6 +219,8 @@ Utility used for query automation on ncbi databases.
 
 It has been used for fetching the correct taxonomy ID of the genomes.
 
-There were some problems with taxid of reference file. Taxonomi ID has been queryed searching for taxid of each contigs inside the genomes but happened that the same genomes contained contigs appartaining to different species.
-(only in Saccharomyces cerevisiae there is sequence _NC_001136.1_ that has got taxid (_4932_) different from the other 16 (_559292_))
+There were some problems with taxid of reference file. Taxonomi ID has been queryed searching for taxid of each contigs
+inside the genomes but happened that the same genomes contained contigs appartaining to different species.
+(only in Saccharomyces cerevisiae there is sequence _NC_001136.1_ that has got taxid (_4932_) different from the other
+16 (_559292_))
 

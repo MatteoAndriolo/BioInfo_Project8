@@ -1,6 +1,10 @@
+import json
 import logging
+import shutil
 import subprocess
+from multiprocessing import Semaphore, Lock
 from pathlib import Path
+from typing import Union
 
 
 def _getNumberReads(coverage, read_lenghts, genome_size) -> int:
@@ -28,3 +32,5 @@ def _count_lines(path: Path) -> int:
     except:
         print(f"{path} not opened")
         return 0
+
+

@@ -6,19 +6,20 @@ import shutil
 import time
 from multiprocessing import cpu_count, Pool, Lock
 from pathlib import Path
-from threading import Semaphore
 
-from config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, COVERAGE, DIR_REF, \
-    PATH_METADATA_READS, RANGE
+from config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, DIR_REF, \
+    PATH_METADATA_READS
 from utils import _count_lines, _getNumberReads, _raiseParameterError
 
-path_metadata_ref = PATH_METADATA_REF
-path_metadata_reads = PATH_METADATA_READS
-dir_reads_simlord = DIR_READS_SIMLORD
-dir_reads_mason = DIR_READS_MASON
 
-
-def _updateJsonRead(taxid_str, lread_str, data):
+def _updateJsonRead(taxid_str, lread_str, data) -> None:
+    """
+    Util for multithread update of JSON files
+    @param taxid_str: first key dictionary
+    @param lread_str: second key dictionary
+    @param data: value
+    @return:
+    """
     with lock:
         shutil.copy2(path_metadata_reads, path_metadata_reads.parent / f"{path_metadata_reads.name}.bkp")
         try:
@@ -39,34 +40,40 @@ def _updateJsonRead(taxid_str, lread_str, data):
 
 
 def _gen_read_simlord(data: dict) -> None:
+    """
+    Generate simlord reads from a reference genome with length given data["lread"]:int.
+    Internally update metadata file.
+    @param data: taken from metadata of reference genome, contains also "lread" and "togenerate"
+    @return:
+    """
     path: str = data["path"].replace("(", "\(").replace(")", "\)")
     taxid: int = int(data["taxid"])
     taxid_str = f"{taxid:0>7}"
     lread: int = data["lread"]
     lread_str = f"{lread:0>6}"
     # SimLoRD parameters
-    c = COVERAGE
+    c = coverage
     # pi = 0.11
-    # pd = 0.04
-    # ps = 0.01
     pi = 0.001
+    # pd = 0.04
     pd = 0.001
+    # ps = 0.01
     ps = 0.004
 
-    (dir_reads_simlord/ lread_str).mkdir(parents=True, exist_ok=True)
+    (dir_reads_simlord / lread_str).mkdir(parents=True, exist_ok=True)
     fread = dir_reads_simlord / lread_str / f"{taxid_str}"
 
     command = f'simlord --fixed-readlength {lread} --read-reference "{path}" -c {c} -pi {pi} -pd {pd} -ps {ps} --no-sam "{fread}"'
 
     if data["togenerate"]:
         # execute SimLoRD
-        logging.info(f"SIMLORD_START: {lread_str}-{taxid_str}")
-        logging.debug(f"{command}")
+        logging.debug(f"SIMLORD_START: {lread_str}-{taxid_str}")
+        logging.info(f"{command}")
         os.system(command)
-        logging.info(f"SIMLORD_END: {lread_str}-{taxid_str}")
+        logging.debug(f"SIMLORD_END: {lread_str}-{taxid_str}")
 
     fread = f"{fread}.fastq"
-    count_reads = int(_count_lines(Path(fread))/4)
+    count_reads = int(_count_lines(Path(fread)) / 4)
     _updateJsonRead(
         taxid_str,
         lread_str,
@@ -75,6 +82,12 @@ def _gen_read_simlord(data: dict) -> None:
 
 
 def _gen_read_mason(data: dict) -> None:
+    """
+    Generate mason reads from a reference genome with length given data["lread"]:int.
+    Internally update metadata file.
+    @param data: taken from metadata of reference genome, contains also "lread" and "togenerate"
+    @return:
+    """
     fref: str = data["path"]
     taxid: int = int(data["taxid"])
     taxid_str = f"{taxid:0>7}"
@@ -84,7 +97,7 @@ def _gen_read_mason(data: dict) -> None:
     (dir_reads_mason / lread_str).mkdir(parents=True, exist_ok=True)
     fread = dir_reads_mason / lread_str / f"{taxid_str}.fq"
     c = _getNumberReads(
-        coverage=COVERAGE,
+        coverage=coverage,
         read_lenghts=lread,
         genome_size=data["mean"] * data["nsequences"],
     )
@@ -100,7 +113,7 @@ def _gen_read_mason(data: dict) -> None:
                 lread_str,
                 {
                     "path": str(fread),
-                    "nreads": _count_lines(fread)/4,
+                    "nreads": _count_lines(fread) / 4,
                     "command": str(command),
                 },
             ]
@@ -124,7 +137,7 @@ def _gen_read_mason(data: dict) -> None:
             lread_str,
             {
                 "path": str(fread),
-                "nreads": _count_lines(fread)/4,
+                "nreads": _count_lines(fread) / 4,
                 "command": str(command),
             },
         ]
@@ -135,8 +148,9 @@ def _gen_read_mason(data: dict) -> None:
 def _generateReads(data: dict):
     """
     Manages generation reads starting from metadata containing lenght reads to be generated
-    :param data: dictionay file containing info reguarding ref genome e lenght reads
-    :return: list containing dictionary of reads metadata
+
+    @param data: dictionay file containing info reguarding ref genome e lenght reads
+    @return: list containing dictionary of reads metadata
     """
     logging.debug("in generate reads")
     lread: int = data["lread"]
@@ -159,7 +173,12 @@ def _generateReads(data: dict):
 
 
 def _yetToGenerate(nmtdt: dict, oldmtdt: dict) -> bool:
-    return True
+    """
+    Check if metadata for genome and length is already generated
+    @param nmtdt: dictionary of genome to be generated containing "taxid" and "lreads"
+    @param oldmtdt: current metadata file
+    @return: True if not found, to be generated
+    """
     taxid_str = f"{nmtdt['taxid']:0>7}"
     try:
         if oldmtdt[taxid_str][f"{nmtdt['lread']:0>6}"]["nreads"] != 0:
@@ -173,6 +192,12 @@ def _yetToGenerate(nmtdt: dict, oldmtdt: dict) -> bool:
 
 
 def _calculate_range(minlenght: int = None, maxlenght: int = None):
+    """
+    Util function to calculate range of lengths
+    @param minlenght: minimum length
+    @param maxlenght: max length
+    @return: range (list) multiples 100 under 1000 then multiple 1000 over 1000
+    """
     if not (minlenght and maxlenght):
         _raiseParameterError("generateReads: Unexpected input")
     assert minlenght <= maxlenght
@@ -194,20 +219,30 @@ def _init_child_job(lock_):
     lock = lock_
 
 
-def generateReads(
-        dir_ref: Path,
-        rangelenght: list = None,
-        minlenght: int = None,
-        maxlenght: int = None,
-):
-    if not rangelenght:
-        rangelenght = _calculate_range(minlenght, maxlenght)
+def generateReads(dir_ref: Path, rangelenght: list = None, minlength: int = None, maxlength: int = None, ) -> None:
+    """
+    Generate simulated reads from files inside dir_ref in rangelength
+    @param dir_ref: directory containing reference genomes and metadata file
+    @param rangelenght: range of lengths [optional, overrides min and max length]
+    @param minlength: minimal length [optional with maxlength!=NULL]
+    @param maxlength: maximal length [optional with minlength!=NULL]
+    @return:
+    """
+    if not rangelenght and minlength and maxlength:
+        rangelenght = _calculate_range(minlength, maxlength)
+    elif not rangelenght:
+        raise ValueError("Unexpected parameter inputs, must be not empty either rangelength or (minlength, maxlength)")
 
-    logging.info(f"start generation reads with min:{minlenght} ; max:{maxlenght}")
+    logging.info(f"start generation reads with min:{minlength} ; max:{maxlength}")
     logging.info(f"in range {rangelenght}")
 
     filesPath_ref = [Path(p) for p in dir_ref.glob("*.fna")]
     logging.debug(f"filepaths for reference files: {filesPath_ref}")
+
+    if not os.path.exists(path_metadata_reads):
+        json.dump({},open(path_metadata_reads,"w"))
+    if not os.path.exists(path_metadata_ref):
+        json.dump({},open(path_metadata_ref,"w"))
 
     mtdtref = json.load(open(path_metadata_ref, "r"))
     mtdtreads = json.load(open(path_metadata_reads, "r"))
@@ -231,7 +266,14 @@ def generateReads(
 
 
 if __name__ == "__main__":
-    # generateReads(dir_ref=Path(DIR_REF), minlenght=100, maxlenght=10000)
-    semaphore_jsonReadsMTDT = Semaphore(1)
+    coverage = 20
+    path_metadata_ref = PATH_METADATA_REF
+    path_metadata_reads = PATH_METADATA_READS
+    dir_reads_simlord = DIR_READS_SIMLORD
+    dir_reads_simlord.mkdir(parents=True,exist_ok=True)
+    dir_reads_mason = DIR_READS_MASON
+    dir_reads_mason.mkdir(parents=True,exist_ok=True)
+
     logging.basicConfig(level=logging.INFO)
-    generateReads(dir_ref=Path(DIR_REF), rangelenght=list(RANGE))
+
+    generateReads(dir_ref=Path(DIR_REF), minlength=11000, maxlength=20000)

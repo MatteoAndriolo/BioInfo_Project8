@@ -6,10 +6,9 @@ import shutil
 import time
 from multiprocessing import cpu_count, Pool, Lock
 from pathlib import Path
-from threading import Semaphore
 
 from config import PATH_METADATA_REF, MASON_SIMULATOR, DIR_READS_SIMLORD, DIR_READS_MASON, DIR_REF, \
-    PATH_METADATA_READS, RANGE
+    PATH_METADATA_READS
 from utils import _count_lines, _getNumberReads, _raiseParameterError
 
 
@@ -240,6 +239,11 @@ def generateReads(dir_ref: Path, rangelenght: list = None, minlength: int = None
     filesPath_ref = [Path(p) for p in dir_ref.glob("*.fna")]
     logging.debug(f"filepaths for reference files: {filesPath_ref}")
 
+    if not os.path.exists(path_metadata_reads):
+        json.dump({},open(path_metadata_reads,"w"))
+    if not os.path.exists(path_metadata_ref):
+        json.dump({},open(path_metadata_ref,"w"))
+
     mtdtref = json.load(open(path_metadata_ref, "r"))
     mtdtreads = json.load(open(path_metadata_reads, "r"))
     listReadToDo = []
@@ -266,7 +270,10 @@ if __name__ == "__main__":
     path_metadata_ref = PATH_METADATA_REF
     path_metadata_reads = PATH_METADATA_READS
     dir_reads_simlord = DIR_READS_SIMLORD
+    dir_reads_simlord.mkdir(parents=True,exist_ok=True)
     dir_reads_mason = DIR_READS_MASON
+    dir_reads_mason.mkdir(parents=True,exist_ok=True)
 
     logging.basicConfig(level=logging.INFO)
-    generateReads(dir_ref=Path(DIR_REF), rangelenght=list(RANGE))
+
+    generateReads(dir_ref=Path(DIR_REF), minlength=11000, maxlength=20000)

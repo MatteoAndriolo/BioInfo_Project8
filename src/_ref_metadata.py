@@ -10,7 +10,6 @@ from pathlib import Path
 from typing import Tuple, List, Union
 
 from config import DIR_REF, PATH_METADATA_REF
-from utils import updateJson
 
 # sh -c "$(curl -fsSL ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
 # or
@@ -19,6 +18,35 @@ from utils import updateJson
 
 sys.path.append(os.path.dirname(shutil.which("xtract")))
 import edirect
+
+
+lock=Lock()
+def _updateJson(file: Union[str, Path], key: Union[int, str], value: Union[dict, list]) -> None:
+    """Safely update json files
+
+    Args:
+        file (str | Path): path Json file to update
+        key (int | str): key
+        value (dict | list): value
+        semaphore (Semaphore): semaphore for safe multithreading
+    """
+    global lock
+    with lock:
+        # semaphore.acquire()
+        if os.path.exists(file):
+            shutil.copy2(file, file.parent / f"{file.name}.bkp")
+        else:
+            json.dump({},open(file,"w"))
+        try:
+            mtdt: dict = json.load(open(file, "r"))
+            mtdt[key] = value
+            json.dump(mtdt, open(file, "w"), indent=4)
+            logging.debug(f"UPDATE JSON:{key} json updated succesfully")
+        except Exception as e:
+            logging.error(f"NOTUPDATED JSON: {key} json failed {e}")
+            if os.path.exists(file):
+                shutil.move(file.parent / f"{file.name}.bkp", file)
+        # semaphore.release()
 
 
 def _buildRefMetadata(path: str, taxid: int, organism: str, nsequences: int, sequences: dict, mean: int, minn: int,
@@ -97,7 +125,6 @@ def _generate_ref_metadata(f_path: Union[str, Path]) -> Tuple[str, dict]:
     organisms = [a.split("\t")[1] for a in out]
     titles = [a.split("\t")[2] for a in out]
 
-    logging.debug(f"{taxids}, {organisms}, {titles}")
 
     # sequences
     sequences = {i: [] for i in taxids}
@@ -118,6 +145,7 @@ def _generate_ref_metadata(f_path: Union[str, Path]) -> Tuple[str, dict]:
             / f"{taxid:0>7}-{organism.replace(' ', '_').replace('/', '').replace('.', '')}.fna"
     )
 
+    logging.debug(f"GENERATING {taxid}: metadata fetched succesfully")
     # rename genome file
     try:
         shutil.copy(f_path, newpath)
@@ -137,7 +165,7 @@ def _generate_ref_metadata(f_path: Union[str, Path]) -> Tuple[str, dict]:
     )
 
     logging.info(f"END: {f_path}")
-    updateJson(Path(f_path).parent / "_metadata.json", taxid_str, data)
+    _updateJson(Path(f_path).parent / "_metadata.json", taxid_str, data)
 
     # # with open(DIR_REF / "_ncbiTaxonID.json", "w") as f:
     # with open(PATH_TAXID_REF, "w") as f:
@@ -180,6 +208,7 @@ def generateReferenceGenomesMetadata(folder: Union[str, Path], extension: List[s
     for ext in extension:
         for path in glob.glob(str(Path(folder) / f"*{ext}")):
             files.append(path)
+    logging.debug(f"LIST FILES: {files}")
 
     # semaphoreJsonUpdate = Semaphore(1)
     lock = Lock()
@@ -191,6 +220,7 @@ def generateReferenceGenomesMetadata(folder: Union[str, Path], extension: List[s
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.DEBUG)
     dir_ref = DIR_REF
     path_metadata_ref = PATH_METADATA_REF
     generateReferenceGenomesMetadata(dir_ref, force=True, outfile=path_metadata_ref)

@@ -18,6 +18,10 @@ def _updatejsonfasta(lread_str: str, data: dict):
     @return:
     """
     with lock:
+        if not os.path.exists(path_metadata_fasta):
+            json.dump({},open(path_metadata_fasta,"w"))
+        if not os.path.exists(path_metadata_empty):
+            json.dump({},open(path_metadata_empty,"w"))
         shutil.copy2(path_metadata_fasta, path_metadata_fasta.parent / f"{path_metadata_fasta.name}.bkp")
         shutil.copy2(path_metadata_empty, path_metadata_empty.parent / f"{path_metadata_empty.name}.bkp")
 
@@ -180,14 +184,17 @@ def generateFastaAndTruth():
     Starting point for multithread generation of fasta and truth files.
     @return:
     """
-    # os.system("mkdir .temp")
+    os.system("mkdir .temp")
+    datareads:dict=json.load(open(dir_reads/"_metadata.json","r"))
+    datareads=datareads[list(datareads.keys())[0]]
+    range_reads:list=list(datareads.keys())
     lock = Lock()
-    with Pool(2, initializer=_init_child_job, initargs=(lock,)) as p:
+    with Pool(5, initializer=_init_child_job, initargs=(lock,)) as p:
         start_time = time.time()
-        if 1000 in range:
-            range.pop(range.index(1000))
-            range.extend([999, 1001])
-        p.map(_generateFastaAndTruth, range)
+        if 1000 in range_reads:
+            range_reads.pop(range_reads.index(1000))
+            range_reads.extend([999, 1001])
+        p.map(_generateFastaAndTruth, range_reads)
         print(time.time() - start_time)
 
 
@@ -199,8 +206,9 @@ if __name__ == "__main__":
     dir_fasta_simlord: Path = DIR_FASTA_SIMLORD
     path_metadata_fasta: Path = PATH_METADATA_FASTA
     path_metadata_empty: Path = dir_fasta / "_empty.json"
-    range = RANGE
+    # range_reads = RANGE
     # semaphore_jsonReadsMTDT = Semaphore(1)
+
 
     generateFastaAndTruth()
     regenerateMetadata()
